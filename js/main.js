@@ -28,3 +28,4 @@ let correo = document.getElementById("correo");
         break;
    }//if
 
+}; 
