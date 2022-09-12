@@ -24,15 +24,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nosotros</title>
      <!-- Bootstrap CSS -->
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-     <link href="./css/style.css" rel="stylesheet" type="text/css">
+     <link href="/css/contact_style.css" rel="stylesheet" type="text/css">
+     <link rel="icon" href="/src/Dr._Lomito.png">
     
 </head>
 <body class="p-0">
     <nav class="navbar fixed-top navbar-expand-lg navbar-light barra">
-        <a class="navbar-brand" href="#">Doctor lomito</a>
+        <a class="navbar-brand" href="#"><img src="/src/Dr._Lomito.png" alt="logo de Dr. Lomito" id="logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -67,39 +68,45 @@
         </div>
       </nav><!--navbar-->
 
+      
+      
       <div class="container p-1">
         <div class="overflow-auto">
           
-          <h1>Acerca de Dr. Lomito</h1>
+          <br>
+          <br>
+          <br>
           
+          <h1 id="acerca">Acerca de Dr. Lomito</h1>
+          <br>
           <h2>Misión</h2>
-          <hr>
+          <hr id="hrMi">
           <p>Nuestra misión es ser una empresa que está conectada con la experiencia del usuario al contratar servicios médicos para sus mascotas. </p>
           <br>
           <h2>Visión</h2>
-          <hr>
+          <hr id="hrVis">
           <p> 
             Dentro de 3 años ser la plataforma web referente a nivel 
             nacional para buscar atención veterinaria y productos para mascotas.</p>
             <br>
           <h2>Problemática a atender</h2>
-          <hr>
-          <p>Hoy en día es complicado encontrar de manera oportuna a un especialista para la atención 
-            médica de nuestras 
-            mascotas </p>
+          <hr id="hrPro">
+          <p>Hoy en día es complicado encontrar de manera oportuna a un especialista veterinario y que su trabajo esté avalado por los dueños de las mascotas. </p> 
             <br>
           
           <h2>Objetivos</h2>
-          <hr>
-          <p>Velamos por la salud y bienestar de tus mascotas proporcionando una manera fácil
-             de acceder a servicios médicos de especialistas. En el perfil de cada médico puedes
-             conocer su trayectoria, así las opiniones de los demás usuarios.</p>
-          <p>Diseñar y desarrollar una aplicación que sea un directorio de veterinarios, 
-            donde se muestre su especialidad, ubicación y también se pueda dejar reseñas sobre su trabajo.</p>
-            <p>En un futuro esperamos generar vínculos con asesores jurídicos, para que los usuarios sepan
-               cómo deben proceder legalmente contra veterinarios con malas prácticas.</p>
-            <p>Generar alianzas con escuelas caninas y organizaciones sin fines de lucro como refugios para animales.</p>
-            <p>Desarrollar e-commerce en donde puedan armarse paquetes de servicio, por ejemplo: una consulta más un baño y corte de pelo.</p>
+          <ul>
+            <li>Velamos por la salud y bienestar de tus mascotas proporcionando una manera fácil
+              de acceder a servicios médicos de especialistas. En el perfil de cada médico puedes
+              conocer su trayectoria, así como las opiniones de los demás usuarios.</li>
+            <li>Diseñar y desarrollar una aplicación que sea un directorio de veterinarios, 
+              donde se muestre su especialidad, ubicación y también se pueda dejar reseñas sobre su trabajo.</li>
+            <li>En un futuro esperamos generar vínculos con asesores jurídicos, para que los usuarios sepan
+              cómo deben proceder legalmente contra veterinarios con malas prácticas.</li>
+            <li>Generar alianzas con escuelas caninas y organizaciones sin fines de lucro, como refugios para animales.</li>
+            <li>Desarrollar a futuro un <em>e-commerce </em>en donde puedan armarse paquetes de servicio, por ejemplo: una consulta más un baño y corte de pelo.</li>
+          </ul>
+         
          
         </div>
 
@@ -124,9 +131,9 @@
                   <div class="container">
                     <h2>Josué Chávez</h2>
                     <p class="title">CEO &amp; Founder</p>
-                    <p>Back-end developer, soy Ingeniero mecatrónico apasionado por la programación</p>
+                    <p><em>Back-end Developer</em>, soy Ingeniero Mecatrónico apasionado por la programación</p>
                     <p>josue.chavezlomeli@gmai.com</p>
-                    <p><button class="button">Contact</button></p>
+                    <p><button class="button">Contacto</button></p>
                   </div>
                 </div>
               </div>
@@ -136,10 +143,10 @@
                   <img src="../src/mario.jpg" alt="Mario" style="width:100%">
                   <div class="container">
                     <h2>Mario Zárate</h2>
-                    <p class="title">Directo de diseño UX y bootstrap</p>
+                    <p class="title">Director de Diseño UX y bootstrap</p>
                     <p>Orgulloso dueño de un pastor alemán. Transformo ideas y datos en código y visuales atractivos</p>
                     <p>mlopezz.ed@gmail.com</p>
-                    <p><button class="button">Contact</button></p>
+                    <p><button class="button">Contacto</button></p>
                   </div>
                 </div>
               </div>
@@ -149,11 +156,10 @@
                   <img src="../src/chris.jpg" alt="John" style="width:100%">
                   <div class="container">
                     <h2>Christian Mendoza</h2>
-                    <p class="title">Desarrollo web </p>
-                    <p>Back-end|
-                      Apoyando en el crecimiento y posicionamiento del proyecto Dr.-Lomito.</p>
+                    <p class="title"><em>Back-end Developer</em> </p>
+                    <p> Apoyando en el crecimiento y posicionamiento del proyecto Dr. Lomito.</p>
                     <p>mendochristiandiaz@gmail.com</p>
-                    <p><button class="button">Contact</button></p>
+                    <p><button class="button">Contacto</button></p>
                   </div>
                 </div>
               </div>
@@ -170,7 +176,7 @@
                   <img src="../src/rubi.png" alt="Rubí Baltazar" style="width:100%">
                   <div class="container">
                     <h2>Rubí Baltazar</h2>
-                    <p class="title">Desarrolla web front-end</p>
+                    <p class="title"> <em>Front-end Developer</em></p>
                     <p> Ingeniera enfocada en el area de las tecnologías.</p>
                     <p>rubibaltazarsandoval@gmail.com</p>
                     <p><button class="button">Contact</button></p>
@@ -182,11 +188,11 @@
                 <div class="card">
                   <img src="../src/stephanie.jpg" alt="Mike" style="width:100%">
                   <div class="container">
-                    <h2>Stephanie Diaz Chamorro</h2>
+                    <h2>Stephanie Díaz Chamorro</h2>
                     <p class="title">Directora de arte</p>
                     <p>Economista y creadora de los mejores diseños de la organización, amante de los animales</p>
                     <p>fannycha1996@gmail.com</p>
-                    <p><button class="button">Contact</button></p>
+                    <p><button class="button">Contacto</button></p>
                   </div>
                 </div>
               </div>
@@ -195,11 +201,11 @@
                 <div class="card">
                   <img src="../src/juan_carlos.jpg" alt="Juca" style="width:100%">
                   <div class="container">
-                    <h2>Juan Carlos</h2>
+                    <h2>Juan Carlos Rojas Sánchez</h2>
                     <p class="title">Diseñador de bases de datos</p>
-                    <p>ODesarrollo web full stack</p>
+                    <p>Desarrollo full stack</p>
                     <p>juca@gmail.com</p>
-                    <p><button class="button">Contact</button></p>
+                    <p><button class="button">Contacto</button></p>
                   </div>
                 </div>
               </div>
@@ -221,20 +227,20 @@
 
                     </p>
                     <p>akariyess@gmail.com</p>
-                    <p><button class="button">Contact</button></p>
+                    <p><button class="button">Contacto</button></p>
                   </div>
                 </div>
               </div>
             
               <div class="column">
                 <div class="card">
-                  <img src="../src/pepe.png" alt="Mike" style="width:100%">
+                  <img src="../src/pepe.png" alt="pepe" style="width:100%">
                   <div class="container">
                     <h2>José Luis Toledo</h2>
                     <p class="title">UX Designer/Web Developer.</p>
-                    <p>Estoy muy emocionado de introducirme a la industria de la tecnología a través del Desarrollo Web para y crecer de manera personal y profesional.</p>
+                    <p>Soy Licenciado en Artes Visuales y Front End Developer</p>
                     <p>jltoledo.ux@gmail.com</p>
-                    <p><button class="button">Contact</button></p>
+                    <p><button class="button">Contacto</button></p>
                   </div>
                 </div>
               </div>
@@ -254,20 +260,10 @@
       </div>
             
                   
-                  
 
-
-            
-            
-        
     </div>
+    <footer> &#169 2022 Dr. Lomito</footer>
     
-    <nav class="navbar barra navbar-light ">
-        <a class="navbar-brand" href="#">Fixed bottom</a>
-      </nav>
-
-
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 
