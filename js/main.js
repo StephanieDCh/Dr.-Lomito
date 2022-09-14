@@ -11,9 +11,9 @@ let correo = document.getElementById("correo");
     console.log(correo.value.charAt(i));
     console.log(correo.value.toLowerCase().charCodeAt(i));
     if(  (
-             ( correo.value.toLowerCase().charCodeAt(i)<65)
+             ( correo.value.toLowerCase().charCodeAt(i)<97)
              ||
-             (correo.value.toLowerCase().charCodeAt(i)>90)
+             (correo.value.toLowerCase().charCodeAt(i)>122)
         )
         && ((correo.value.toLowerCase().charCodeAt(i)!=32) ) // espacio
         && ((correo.value.toLowerCase().charCodeAt(i)!=193) ) // Á
