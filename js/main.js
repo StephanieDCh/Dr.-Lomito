@@ -1,30 +1,30 @@
-let correo = document.getElementById("correo");
-    correo.classList.remove("is-invalid");
-    correo.classList.add("is-valid");
-    if ( (correo.value.length<3) || (correo.value.length>20) ){
-        correo.classList.remove("is-valid");
-        correo.classList.add("is-invalid");
+let Correo = document.getElementById("Correo");
+    Correo.classList.remove("is-invalid");
+    Correo.classList.add("is-valid");
+    if ( (correo.value.length<3) || (Correo.value.length>20) ){
+        Correo.classList.remove("is-valid");
+        Correo.classList.add("is-invalid");
     }//if
 
-    for (let i = 0; i < correo.value.length; i++) {
-    console.log((!isNaN(correo.value.charAt(i))) );
-    console.log(correo.value.charAt(i));
-    console.log(correo.value.toLowerCase().charCodeAt(i));
+    for (let i = 0; i < Correo.value.length; i++) {
+    console.log((!isNaN(Correo.value.charAt(i))) );
+    console.log(Correo.value.charAt(i));
+    console.log(Correo.value.toLowerCase().charCodeAt(i));
     if(  (
-             ( correo.value.toLowerCase().charCodeAt(i)<97)
+             ( Correo.value.toLowerCase().charCodeAt(i)<97)
              ||
-             (correo.value.toLowerCase().charCodeAt(i)>122)
+             (Correo.value.toLowerCase().charCodeAt(i)>122)
         )
-        && ((correo.value.toLowerCase().charCodeAt(i)!=32) ) // espacio
-        && ((correo.value.toLowerCase().charCodeAt(i)!=193) ) // Á
-        && ((correo.value.toLowerCase().charCodeAt(i)!=201) ) // É
-        && ((correo.value.toLowerCase().charCodeAt(i)!=205) ) // Í
-        && ((correo.value.toLowerCase().charCodeAt(i)!=211) ) // Ó
-        && ((correo.value.toLowerCase().charCodeAt(i)!=218) ) // Ú
-        && ((correo.value.toLowerCase().charCodeAt(i)!=209) ) // Ñ
+        && ((Correo.value.toLowerCase().charCodeAt(i)!=32) ) // espacio
+        && ((Correo.value.toLowerCase().charCodeAt(i)!=193) ) // Á
+        && ((Correo.value.toLowerCase().charCodeAt(i)!=201) ) // É
+        && ((Correo.value.toLowerCase().charCodeAt(i)!=205) ) // Í
+        && ((Correo.value.toLowerCase().charCodeAt(i)!=211) ) // Ó
+        && ((Correo.value.toLowerCase().charCodeAt(i)!=218) ) // Ú
+        && ((Correo.value.toLowerCase().charCodeAt(i)!=209) ) // Ñ
    ) {
-        correo.classList.remove("is-valid");
-        correo.classList.add("is-invalid");
+        Correo.classList.remove("is-valid");
+        Correo.classList.add("is-invalid");
         break;
    }//if
 
