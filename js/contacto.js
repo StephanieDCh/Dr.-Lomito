@@ -1,6 +1,6 @@
 let tel = document.getElementById("Numero");
 let msg = document.getElementById("validationTextarea");
-//let flag = true;
+
 
 
 tel.addEventListener("blur", function (e) {
@@ -14,7 +14,6 @@ tel.addEventListener("blur", function (e) {
         tel.classList.add("is-valid")
 
     }else{
-        flag = false;
         tel.classList.remove("is-valid")
         tel.classList.add("is-invalid")
     }
@@ -31,7 +30,6 @@ msg.addEventListener("blur", function (e) {
         msg.classList.add("is-valid")
 
     }else{
-        flag = false;
         msg.classList.remove("is-valid")
         msg.classList.add("is-invalid")
     }
