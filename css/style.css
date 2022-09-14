@@ -1,99 +1,125 @@
 body{
-    background:#FFF9E3;
+  background:#FFF9E3;
+}
+nav{
+font-family: Arial, Helvetica, sans-serif;
+font-size: 25px;
 }
 
-.marco{
-    
-}
 
 .barra{
-    background-color:#7ED4B5;
+  background-color:#7ED4B5;
 }
 
 .recuadro{
-    height: 500px;
+  height: 500px;
 }
 
 .retrato{
-    width: 200px;
-    height: 200px;
+  width: 200px;
+  height: 200px;
 }
 
 
 
- .container{
-     justify-content: space-around;
-     flex-wrap: wrap;
-     color: darkslategray;
-     
- }
- 
- .imgNav{
-     background-color: white;
- }
- 
- img{
-     border-radius: 30px;
- }
- .textoBar{
-     padding-left: 50px;
-     padding-right: 50px;
- }
- h1{
-     color: mediumseagreen;
- }
- h2{
-     color: mediumseagreen;
- }
-.column {
-    float: left;
-    width: 33.3%;
-    margin-bottom: 16px;
-    padding: 0 8px;
-  }
-  
-  /* Display the columns below each other instead of side by side on small screens */
-  @media screen and (max-width: 650px) {
-    .column {
-      width: 100%;
-      display: block;
-    }
-  }
-  
-  /* Add some shadows to create a card effect */
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Some left and right padding inside the container */
-  .container {
-    padding: 0 16px;
-  }
-  
-  /* Clear floats */
-  .container::after, .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-  
-  .title {
-    color: grey;
-  }
-  
-  .button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #548AAF;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-  }
-  
-  .button:hover {
-    background-color: #555;
-  }
+.container{
+   justify-content: space-around;
+   flex-wrap: wrap;
+   color: darkslategray;
+   
+}
 
+.imgNav{
+   background-color: white;
+}
+
+
+.textoBar{
+   padding-left: 50px;
+   padding-right: 50px;
+}
+h1{
+   color: mediumseagreen;
+}
+h2{
+   color: mediumseagreen;
+}
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* Add some shadows to create a card effect */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Some left and right padding inside the container */
+.container {
+  padding: 0 16px;
+}
+
+/* Clear floats */
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #548AAF;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+footer{
+text-align: center;
+}
+#acerca{
+margin-top: 30px;
+}
+
+#hrMi{
+width: 95px;
+text-align: left;
+margin-left: 0%;
+margin-top: 10px;
+}
+
+#hrVis{
+width: 90px;
+text-align: left;
+margin-left: 0%;
+margin-top: 10px;
+
+}
+
+#hrPro{
+width: 330px;
+text-align: left;
+margin-left: 0%;
+margin-top: 10px;
+}
