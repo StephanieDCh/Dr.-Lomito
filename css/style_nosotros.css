@@ -1,14 +1,12 @@
+/*body nav y footer lo llevan igual todas las páginas*/
+
 body{
   background:#FFF9E3;
 }
 nav{
 font-family: Arial, Helvetica, sans-serif;
 font-size: 25px;
-}
-
-
-.barra{
-  background-color:#7ED4B5;
+background-color:#7ED4B5;
 }
 
 .recuadro{
@@ -20,12 +18,13 @@ font-size: 25px;
   height: 200px;
 }
 
-
+/*Container del carrusel*/
 
 .container{
    justify-content: space-around;
    flex-wrap: wrap;
    color: darkslategray;
+   padding: 0 16px;
    
 }
 
@@ -33,11 +32,6 @@ font-size: 25px;
    background-color: white;
 }
 
-
-.textoBar{
-   padding-left: 50px;
-   padding-right: 50px;
-}
 h1{
    color: mediumseagreen;
 }
@@ -65,9 +59,7 @@ h2{
 }
 
 /* Some left and right padding inside the container */
-.container {
-  padding: 0 16px;
-}
+
 
 /* Clear floats */
 .container::after, .row::after {
@@ -95,12 +87,15 @@ h2{
 .button:hover {
   background-color: #555;
 }
+
 footer{
 text-align: center;
 }
 #acerca{
 margin-top: 30px;
 }
+
+/*Líneas hr bajo los subtítulos*/
 
 #hrMi{
 width: 95px;

@@ -11,6 +11,7 @@ let Correo = document.getElementById("Correo");
 let tel = document.getElementById("Numero");
 let msg = document.getElementById("msgArea");
 let btnEnviar = document.getElementById("btnEnviar");
+let alertSend = document.getElementById("alertSend");
 
 let flagArroba = false;
 let flagPunto = false;
@@ -95,7 +96,10 @@ if((campoApellido.value.length>=3)&&(campoApellido.value.length<=50)){ //validac
 
 //validacion de correo, minimo un arroba y un punto.
 Correo.addEventListener("blur", function(e){
-    e.preventDefault();   
+    e.preventDefault()
+    flagArroba=false;
+    flagChar=false;
+    flagPunto=false;   
 
     Correo.classList.remove("is-invalid");
     Correo.classList.add("is-valid");
@@ -156,10 +160,14 @@ tel.addEventListener("blur", function (e) {
         tel.classList.remove("is-valid")
         tel.classList.add("is-invalid")
     }
+<<<<<<< HEAD
 })
 <<<<<<< HEAD
 
 =======
+=======
+});
+>>>>>>> 9d5c8cc3ea8e4d2b85235f35d596df90cdeb8dc0
 //Validacion mensaje
 >>>>>>> 7c455d06a6a3a631cc57933af3e059b3c6f4c269
 msg.addEventListener("blur", function (e) {
@@ -169,10 +177,14 @@ msg.addEventListener("blur", function (e) {
 
     //validando campo usuario
 <<<<<<< HEAD
+<<<<<<< HEAD
     if(msgValor.length>=20 && msgValor.length<=280){
 =======
     if(msgValor.length>=15 && msgValor.length<=280){
 >>>>>>> 7c455d06a6a3a631cc57933af3e059b3c6f4c269
+=======
+    if(msgValor.length> 0 && msgValor.length<=280){
+>>>>>>> 9d5c8cc3ea8e4d2b85235f35d596df90cdeb8dc0
         msg.classList.remove("is-invalid")
         msg.classList.add("is-valid")
 
@@ -181,8 +193,12 @@ msg.addEventListener("blur", function (e) {
         msg.classList.add("is-invalid")
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 })
+=======
+});
+>>>>>>> 9d5c8cc3ea8e4d2b85235f35d596df90cdeb8dc0
 btnEnviar.addEventListener("click", function (e){
     e.preventDefault();
 
@@ -193,7 +209,7 @@ btnEnviar.addEventListener("click", function (e){
     
     sendCuerpo += " -El nombre del usuario es:  " +sendNombre+" -Y su mensaje es: " + msg.value;
    
-    /* if(campoNombre.value!="" && campoApellido.value !="" && Correo.value != "" && msg.value != ""){ */
+     if(campoNombre.value!="" && campoApellido.value !="" && Correo.value != "" && msg.value != ""){ 
         Email.send({
             Host : "smtp.elasticemail.com",
             Username : "hola.drlomito@gmail.com",
@@ -205,9 +221,14 @@ btnEnviar.addEventListener("click", function (e){
         }).then(
           message => alert("Correo enviado con éxito")
         );
-    /* }else{
-        console.error("Campos vacíos, verifique");
-  }    */
+    }else{
+        alertSend.style.display = "block";
+        setTimeout( ()=>{alertSend.style.display = "none"}, 5000);
+  }    
  
+<<<<<<< HEAD
 >>>>>>> 7c455d06a6a3a631cc57933af3e059b3c6f4c269
 })
+=======
+});
+>>>>>>> 9d5c8cc3ea8e4d2b85235f35d596df90cdeb8dc0
