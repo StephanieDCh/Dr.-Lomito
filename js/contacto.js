@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-let tel = document.getElementById("Numero");
-let msg = document.getElementById("validationTextarea");
-
-
-
-=======
 let campoNombre=document.getElementById("Nombre");
 let campoApellido=document.getElementById("Apellido");
 let Correo = document.getElementById("Correo");
@@ -145,7 +138,7 @@ if(flagArroba==false || flagPunto==false || flagChar==true)
 
 });
 //Validacion de numero
->>>>>>> 7c455d06a6a3a631cc57933af3e059b3c6f4c269
+
 tel.addEventListener("blur", function (e) {
     e.preventDefault()
     
@@ -160,31 +153,16 @@ tel.addEventListener("blur", function (e) {
         tel.classList.remove("is-valid")
         tel.classList.add("is-invalid")
     }
-<<<<<<< HEAD
-})
-<<<<<<< HEAD
 
-=======
-=======
-});
->>>>>>> 9d5c8cc3ea8e4d2b85235f35d596df90cdeb8dc0
+})
 //Validacion mensaje
->>>>>>> 7c455d06a6a3a631cc57933af3e059b3c6f4c269
+
 msg.addEventListener("blur", function (e) {
     e.preventDefault()
     
-    let msgValor = msg.value;
+    let msgValor = msg.value;  
 
-    //validando campo usuario
-<<<<<<< HEAD
-<<<<<<< HEAD
-    if(msgValor.length>=20 && msgValor.length<=280){
-=======
-    if(msgValor.length>=15 && msgValor.length<=280){
->>>>>>> 7c455d06a6a3a631cc57933af3e059b3c6f4c269
-=======
     if(msgValor.length> 0 && msgValor.length<=280){
->>>>>>> 9d5c8cc3ea8e4d2b85235f35d596df90cdeb8dc0
         msg.classList.remove("is-invalid")
         msg.classList.add("is-valid")
 
@@ -192,13 +170,9 @@ msg.addEventListener("blur", function (e) {
         msg.classList.remove("is-valid")
         msg.classList.add("is-invalid")
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 })
-=======
-});
->>>>>>> 9d5c8cc3ea8e4d2b85235f35d596df90cdeb8dc0
+
 btnEnviar.addEventListener("click", function (e){
     e.preventDefault();
 
@@ -226,9 +200,5 @@ btnEnviar.addEventListener("click", function (e){
         setTimeout( ()=>{alertSend.style.display = "none"}, 5000);
   }    
  
-<<<<<<< HEAD
->>>>>>> 7c455d06a6a3a631cc57933af3e059b3c6f4c269
 })
-=======
-});
->>>>>>> 9d5c8cc3ea8e4d2b85235f35d596df90cdeb8dc0
+
