@@ -5,21 +5,26 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto</title>
+  
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-  <link href="../css/stylecon.css" rel="stylesheet" type="text/css">
+  <link href="../css/style_contacto.css" rel="stylesheet" type="text/css">
   <link rel="icon" href="/src/Dr._Lomito.png">
+  <title>Contacto</title>
 </head>
+<body>
+
 <nav class="navbar fixed-top navbar-expand-lg navbar-light barra">
-  <a class="navbar-brand" href="/index.html"><img src="/src/Dr._Lomito.png" alt="logo" width="120px"></a>
+  
+  <a class="navbar-brand" href="../index.html"><img src="../src/Dr._Lomito.png" alt="logo" width="120px"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+<<<<<<< HEAD
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" href="./nosotros.html">Nosotros <span class="sr-only">(current)</span></a>
@@ -45,11 +50,46 @@
         <a class="nav-link disabled"></a>
       </li>
     </ul>
+=======
+>>>>>>> 47535887111e84af9f3549eb7442b605de721443
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
     </form>
-  </div>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Iniciar Sesión <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="./pages/registrodoctores.html">Regístrate</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="./pages/nosotros.html">Nosotros <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="./pages/contacto.html">Contacto <span class="sr-only"></span></a>
+        </li>
+        
+
+        <li class="nav-item active">
+          <a class="nav-link active " href="./pages/doctores.html" role="button">
+            Directorio
+          </a>
+        </li>
+
+        
+
+        <li class="nav-item active">
+          <a class="nav-link" href="./pages/perfil.html">Mi Perfil <span class="sr-only"></span></a>
+        </li>
+      </ul>
+    
+    
+  </div><!--div navbar-->
+  
 </nav>
 
 <section>
@@ -59,15 +99,15 @@
     alt="" class="img-fluid" width="100%">
 </section>
 <br>
-<main class="Container">
-  <div class="Empresa">
+<main class="container">
+  <div class="empresa">
 
     <img src="/src/dog-removebg-preview.png" alt="" class="img-fluid   mx-auto d-block" width="500px">
     
 
   </div>
 
-  <form class="Formato">
+  <form class="formato">
     <h1>Escríbenos</h1>
     <br>
     <div class="form-group">
@@ -87,7 +127,7 @@
         <label for="Nombre">Apellidos:</label>
         <input type="text" class="form-control" id="Apellido" placeholder="Apellidos" required>
         <small id="passwordHelpBlock" class="form-text text-muted">
-          Ejemplo: Flores Minor
+          Ejemplo: Flores 
         </small>
         <div class="invalid-feedback">
           Recuerda este campo:
@@ -118,25 +158,41 @@
       </div>
       <div class="form-group col-md-8 ">
         <label for="validationTextarea">Mensaje</label>
-        <textarea class="form-control " id="validationTextarea" placeholder="Inserta tu mensaje"
+        <textarea class="form-control " id="msgArea" placeholder="Inserta tu mensaje"
           required></textarea>
       </div>
       <div class="invalid-feedback">
        ¡Recuerda dejarnos tus comentarios!
       </div>
 
-      <button class="button" type="submit" id="enviar">Enviar</button>
+      <button class="button" type="button" id="btnEnviar">Enviar</button>
+      <div id="alertSend" class="alert alert-danger" style="display: none" role="alert">
+        Alguno de los campos se encuentran vacíos, verifique por favor!
+      </div>
+
     </div>
     <br>
     
   </form>
-</main>
-<br>
-<br>
-<footer> &#169 2022 Dr. Lomito</footer>
 
+  
+</main>
+<!-- <br>
+<div class="d-block">
+  <nav class="navbar navbar-light ">
+    <a class="navbar-brand" href="#">&#169 2022 Dr. Lomito</a>
+  </nav>
+</div>
+ -->
+ <footer> &#169 2022 Dr. Lomito</footer>
+
+
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 <script src="../js/contacto.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 </body>
+
 </html>
