@@ -1,47 +1,28 @@
-.barra{
-  background-color:#7ED4B5;
-}
-
-  body {
+/*body nav y footer lo llevan igual todas las páginas*/
+body {
     background: #FFF9E3;
 
-  }
+}
 nav{
  font-family: Arial, Helvetica, sans-serif;
- font-size: 25px;
+ font-size: 20px;
+ color: black;
+ background-color:#7ED4B5;
 }
-    
 
-  .Container {
-
+.container {
     display: flex;
     width: 100%;
     align-items: center;
-  }
-
-  .Empresa {
-
+}
+/*Esto estiliza el formulario*/
+  .formato {
     width: 50%;
-    margin: 2em;
-    text-align: left;
-    border: 2px;
-    width: 38em;
-    height: 38em;
-
-
-
-  }
-
-  .Formato {
-    width: 50%;
-    
     margin: 2em ;
     text-align: left;
     border: 2px;
     width: 38em;
     height: 38em;
-
-
 
   }
 
@@ -49,6 +30,7 @@ nav{
     color: mediumseagreen;
     text-align: left;
   }
+  /*Estilos del botón enviar*/
   .button {
       border: none;
       outline: 0;
@@ -58,14 +40,13 @@ nav{
       background-color: #548AAF;
       text-align: center;
       cursor: pointer;
-      width: 10%;
+      width: 100px;
     }
     
     footer{
       text-align: center;
       padding-bottom: 15px;
+      
     }
 
-    #enviar{
-      width: 80px;
-    }
+    
