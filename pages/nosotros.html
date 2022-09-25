@@ -9,52 +9,12 @@
     <title>Acerca de nosotros</title>   
     
 </head>
+<header>
+  <!--Encabezado del body, NavBar se inserta desde Js jsnavBar.js-->
+  <nav class="navbar fixed-top navbar-expand-md navbar-light" id="navBar"></nav>
+</header>
 <body class="p-0">
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
-      <a class="navbar-brand" href="../index.html"><img src="../src/Dr._Lomito.png" alt="logo" width="120px"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                   <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-          </form>       
-    
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Iniciar Sesión <span class="sr-only"></span></a>
-                <li class="nav-item active">
-                  <a class="nav-link" href="./registrodoctores.html">Regístrate</a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="./nosotros.html">Nosotros <span class="sr-only"></span></a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="./contacto.html">Contacto <span class="sr-only"></span></a>
-                </li>
-                
-      
-                <li class="nav-item active">
-                  <a class="nav-link active " href="./directorio.html" role="button">
-                    Directorio
-                  </a>
-                </li>
-      
-                
-      
-                <li class="nav-item active">
-                  <a class="nav-link" href="./perfilUsuario.html">Mi perfil <span class="sr-only"></span></a>
-                </li>
-              
-            </ul>
-          
-        </div>
-      </nav><!--navbar-->
-
-      
-      
+        
       <div class="container p-1">
         <div class="overflow-auto">
           
@@ -66,30 +26,22 @@
           <br>
           <h2>Misión</h2>
           <hr id="hrMi">
-          <p>Nuestra misión es ser una empresa que está conectada con la experiencia del usuario al contratar servicios médicos para sus mascotas. </p>
+          <p>Nuestra misión es ayudar a nuestros usuarios a encontrar la mejor atención médica por parte de los profesionales veterinarios, con base en las calificaciones y experiencias de los usuarios.</p>
           <br>
           <h2>Visión</h2>
           <hr id="hrVis">
           <p> 
-            Dentro de 3 años ser la plataforma web referente a nivel 
-            nacional para buscar atención veterinaria y productos para mascotas.</p>
+            Convertirnos en un referente en la búsqueda de veterinarios.</p>
             <br>
-          <h2>Problemática a atender</h2>
+          <h2>Problema</h2>
           <hr id="hrPro">
-          <p>Hoy en día es complicado encontrar de manera oportuna a un especialista veterinario y que su trabajo esté avalado por los dueños de las mascotas. </p> 
+          <p>Hoy en día no existe una plataforma donde puedas encontrar atención médica especializada para tu mascota.  </p> 
             <br>
           
           <h2>Objetivos</h2>
           <ul>
-            <li>Velamos por la salud y bienestar de tus mascotas proporcionando una manera fácil
-              de acceder a servicios médicos de especialistas. En el perfil de cada médico puedes
-              conocer su trayectoria, así como las opiniones de los demás usuarios.</li>
-            <li>Diseñar y desarrollar una aplicación que sea un directorio de veterinarios, 
-              donde se muestre su especialidad, ubicación y también se pueda dejar reseñas sobre su trabajo.</li>
-            <li>En un futuro esperamos generar vínculos con asesores jurídicos, para que los usuarios sepan
-              cómo deben proceder legalmente contra veterinarios con malas prácticas.</li>
-            <li>Generar alianzas con escuelas caninas y organizaciones sin fines de lucro, como refugios para animales.</li>
-            <li>Desarrollar a futuro un <em>e-commerce </em>en donde puedan armarse paquetes de servicio, por ejemplo: una consulta más un baño y corte de pelo.</li>
+            <li>Proporcionar a los usuarios un directorio de médicos veterinarios especializados.</li>
+            <li>Exponer el perfil del veterinario a clientes potenciales.</li>
           </ul>
          
          
@@ -111,26 +63,24 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active "> <!--inicia item-->
-            <div class="row"><!--fila de tarjetas-->
-              <div class="column">
-                <div class="card">
+           
+                <div class="card"> 
                   <img src="../src/Josue.png" alt="Josue" >
-                  <div class="container">
+                  
                     <h2>Josué Chávez</h2>
-                    <p class="title">CEO &amp; Founder</p>
+                    <p class="title">Product Owner</p>
                     <p><em>Back-end Developer</em> Soy Ingeniero Mecatrónico apasionado por la programación</p>
                     <p>josue.chavezlomeli@gmai.com</p>
                     <p><button class="button">Contacto</button></p>
-                  </div>
-                </div>
-              </div>
+                  </div><!--card josue-->
+               
             
-              <div class="column">
+              <div class="column d-flex">
                 <div class="card">
                   <img src="../src/mario.jpg" alt="Mario" style="width:100%">
                   <div class="container">
                     <h2>Mario Zárate</h2>
-                    <p class="title">Director de Diseño UX y bootstrap</p>
+                    <p class="title">Developer</p>
                     <p>Orgulloso dueño de un pastor alemán. Transformo ideas y datos en código y visuales atractivos</p>
                     <p>mlopezz.ed@gmail.com</p>
                     <p><button class="button">Contacto</button></p>
@@ -138,12 +88,12 @@
                 </div>
               </div>
             
-              <div class="column">
+              <div class="column d-flex">
                 <div class="card">
                   <img src="../src/chris.jpg" alt="John" style="width:100%">
                   <div class="container">
                     <h2>Christian Mendoza</h2>
-                    <p class="title"><em>Back-end Developer</em> </p>
+                    <p class="title"><em>Developer</em> </p>
                     <p> Apoyando en el crecimiento y posicionamiento del proyecto Dr. Lomito.</p>
                     <p>mendochristiandiaz@gmail.com</p>
                     <p><button class="button">Contacto</button></p>
@@ -157,8 +107,8 @@
           <div class="carousel-item">
             
             
-            <div class="row"><!--fila de tarjetas-->
-              <div class="column">
+            <div class="row d-flex"><!--fila de tarjetas-->
+              <div class="column d-flex">
                 <div class="card">
                   <img src="../src/rubi.png" alt="Rubí Baltazar" style="width:100%">
                   <div class="container">
@@ -171,7 +121,7 @@
                 </div>
               </div>
             
-              <div class="column">
+              <div class="column d-flex">
                 <div class="card">
                   <img src="../src/stephanie.jpg" alt="Mike" style="width:100%">
                   <div class="container">
@@ -184,7 +134,7 @@
                 </div>
               </div>
             
-              <div class="column">
+              <div class="column d-flex">
                 <div class="card">
                   <img src="../src/juan_carlos.jpg" alt="Juca" style="width:100%">
                   <div class="container">
@@ -200,7 +150,7 @@
               
           </div><!--termina item-->
           <div class="carousel-item">
-            <div class="row"><!--fila de tarjetas-->
+            <div class="row d-flex"><!--fila de tarjetas-->
               <div class="column">
                 <div class="card">
                   <img src="../src/akari.jpg" alt="Akari">
@@ -253,7 +203,7 @@
     
     <footer> &#169 2022 Dr. Lomito</footer>
     
-    <script src="js/main.js"></script>
+    <script src="../js/navBar.js"></script>   
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 
