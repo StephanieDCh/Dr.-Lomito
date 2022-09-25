@@ -88,7 +88,9 @@ window.addEventListener("load", function(){
         </div>  
                    
         <br/>`
-     });//sacar todos los elementos del arreglo para mostrar las cards
+
+    localStorage.setItem("vets", JSON.stringify(listVet));//llevarlos a localStorage
+     });//sacar todos los elementos del arreglo para mostrar las cards y enviarlas al local storage
 });
 
 btnFiltrar.addEventListener("click", function(event){    
