@@ -9,6 +9,8 @@ font-size: 20px;
 background-color:#7ED4B5;
 }
 
+
+/*en desuso*/
 .recuadro{
   height: 500px;
 }
@@ -27,7 +29,7 @@ background-color:#7ED4B5;
    padding: 0 16px;
    
 }
-
+/*en desuso*/
 .imgNav{
    background-color: white;
 }
@@ -38,6 +40,8 @@ h1{
 h2{
    color: mediumseagreen;
 }
+
+/*intenta con un flex column*/
 .column {
   float: left;
   width: 33.3%;
@@ -83,10 +87,21 @@ h2{
   cursor: pointer;
   width: 100%;
 }
+/* 
+fondo para los botones del carrusel prev y next */
 
-.button:hover {
-  background-color: #555;
+.carousel-control-prev-icon{
+  color:black;
+  background-color: black;
+  padding: 20px;
 }
+
+.carousel-control-next-icon{
+  color:black;
+  background-color: black;
+  padding: 20px;
+}
+
 
 footer{
 text-align: center;
