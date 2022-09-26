@@ -13,7 +13,7 @@ window.addEventListener("load", function (e){
 
        <ul class="navbar-nav px-3" style="flex: auto; justify-content: space-between ">
          <li class="nav-item active">
-           <a class="nav-link" href="#">Iniciar Sesión</a>
+           <a class="nav-link" href="../pages/logIn.html">Iniciar Sesión</a>
          </li>
          <li class="nav-item active">
            <a class="nav-link" href="../pages/registrodoctores.html">Regístrate</a>
@@ -30,6 +30,9 @@ window.addEventListener("load", function (e){
          </li>
          <li class="nav-item active">
            <a class="nav-link" href="../pages/perfilUsuario.html">Mi Perfil</a>
+         </li>
+         <li class="nav-item active">
+           <a class="nav-link" href="../pages/ingresarVet.html">Agregar Vet</a>
          </li>
        </ul>
 
