@@ -11,3 +11,31 @@ body{
     text-align: center;
     color:black;
     }
+
+  .containerForm{
+    background-color: rgba(209, 207, 207, 0.678);
+    border-radius: 30px;
+  }
+
+  .textFormat label{
+    font-family: sans-serif;
+    font-size: large;
+    font-weight: bold;
+    color: black; 
+    text-shadow: 0 0 0.1em #000000;
+  }
+  
+  .btn{    
+    padding: 10px 80px 10px 80px;
+    font-size: larger;
+    font-weight: bold;
+    color: aliceblue;
+    border-color: #7ED4B5;
+    background-color: #7ED4B5;
+    
+  }
+  .container a{
+    color: black;
+    font-weight: bolder;
+    font-size: large;
+  }
