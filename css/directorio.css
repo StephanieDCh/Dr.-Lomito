@@ -7,10 +7,26 @@ body{
   background-color:#7ED4B5;
   }
 
+form{
+    background-color: #fff
+}
+#btnAgregar{
+    background-color: #7ED4B5;
+    border: none;
+    color: #2c3e50;
+}
   footer{
     text-align: center;
     color:black;
     }
+.form-group{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    color: mediumseagreen;
+    text-align: center;
+}
 
 #list-items{
     justify-content: center;
