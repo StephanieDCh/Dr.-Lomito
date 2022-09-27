@@ -12,6 +12,10 @@ body{
     color:black;
     }
 
+img{
+  width: 100%;
+}
+
   .containerForm{
     background-color: rgba(209, 207, 207, 0.678);
     border-radius: 30px;
@@ -39,3 +43,4 @@ body{
     font-weight: bolder;
     font-size: large;
   }
+
