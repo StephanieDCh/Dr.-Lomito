@@ -13,50 +13,99 @@
     <nav class="navbar fixed-top navbar-expand-md navbar-light" id="navBar"></nav>
     <br><br><br><br>
   </header>
-  <body class="p-0">
-    <main class="container">
-      <form>
-        <div class="form-group1">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-        </div>
-        <div class="form-group2">
-          <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
-          <div class="form-group3">
-            <label for="exampleInputPassword1">Confirmar contraseña</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
-        </div>
+  <body class="mt-3">
+    <main class="container mb-5">
 
-        <div class="form-group form-check">
-          <label for="usertype">Soy un</label>
-          <div>
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Veterianario</label><br>
-            <input type="checkbox" class="form-check-input" id="exampleCheck2"> 
-            <label class="form-check-label" for="exampleCheck1">Usuario</label>
-          </div>
+      <div class="alert alert-success mt-2 d-block" role="alert" id="alertExito">
+        <h4 class="alert-heading">¡Felicidades!</h4>
+        <p>Ahora formas parte de la comunidad Dr. Lomito, en breve recibirás tu usuario y contraseña al correo proporcionado.</p>
+        <hr>
+        <p class="mb-0">Para nosotros tus comentarios son muy importantes, no dudes en contactarnos por medio de nuestra pagina "Contacto".</p>
+      </div>
+
+      <div class="alert alert-danger mt-2 d-block" role="alert" id="alertError">
+        <h4 class="alert-heading">Lo sentimos!</h4>
+        <p>Parece que el correo que has ingresado ya está vinculado con una cuenta de Dr. Lomito, por favor intenta con un correo diferente.</p>
+       </div>
+
+      <div class="row">
+        <div class="col col-sm-6 p-0">          
+            <br>
+            <h1>Regístrate</h1>  
+            <hr>
+            <h4> Ayuda a tu lomito a sentirse mejor</h4>   
+            <div class="container p-5 "><img src="../src/minimal_animal_9.jpg" alt=""></div>         
+            
+              </div> 
           
-        
-        </div>
-        <button type="submit" class="btn btn-primary">Registrate</button>
-      </form>
-       
-  
-  
-  
-    <h1>Página en construccióm....disculpe las molestias</h1>
-    <br>
-    <img src="https://division-puresoft.club/wp-content/uploads/2021/03/cheems-constructor.png" alt="">
+        <div class="col col-sm-6 containerForm p-5">      
+          <form class="p-4">
+            <div class="form-group textFormat">
+              <label for="inputNombre">Nombre Completo</label>
+              <input type="text" class="form-control" id="inputNombre" placeholder="Ingresar Nombre">
+              <small id="nombreHelp" class="form-text text-muted">Ejemplo: Juan Perez</small>
+              <div class="invalid-feedback">
+                Nombre inválido, no debe contener números. Max 80 car.
+              </div>
+            </div>
+
+            <div class="form-group textFormat">
+              <label for="inputCorreo">Correo Electrónico</label>
+              <input type="email" class="form-control" id="inputCorreo" aria-describedby="emailHelp" placeholder="usuario@ejemplo.com">
+              <small id="emailHelp" class="form-text text-muted">Descuida, en Dr. Lomito tus datos están protegidos.</small>
+              <div class="invalid-feedback">
+                Correo inválido, deben contener 1 arroba y un punto.
+              </div>
+            </div>            
+            
+              <div class="form-group textFormat">
+              <label for="inputCont1">Contraseña</label>
+              <input type="password" class="form-control" id="inputCont1" placeholder="Ingresar contraseña">
+              <small class="form-text text-muted">Min. 8, Max 15, al menos 1 número, 1 caracter especial, 1 mayúscula y 1 minúscula </small>
+              <div class="invalid-feedback">
+                Contraseña inválida, debe contener, Min. 8, Max 15, al menos 1 número, 1 caracter especial, 1 mayúscula y 1 minúscula.
+              </div>
+              </div>
+
+              <div class="form-group textFormat">
+                <label for="inputCont2">Confirmar Contraseña</label>
+                <input type="password" class="form-control" id="inputCont2" placeholder="Ingresar nuevamente su contraseña">
+                <small class="form-text text-muted">Los campos deben coincidir.</small>
+                <div class="invalid-feedback">
+                 Las contraseñas no coinciden.
+                </div>
+              </div>                 
+           
+              
+              <div class="form-group custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="vetCheck">
+                <label class="custom-control-label" for="vetCheck"> Soy un Veterianario</label><br> 
+              </div>        
+              
+              <div class="form-group d-flex justify-content-center">                            
+                <button type="button" class="btn">Regístrate</button>                             
+              </div>
+
+              <div class="form-group d-flex justify-content-center">
+                <p>¿Ya tienes cuenta?</p>                
+              </div>   
+              
+              <div class="form-group d-flex justify-content-center">
+                <a href="../pages/logIn.html">Ingresa</a>
+              </div>
+          </form>
+        </div>         
+      </div>  
+    
          
     </main>
-    <footer class="fixed-bottom"> &#169 2022 Dr. Lomito</footer>
+    <footer> &#169 2022 Dr. Lomito</footer>
           
  
 
     <script src="../js/navBar.js"></script>
-    <script src="/js/doctores.js"></script>
+    <script src="/js/registro.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
   </body>
