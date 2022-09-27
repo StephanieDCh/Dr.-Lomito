@@ -16,7 +16,7 @@ window.addEventListener("load", function (e){
            <a class="nav-link" href="../pages/logIn.html">Iniciar Sesión</a>
          </li>
          <li class="nav-item active">
-           <a class="nav-link" href="../pages/registrodoctores.html">Regístrate</a>
+           <a class="nav-link" href="../pages/registro.html">Regístrate</a>
          </li>
          <li class="nav-item active">
            <a class="nav-link" href="../pages/nosotros.html">Nosotros</a>
