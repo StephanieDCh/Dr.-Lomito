@@ -83,33 +83,39 @@ window.addEventListener("load", function(){
         }//si no tiene nada, inicializar
 
 
-    listVetsDir.forEach(item => {
-        itemsContainer.innerHTML += `
-        <div class="card ${item.categoria} all col-md-5 m-1">
-            <div class="row no-gutters d-flex">
-                    <div class="col-sm-4" >
-                        <img id="imagenTest" src="${item.img}" class="card-img-top"  alt="..." >
-                    </div>
-                    <div class="col-sm-8">
-                        <div class="card-body">                    
-                            <h5 class="card-title">${item.nombre}</h5>
-                            <p class="card-text">${item.especialidad}</p> 
-                            <p class="card-text">${item.calificacion}</p>
-                            <p class="card-text">${item.descripcion}</p>
-                            <p class="card-text">Consulta General<strong> $${item.costoConsulta}.00 MXN</strong></p>
-                            <a href = "${item.verMas}" class="btn btn-dark" >Ver más</a>
-                            
+        for (let i=0; i<listVetsDir.length; i++){        
+            let item = listVetsDir[i];
+            itemsContainer.innerHTML += `
+            <div class="card ${item.categoria} all col-md-5 m-1">
+                <div class="row no-gutters d-flex">
+                        <div class="col-sm-4" >
+                            <img id="imagenTest" src="${item.img}" class="card-img-top"  alt="..." >
                         </div>
-                    </div>
-            </div>
-        </div>  
-                   
-        <br/>`
-
-    
-     });//sacar todos los elementos del arreglo para mostrar las cards y enviarlas al local storage
+                        <div class="col-sm-8">
+                            <div class="card-body">                    
+                                <h5 class="card-title">${item.nombre}</h5>
+                                <p class="card-text">${item.especialidad}</p> 
+                                <p class="card-text">${item.calificacion}</p>
+                                <p class="card-text">${item.descripcion}</p>
+                                <p class="card-text">Consulta General<strong> $${item.costoConsulta}.00 MXN</strong></p>
+                                <a href="${item.verMas}" type="buton" class="btn btn-dark" id="btnVerMas_${i}">Ver más</a>                                         
+                            </div>
+                        </div>
+                </div>
+            </div>  
+            <br/>`       
+        };//sacar todos los elementos del arreglo para mostrar las cards y enviarlas al local storage
 });
 
+itemsContainer.addEventListener("click", function (event){
+    //event.preventDefault();
+   console.log(event.target.id)
+   if((event.target.id).includes("btnVerMas_")){    
+    let posCard = (event.target.id).slice(10);    
+    localStorage.setItem("card", posCard);
+   }
+
+});//Escuchar cualquier click en el contenedor
 btnFiltrar.addEventListener("click", function(event){    
     if(checkFilter[0].checked){
         checkFilter[0].click();
