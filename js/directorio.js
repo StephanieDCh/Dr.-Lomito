@@ -83,8 +83,8 @@ window.addEventListener("load", function(){
         }//si no tiene nada, inicializar
 
 
-        for (i=0; i<listVetsDir.length; i++){        
-            item = listVetsDir[i];
+        for (let i=0; i<listVetsDir.length; i++){        
+            let item = listVetsDir[i];
             itemsContainer.innerHTML += `
             <div class="card ${item.categoria} all col-md-5 m-1">
                 <div class="row no-gutters d-flex">

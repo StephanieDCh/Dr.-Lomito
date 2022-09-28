@@ -7,6 +7,7 @@ let usuarios = [];
 let indexUser = 0;
 let alertExito = document.getElementById("alertExito");
 let alertError = document.getElementById("alertError");
+let vetCheck = document.getElementById("vetCheck");
 
 window.addEventListener("load", function(e){
     e.preventDefault();
@@ -90,17 +91,13 @@ else {
     flag = false;
 }
 
-if(flag)
-{
+if(flag){
+
     let flag2 = true    
     usuarios.forEach(e => {
         if(e.correo==valorCorreo){
-            flag2 = false;
-            
-
-            
+            flag2 = false;       
         }
-
     });
 
     if(flag2){
@@ -120,11 +117,21 @@ if(flag)
             From : "hola.drlomito@gmail.com",
             Subject : "Bienvenido a Dr. Lomito",
             Body : sendCuerpo
-        }).then(
+        })/* .then(
           message => alert("Correo enviado con éxito")
-        );
+        ); */
         
-
+    campoNombre.value = "";
+    campoCorreo.value = "";
+    campoCont1.value = "";
+    campoCont2.value = "";
+    if(vetCheck.checked){
+        vetCheck.click();
+    }
+    campoNombre.classList.remove("is-valid");
+    campoCorreo.classList.remove("is-valid");
+    campoCont1.classList.remove("is-valid");
+    campoCont2.classList.remove("is-valid");
 
     }else{
         campoCorreo.classList.add("is-invalid");
