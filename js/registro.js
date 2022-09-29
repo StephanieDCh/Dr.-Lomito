@@ -43,15 +43,26 @@ btnRegistro.addEventListener("click", function (e) {
  
 
 //Nombre 
-    if (valorNombre.length >= 3 && valorNombre.length <= 80 && isNaN(valorNombre)) {
-        campoNombre.classList.remove("is-invalid");
-        campoNombre.classList.add("is-valid");
-    } 
-    else {
-        campoNombre.classList.remove("is-valid");
-        campoNombre.classList.add("is-invalid");
-        flag = false;
-    }
+for (let index = 0; index < valorNombre.length; index++) {
+        
+        if (valorNombre.length >= 3 && valorNombre.length <= 80) {
+            campoNombre.classList.remove("is-invalid");
+            campoNombre.classList.add("is-valid");
+        } 
+        else {
+            campoNombre.classList.remove("is-valid");
+            campoNombre.classList.add("is-invalid");
+            flag = false;
+            }
+        if (! isNaN(campoNombre.value.charAt(index)) ){
+            campoNombre.classList.remove("is-valid");
+            campoNombre.classList.add("is-invalid");
+            flag = false;
+            }    
+            console.log(flag);
+}
+
+
 //Correo
 if ((valorCorreo.includes("@","")) && (valorCorreo.includes("."))) {
     campoCorreo.classList.remove("is-invalid");
@@ -64,7 +75,7 @@ else {
 }
 
 //Cont1
-let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&_-])[A-Za-z\d$@$!%*?&_-]{8,15}/;
+let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?#$&_-])[A-Za-z\d$@$!%*?#&_-]{8,15}/;
 let result = regex.test(valorCont1);
 if(result){
     campoCont1.classList.remove("is-invalid");
