@@ -1,46 +1,66 @@
-let navBar = document.getElementById("navBar");
+let navBar = document.getElementsByClassName("insertNavbar");
 
-
-window.addEventListener("load", function (e){
-
-     navBar.innerHTML = ` <a class="navbar-brand pl-3" href="../index.html"><img src="../src/Dr._Lomito.png" alt="logo" width="90px" height="45px"></a>
-     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-       <span class="navbar-toggler-icon"></span>
-     </button>     
-
-     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-       <ul class="navbar-nav px-3" style="flex: auto; justify-content: space-between ">
-         <li class="nav-item active">
-           <a class="nav-link" href="../pages/logIn.html">Iniciar Sesión</a>
-         </li>
-         <li class="nav-item active">
-           <a class="nav-link" href="../pages/registro.html">Regístrate</a>
-         </li>
-         <li class="nav-item active">
-           <a class="nav-link" href="../pages/nosotros.html">Nosotros</a>
-         </li>
-         <li class="nav-item active">
-           <a class="nav-link" href="../pages/contacto.html">Contacto</a>
-         </li>
-         <li class="nav-item active">
-           <a class="nav-link" href="../pages/directorio.html">Directorio</a> 
-           </a>
-         </li>
-         <li class="nav-item active">
-           <a class="nav-link" href="../pages/perfilUsuario.html">Mi Perfil</a>
-         </li>
-         <li class="nav-item active">
-           <a class="nav-link" href="../pages/ingresarVet.html">Agregar Vet</a>
-         </li>
-       </ul>
-
+navBar[0].innerHTML = ` <div class="logo">
+     <a href="./index.html"><img src="../src/logoCircular.png" alt="logo" width="60px" height="60px"></a>
+     <div >Dr.Lomito</div>  
+   </div>         
+     <div class="hamburguer">
+     <div class="line"></div>
+     <div class="line"></div>
+     <div class="line"></div>      
      </div>
-    </nav>
-  </div>`
+   <nav class="navbar1 d-block">
+     <ul id"listPages">
+       <li>
+         <a class="activePage"  href="../pages/logIn.html" style="text-decoration: none">Iniciar Sesión</a>
+       </li>
+       <li>
+         <a class="activePage" href="../pages/registro.html" style="text-decoration: none">Regístrate</a>
+       </li>
+       <li>
+         <a class="activePage"  href="../pages/nosotros.html" style="text-decoration: none">Nosotros</a>
+       </li>
+       <li>
+         <a class="activePage"  href="../pages/contacto.html" style="text-decoration: none">Contacto</a>
+       </li>
+       <li>
+         <a class="activePage"  href="../pages/directorio.html" style="text-decoration: none">Directorio</a> 
+         </a>
+       </li>
+       <li>
+         <a class="activePage" href="../pages/perfilUsuario.html" style="text-decoration: none">Perfil</a>
+       </li>
+       <li>
+         <a class="activePage" href="../pages/ingresarVet.html" style="text-decoration: none">Agregar Vet</a>
+       </li>
+       </li>
+     </ul>
+   </nav>`
+
+
+window.addEventListener("load", function(e){
+  let page = document.getElementsByClassName("activePage");
+  let actualPage = (document.location.pathname).slice(6);
+  console.log(page)
+  console.log(page[5].href)
+  console.log(actualPage);
+  console.log(page[5].href.includes(actualPage))
+
+ for (let i = 0; i < page.length; i++) {
+
+  if(page[i].href.includes(actualPage)){
+        page[i].classList.add("active");
+        break;    
+  }
+ }
+ 
+  hamburguer = document.querySelector(".hamburguer");
+  hamburguer.onclick = function(){
+    navBar = document.querySelector(".navbar1");
+    navBar.classList.toggle("active");
+  }
+});//Habilita hamburguesa y añade class active
 
 
 
-
-})//Carga la nav bar
+     
