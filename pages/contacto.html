@@ -32,7 +32,7 @@
     <h1>Escríbenos</h1>
     <br>
     <div class="form-group">
-      <div class="form-group row col-md-4">
+      <div class="form-group row col-md-4" id="divNombre">
         <label for="Nombre">Nombre:</label>
         <input type="text" class="form-control" id="Nombre" placeholder="Nombre">
         <small id="passwordHelpBlock" class="form-text text-muted">
@@ -81,11 +81,14 @@
        ¡Recuerda dejarnos tus comentarios!
       </div>
     </div>
-      <div class="form-group col-md-4">
-      <button class="btn btn-primary btn-md" type="button" id="btnEnviar">Enviar</button>
+      
+    <div class="form-group col-md-4">
+      <button id="btnEnviar"><span>Enviar</span>
+        <img src="https://i.cloudup.com/2ZAX3hVsBE-3000x3000.png" height="55" width="55" class="flecha"></button>
       <div id="alertSend" class="alert alert-danger" style="display: none" role="alert">
         Ingrese los datos correspondientes antes de dar click en "Enviar".
       </div>
+    
     </div>
     <br>    
    
