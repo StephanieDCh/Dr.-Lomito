@@ -2,52 +2,66 @@ let posCardVerMas = "";
 let listVet = [];
 let itemsContainer = document.getElementById("list-items");
 
+var swiper = new Swiper(".slide-content", {
+    slidesPerView: 3,
+    spaceBetween: 25,
+    loop: true,
+    centerSlide: 'true',
+    fade: 'true',
+    grabCursor: 'true',
+     pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
+    breakpoints:{
+        0:{
+            slidesPerView: 1, 
+        },
+        520:{
+            slidesPerView: 2, 
+        },
+        950:{
+            slidesPerView: 3, 
+        },
+    },
+  });//propiedad responsiva del carrusel
+
 window.addEventListener("load", function (e){
     if(localStorage.getItem("card") && localStorage.getItem("vets")){
         
         posCardVerMas = localStorage.getItem("card");
         listVet = JSON.parse(localStorage.getItem("vets"));
-
-        itemsContainer.innerHTML += `<div class="card col-sm-7 m-1 d-flex">
-                <div class="row no-gutters ">
-                <div class="col-sm-4" >
-                    <img id="imagenTest" src="${listVet[posCardVerMas].img}" class="card-img-top"  alt="..." >
-                </div>
-                <div class="col-sm-8">
-                    <div class="card-body">                    
-                    <h5 class="card-title">${listVet[posCardVerMas].nombre}</h5>
-                    <p class="card-text">${listVet[posCardVerMas].especialidad}</p> 
-                    <p class="card-text">${listVet[posCardVerMas].calificacion}</p>
-                    <p class="card-text">${listVet[posCardVerMas].descripcion}</p>
-                    <p class="card-text">${listVet[posCardVerMas].servicios}</p>
-                    <p class="card-text">Direccion: ${listVet[posCardVerMas].direccion}</p>
-                    <p class="card-text">Telefono Consultorio: ${listVet[posCardVerMas].telLocal1}</p>
-                    <p class="card-text">Teléfono Personal: ${listVet[posCardVerMas].telPersonal}</p>
-                    <p class="card-text">Correo: ${listVet[posCardVerMas].correo}</p>
-                    <p class="card-text">Lunes - Viernes de: ${listVet[posCardVerMas].horAteIni} a ${listVet[posCardVerMas].horaAteCierre}</p>
-                    <p class="card-text"><strong>Costo Consulta: $${listVet[posCardVerMas].costoConsulta}.00 mxn</strong></p>
-                    <a href = "#" class="btn btn-dark px-5">Agendar</a>                    
-                    </div>
-                </div>
-                </div>
-            </div> 
-            <br/>
-            <div class="col col-sm-3">
-                <div class"d-flex justify-content-center" style="width: 18rem;">
-                <h5>Opiniones</h5>
-                </div>
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                    <h5 class="card-title">José Luis Toledo</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">3 estrellas</h6>
-                    <p class="card-text">Es un buen doctor, pero no quedé muy conforme con el diagnóstico de mi hipopotamo</p>   
-                </div>
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                    <h5 class="card-title">Anónimo</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">5 estrellas</h6>
-                    <p class="card-text">Excelente Doctor!, quedé muy satisfecho con su consulta, es una persona muy profesional con los animalitos</p>   
-                </div>`;
+        console.log(listVet[posCardVerMas].urgencia24_7)
+        itemsContainer.innerHTML += `<div class="vetCardContainer">
+        <div class="cardHeader">
+          <a href="#">
+            <img src="${listVet[posCardVerMas].img}" alt="">
+          </a>
+          <h2>${listVet[posCardVerMas].nombre}</h2>
+          <h4>${listVet[posCardVerMas].especialidad}</h4>
+          <p>${listVet[posCardVerMas].calificacion}</p>
+        </div>
+        <div class="descripcion">
+          <p><strong>Descripcion: </strong> ${listVet[posCardVerMas].descripcion}</p>
+              <p><strong>Servicios: </strong>${listVet[posCardVerMas].servicios}</p>
+              <p><strong>Direccion: </strong>${listVet[posCardVerMas].direccion}</p>
+              <p><strong>Telefono: </strong>${listVet[posCardVerMas].telLocal1}</p>
+              <p><strong>Teléfono Personal: </strong>${listVet[posCardVerMas].telPersonal}</p>
+              <p><strong>Correo: </strong>${listVet[posCardVerMas].correo}</p>
+              <p><strong>Horario: </strong>Lunes a viernes de: ${listVet[posCardVerMas].horAteIni} a ${listVet[posCardVerMas].horaAteCierre}</p>
+              <p><strong>Disponibilidad Urgencias 24/7: </strong>${((listVet[posCardVerMas].urgencia24_7) == true)?"Disponible": "No disponible"}</p>
+              <p><strong>Costo Consulta: </strong>${listVet[posCardVerMas].costoConsulta} mxn</p>
+              <div class="botones">
+                <a href="#">Agendar</a>
+                <a href="#">Escribir Opinión</a>
+              </div>
+        </div>
+      </div>`;            
     }
-    
-});
+});//se inserta la card principal

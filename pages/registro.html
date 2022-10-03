@@ -5,40 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles_registro.css">
+    <link rel="stylesheet" href="../css/general.css">
     <link rel="icon" href="/src/Dr._Lomito.png">
     <title>Regístrate</title>
-  </head>
-  <header>
-    <!--Encabezado del body, NavBar se inserta desde Js jsnavBar.js-->
-    <nav class="navbar fixed-top navbar-expand-md navbar-light" id="navBar"></nav>
-    <br><br><br><br>
-  </header>
-  <body class="mt-3">
+  </head>  
+  <body>
+    <!-- Se inserta NavBar desde js/general.js -->
+    <header class="insertNavbar"></header> 
     <main class="container mb-5">
-
-      <div class="alert alert-success mt-2 d-block" role="alert" id="alertExito">
+<br><br>
+      <div class="alert alert-success mt-2" role="alert" id="alertExito" style="display:none">
         <h4 class="alert-heading">¡Felicidades!</h4>
         <p>Ahora formas parte de la comunidad Dr. Lomito, en breve recibirás tu usuario y contraseña al correo proporcionado.</p>
         <hr>
         <p class="mb-0">Para nosotros tus comentarios son muy importantes, no dudes en contactarnos por medio de nuestra pagina "Contacto".</p>
       </div>
 
-      <div class="alert alert-danger mt-2 d-block" role="alert" id="alertError">
+      <div class="alert alert-danger mt-2" role="alert" id="alertError" style="display:none">
         <h4 class="alert-heading">Lo sentimos!</h4>
         <p>Parece que el correo que has ingresado ya está vinculado con una cuenta de Dr. Lomito, por favor intenta con un correo diferente.</p>
        </div>
 
-      <div class="row">
-        <div class="col col-sm-6 p-0">          
+      <div class="row d-flex justify-content-between">
+        <div class="col col-sm-4 p-0">          
             <br>
             <h1>Regístrate</h1>  
             <hr>
             <h4> Ayuda a tu lomito a sentirse mejor</h4>   
-            <div class="container p-5 "><img src="../src/minimal_animal_9.jpg" alt=""></div>         
-            
-              </div> 
+            <div class="container m-1 "><img src="../src/minimal.png" alt="siluetas_de_animales" ></div>              
+        </div> 
           
-        <div class="col col-sm-6 containerForm p-5">        
+        <div class="col col-sm-7 containerForm ml-1">        
           <form class="p-4">
             <div class="form-group textFormat">
               <label for="inputNombre">Nombre Completo</label>
@@ -83,7 +80,7 @@
               </div>        
               
               <div class="form-group d-flex justify-content-center">                            
-                <button type="button" class="btn">Regístrate</button>                             
+                <button type="button" class="btn" id="btnRegistro">Regístrate</button>                             
               </div>
 
               <div class="form-group d-flex justify-content-center">
@@ -103,8 +100,8 @@
           
  
 
-    <script src="../js/navBar.js"></script>
-    <script src="/js/registro.js"></script>
+    <script src="../js/general.js"></script>
+    <script src="/js/registro.js" type="module"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
