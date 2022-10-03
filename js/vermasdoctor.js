@@ -33,10 +33,10 @@ var swiper = new Swiper(".slide-content", {
   });//propiedad responsiva del carrusel
 
 window.addEventListener("load", function (e){
-    if(localStorage.getItem("card") && localStorage.getItem("vets")){
+    if(localStorage.getItem("card") && localStorage.getItem("users")){
         
         posCardVerMas = localStorage.getItem("card");
-        listVet = JSON.parse(localStorage.getItem("vets"));
+        listVet = JSON.parse(localStorage.getItem("users"));
         console.log(listVet[posCardVerMas].urgencia24_7)
         itemsContainer.innerHTML += `<div class="vetCardContainer">
         <div class="cardHeader">

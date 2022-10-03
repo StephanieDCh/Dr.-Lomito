@@ -4,8 +4,10 @@ export class usuario {
     nombre = "";
     correo = "";
     password = "";
+    typeVet = "";
 
-    constructor (id,nombre,correo,password){
+    constructor (typeVet, id,nombre,correo,password){
+        this.typeVet = typeVet;
         this.id = id;
         this.nombre = nombre;
         this.correo = correo;
@@ -29,8 +31,8 @@ export class veterinario extends usuario{
     urgencia24_7 = false;   
     
 
-    constructor (id, nombre, correo, password, categoria, img, especialidad, calificacion, descripcion, direccion, telLocal1, telPersonal,  costoConsulta, servicios, horAteIni, horaAteCierre, urgencia24_7){
-        super(id,nombre,correo,password)
+    constructor (typeVet, id, nombre, correo, password, categoria, img, especialidad, calificacion, descripcion, direccion, telLocal1, telPersonal,  costoConsulta, servicios, horAteIni, horaAteCierre, urgencia24_7){
+        super(typeVet, id,nombre,correo,password)
         this.categoria = categoria;
         this.img = img;         
         this.especialidad = especialidad;

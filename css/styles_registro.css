@@ -1,6 +1,8 @@
+
 body{
     background:#FFF9E3;
-  }
+   
+  }  
 
   footer{
     text-align: center;
@@ -17,12 +19,11 @@ img{
     border-radius: 30px;
   } 
 
-  .textFormat label{
-    font-family: sans-serif;
+  .textFormat label{   
     font-size: large;
     font-weight: bold;
     color: black; 
-    text-shadow: 0 0 0.1em #000000;
+   /*  text-shadow: 0 0 0.1em #000000; */
   }
   
   .btn{    

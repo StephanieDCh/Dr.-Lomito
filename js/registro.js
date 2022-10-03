@@ -1,4 +1,4 @@
-import { usuario } from "./classes.js";
+import { usuario, veterinario } from "./classes.js";
 let campoNombre = document.getElementById("inputNombre");
 let campoCorreo = document.getElementById("inputCorreo");
 let campoCont1 = document.getElementById("inputCont1");
@@ -23,7 +23,7 @@ window.addEventListener("load", function(e){
 btnRegistro.addEventListener("click", function (e) {
     e.preventDefault();
 
-    flag = true;
+    let flag = true;
 
     let valorNombre = document.getElementById("inputNombre").value;
     let valorCorreo = document.getElementById("inputCorreo").value;
@@ -33,23 +33,26 @@ btnRegistro.addEventListener("click", function (e) {
 
 //Nombre 
 for (let index = 0; index < valorNombre.length; index++) {
+
+      if(!isNaN(valorNombre.charAt(index)) && valorNombre.charAt(index)!= " "){
+        flag = false;
         
-        if (valorNombre.length >= 3 && valorNombre.length <= 80) {
-            campoNombre.classList.remove("is-invalid");
-            campoNombre.classList.add("is-valid");
+      }
+
+    }
+    console.log(flag);
+   
+    if (valorNombre.length >= 3 && valorNombre.length <= 80 && flag == true) {
+        campoNombre.classList.remove("is-invalid");
+         campoNombre.classList.add("is-valid");
         } 
-        else {
-            campoNombre.classList.remove("is-valid");
-            campoNombre.classList.add("is-invalid");
-            flag = false;
-            }
-        if (! isNaN(campoNombre.value.charAt(index)) ){
-            campoNombre.classList.remove("is-valid");
-            campoNombre.classList.add("is-invalid");
-            flag = false;
-            }    
-            console.log(flag);
-}
+    else {
+        campoNombre.classList.remove("is-valid");
+        campoNombre.classList.add("is-invalid");
+        flag = false;
+        }
+        
+
 
 
 //Correo
@@ -79,7 +82,7 @@ else {
 }
     
 //Cont2
-if (valorCont2 === valorCont1) {
+if (valorCont2 === valorCont1 && valorCont2 != "") {
     campoCont2.classList.remove("is-invalid");
     campoCont2.classList.add("is-valid");
 } 
@@ -98,29 +101,40 @@ if(flag){
         if(e.correo==valorCorreo){
             flag2 = false;       
         }
-    });
+    });//pregunta si el correo se ha repetido
 
     if(flag2){
-    let sendCuerpo = "Bienvenido a Dr. Lomito, tu usuario es: " + valorCorreo+ " y tu contraseña es: " +valorCont1;
-    indexUser++;
-    usuarios.push(new usuario(indexUser, valorNombre, valorCorreo, valorCont1));
-    localStorage.setItem( "users", JSON.stringify(usuarios));
-        
-        alertExito.style.display = "block";
-        setTimeout( ()=>{alertExito.style.display = "none"}, 5000);
+            if(vetCheck.checked){
+                location.href = "http://127.0.0.1:5501/pages/perfilUsuario.html"
+                localStorage.setItem("nameRegisterVet", valorNombre);
+                localStorage.setItem("correoRegisterVet", valorCorreo);
+                localStorage.setItem("passRegisterVet", valorCont1);
+               
+                /* indexUser++;
+                usuarios.push(new veterinario("true",indexUser, valorNombre, valorCorreo, valorCont1));
+                localStorage.setItem("users", JSON.stringify(usuarios)); */
+            }else{
+                let sendCuerpo = "Bienvenido a Dr. Lomito, tu usuario es: " + valorCorreo+ " y tu contraseña es: " +valorCont1;
+                indexUser++;
+                usuarios.push(new usuario("false",indexUser, valorNombre, valorCorreo, valorCont1));
+                localStorage.setItem( "users", JSON.stringify(usuarios));
+                    
+                    alertExito.style.display = "block";
+                    setTimeout( ()=>{alertExito.style.display = "none"}, 5000);
+            
+                    Email.send({
+                        Host : "smtp.elasticemail.com",
+                        Username : "hola.drlomito@gmail.com",
+                        Password : "D2688BAD0F83F061575A92C02049DCD40FEE",
+                        To : valorCorreo,
+                        From : "hola.drlomito@gmail.com",
+                        Subject : "Bienvenido a Dr. Lomito",
+                        Body : sendCuerpo
+                    })/* .then(
+                    message => alert("Correo enviado con éxito")
+                    ); */
+            }  
 
-        Email.send({
-            Host : "smtp.elasticemail.com",
-            Username : "hola.drlomito@gmail.com",
-            Password : "D2688BAD0F83F061575A92C02049DCD40FEE",
-            To : valorCorreo,
-            From : "hola.drlomito@gmail.com",
-            Subject : "Bienvenido a Dr. Lomito",
-            Body : sendCuerpo
-        })/* .then(
-          message => alert("Correo enviado con éxito")
-        ); */
-        
     campoNombre.value = "";
     campoCorreo.value = "";
     campoCont1.value = "";
@@ -138,7 +152,7 @@ if(flag){
         alertError.style.display = "block";
         setTimeout( ()=>{alertError.style.display = "none"}, 5000);
 
-    }
+    }//si ya existe el correo envia el alert de que ya existe
 }
 
 });
