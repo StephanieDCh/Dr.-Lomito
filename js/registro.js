@@ -1,3 +1,4 @@
+import { usuario } from "./classes.js";
 let campoNombre = document.getElementById("inputNombre");
 let campoCorreo = document.getElementById("inputCorreo");
 let campoCont1 = document.getElementById("inputCont1");
@@ -17,19 +18,7 @@ window.addEventListener("load", function(e){
         indexUser = usuarios.length;
         }
 });
-//clase:
-class usuario {
-    id = 0;
-    nombre = "";
-    correo = "";
-    password = "";
-    constructor (id,nombre,correo,password){
-    this.id = id;
-    this.nombre = nombre.toUpperCase();
-    this.correo = correo;
-    this.password = password;
-    }
-}
+
 
 btnRegistro.addEventListener("click", function (e) {
     e.preventDefault();

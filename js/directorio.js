@@ -1,3 +1,5 @@
+import { veterinario } from "./classes.js";
+
 let listVetsDir = [];//Arreglo de objetos JSON, 1 por cada veterinario
 let listUser = [];//Arreglo de objetos JSON, 1 por cada usuario
 let itemsContainer = document.getElementById("list-items");
@@ -5,52 +7,6 @@ let checkFilter = document.getElementsByClassName("custom-control-input");
 let btnFiltrar = document.getElementById("btnFiltrar");
 let filter = false;
 let indexVetsDir = 0;
-
-class veterinario{
-    id = 0;
-    categoria = "";
-    img = "";
-    nombre = "";
-    especialidad = "";
-    calificacion = "";
-    descripcion = "";
-    direccion = "";
-    telLocal1 = 0;
-    telPersonal = 0;      
-    correo = 0;
-    costoConsulta = 0;
-    servicios = "";
-    horAteIni = 0;
-    horaAteCierre = 0;
-    urgencia24_7 = false;
-    verMas = "../pages/doctorVerMas.html" ;
-   
-    
-
-    constructor (id, categoria, img, nombre, especialidad, calificacion, descripcion, direccion, telLocal1, telPersonal, correo, costoConsulta, servicios, horAteIni, horaAteCierre, urgencia24_7, verMas){
-        this.id = id;
-        this.categoria = categoria;
-        this.img = img;
-        this.nombre = nombre;   
-        this.especialidad = especialidad;
-        this.calificacion = calificacion;
-        this.descripcion = descripcion;
-        this.direccion = direccion;
-        this.telLocal1 = telLocal1;
-        this.telPersonal = telPersonal;
-        this.correo = correo;
-        this.costoConsulta = costoConsulta;
-        this.servicios = servicios;
-        this.horAteIni = horAteIni;
-        this.horaAteCierre = horaAteCierre;
-        this.urgencia24_7 = urgencia24_7;
-        this.verMas = verMas;
-
-        
-    } //constructor
-    
-
-}//class veterinario
 
 
 
@@ -65,18 +21,18 @@ window.addEventListener("load", function(){
     }else{
 
         listVetsDir.push(
-            (new veterinario("1","vetG",'../src/8.png','Juan Pérez','Veterinario general','4.8 estrellas','Especialista en Medicina y Cirugía en Perros y Gatos', 'Calle Lazaro Cardenas #204','33 3852-7890', '33 7865-7890', 'josue.chavezlomeli@gmail.com', 600,'Estetica Canina $250 mxn', '7am', '8pm','true','../pages/doctorVerMas.html')),
-            (new veterinario("2","vetRep",'../src/9.png','Josué Chávez','Veterinario Reptiles','5 estrellas','Especialista en Medicina y Cirugía en Perros y Gatos', 'Calle Lazaro Cardenas #204','33 3852-7890', '33 7865-7890', 'josue.chavezlomeli@gmail.com', 550,'Estetica Canina $250 mxn', '7am', '8pm','true','../pages/doctorVerMas.html')),
-            (new veterinario("3","vetAv",'../src/6.png','Juan Carlos Rojas','Veterinario Aviar','4.5 estrellas','Especialista en Medicina y Cirugía en Perros y Gatos', 'Calle Lazaro Cardenas #204','33 3852-7890', '33 7865-7890', 'josue.chavezlomeli@gmail.com', 350,'Estetica Canina $250 mxn', '7am', '8pm','true','../pages/doctorVerMas.html')),
-            (new veterinario("4","vetGan",'../src/7.png','José Toledo','Veterinario Ganadero','3 estrellas','Especialista en Medicina y Cirugía en Perros y Gatos', 'Calle Lazaro Cardenas #204','33 3852-7890', '33 7865-7890', 'josue.chavezlomeli@gmail.com', 370,'Estetica Canina $250 mxn', '7am', '8pm','true','../pages/doctorVerMas.html')),
-            (new veterinario("5","vetOrt",'../src/8.png','Akari Gutierrez','Veterinario Ortopedista','5 estrellas','Especialista en Medicina y Cirugía en Perros y Gatos', 'Calle Lazaro Cardenas #204','33 3852-7890', '33 7865-7890', 'josue.chavezlomeli@gmail.com', 300,'Estetica Canina $250 mxn', '7am', '8pm','true','../pages/doctorVerMas.html')),
-            (new veterinario("6","vetCir",'../src/9.png','Rubí Sandoval','Veterinario Cirujano','5 estrellas','Especialista en Medicina y Cirugía en Perros y Gatos', 'Calle Lazaro Cardenas #204','33 3852-7890', '33 7865-7890', 'josue.chavezlomeli@gmail.com', 600,'Estetica Canina $250 mxn', '7am', '8pm','true','../pages/doctorVerMas.html')),
-            (new veterinario("7","vetOnc",'../src/3.png','Mario Zarate','Veterinario Oncólogo','3 estrellas','Especialista en Medicina y Cirugía en Perros y Gatos', 'Calle Lazaro Cardenas #204','33 3852-7890', '33 7865-7890', 'josue.chavezlomeli@gmail.com', 450,'Estetica Canina $250 mxn', '7am', '8pm','true','../pages/doctorVerMas.html')),
-            (new veterinario("8","vetOft",'../src/4.png','Christian Mendoza','Veterinario Oftalmólogo','5 estrellas','Especialista en Medicina y Cirugía en Perros y Gatos', 'Calle Lazaro Cardenas #204','33 3852-7890', '33 7865-7890', 'josue.chavezlomeli@gmail.com', 390,'Estetica Canina $250 mxn', '7am', '8pm','true','../pages/doctorVerMas.html')),
-            (new veterinario("9","vetFis",'../src/6.png','Stephanie Diaz','Veterinario Fisioterapeuta','5 estrellas','Especialista en Medicina y Cirugía en Perros y Gatos', 'Calle Lazaro Cardenas #204','33 3852-7890', '33 7865-7890', 'josue.chavezlomeli@gmail.com', 200,'Estetica Canina $250 mxn', '7am', '8pm','true','../pages/doctorVerMas.html')),
-            (new veterinario("10","vetDer",'../src/8.png','Jaime Lopez','Veterinario Dermatólogo','5 estrellas','Especialista en Medicina y Cirugía en Perros y Gatos', 'Calle Lazaro Cardenas #204','33 3852-7890', '33 7865-7890', 'josue.chavezlomeli@gmail.com', 150,'Estetica Canina $250 mxn', '7am', '8pm','true','../pages/doctorVerMas.html')),
-            (new veterinario("11","otros",'../src/7.png','Gustavo Reyes','Veterinario Animales Exoticos','5 estrellas','Especialista en Medicina y Cirugía en Perros y Gatos', 'Calle Lazaro Cardenas #204','33 3852-7890', '33 7865-7890', 'josue.chavezlomeli@gmail.com', 1000,'Estetica Canina $250 mxn', '7am', '8pm','true','../pages/doctorVerMas.html')),
-            (new veterinario("12","vetG",'../src/4.png','Francisco Sandoval','Veterinario general','3.8 estrellas','Especialista en Medicina y Cirugía en Perros y Gatos', 'Calle Lazaro Cardenas #204','33 3852-7890', '33 7865-7890', 'josue.chavezlomeli@gmail.com', 400,'Estetica Canina $250 mxn', '7am', '8pm','true','../pages/doctorVerMas.html')));
+            (new veterinario("1",'Juan Pérez','josue.chavezlomeli@gmail.com', "Batman33!","vetG",'../src/8.png','Veterinario general','4.8 estrellas','Especialista en Medicina y Cirugía en Perros y Gatos', 'Calle Lazaro Cardenas #204','33 3852-7890', '33 7865-7890',  600,'Estetica Canina $250 mxn', '7am', '8pm','true')),
+            (new veterinario("2",'Josué Chávez','josue.chavezlomeli@gmail.com',"Batman33!","vetRep",'../src/9.png','Veterinario Reptiles','5 estrellas','Especialista en Medicina y Cirugía en Perros y Gatos', 'Calle Lazaro Cardenas #204','33 3852-7890', '33 7865-7890',  550,'Estetica Canina $250 mxn', '7am', '8pm','true')),
+            (new veterinario("3",'Juan Carlos Rojas','josue.chavezlomeli@gmail.com',"Batman33!","vetAv",'../src/6.png','Veterinario Aviar','4.5 estrellas','Especialista en Medicina y Cirugía en Perros y Gatos', 'Calle Lazaro Cardenas #204','33 3852-7890', '33 7865-7890',  350,'Estetica Canina $250 mxn', '7am', '8pm','true')),
+            (new veterinario("4",'José Toledo','josue.chavezlomeli@gmail.com',"Batman33!","vetGan",'../src/7.png','Veterinario Ganadero','3 estrellas','Especialista en Medicina y Cirugía en Perros y Gatos', 'Calle Lazaro Cardenas #204','33 3852-7890', '33 7865-7890', 370,'Estetica Canina $250 mxn', '7am', '8pm','true')),
+            (new veterinario("5",'Akari Gutierrez','josue.chavezlomeli@gmail.com',"Batman33!","vetOrt",'../src/8.png','Veterinario Ortopedista','5 estrellas','Especialista en Medicina y Cirugía en Perros y Gatos', 'Calle Lazaro Cardenas #204','33 3852-7890', '33 7865-7890',  300,'Estetica Canina $250 mxn', '7am', '8pm','true')),
+            (new veterinario("6",'Rubí Sandoval','josue.chavezlomeli@gmail.com',"Batman33!","vetCir",'../src/9.png','Veterinario Cirujano','5 estrellas','Especialista en Medicina y Cirugía en Perros y Gatos', 'Calle Lazaro Cardenas #204','33 3852-7890', '33 7865-7890',  600,'Estetica Canina $250 mxn', '7am', '8pm','true')),
+            (new veterinario("7",'Mario Zarate','josue.chavezlomeli@gmail.com',"Batman33!","vetOnc",'../src/3.png','Veterinario Oncólogo','3 estrellas','Especialista en Medicina y Cirugía en Perros y Gatos', 'Calle Lazaro Cardenas #204','33 3852-7890', '33 7865-7890',  450,'Estetica Canina $250 mxn', '7am', '8pm','true')),
+            (new veterinario("8",'Christian Mendoza','josue.chavezlomeli@gmail.com',"Batman33!","vetOft",'../src/4.png','Veterinario Oftalmólogo','5 estrellas','Especialista en Medicina y Cirugía en Perros y Gatos', 'Calle Lazaro Cardenas #204','33 3852-7890', '33 7865-7890',  390,'Estetica Canina $250 mxn', '7am', '8pm','true')),
+            (new veterinario("9",'Stephanie Diaz','josue.chavezlomeli@gmail.com',"Batman33!","vetFis",'../src/6.png','Veterinario Fisioterapeuta','5 estrellas','Especialista en Medicina y Cirugía en Perros y Gatos', 'Calle Lazaro Cardenas #204','33 3852-7890', '33 7865-7890',  200,'Estetica Canina $250 mxn', '7am', '8pm','true')),
+            (new veterinario("10",'Jaime Lopez','josue.chavezlomeli@gmail.com',"Batman33!","vetDer",'../src/8.png','Veterinario Dermatólogo','5 estrellas','Especialista en Medicina y Cirugía en Perros y Gatos', 'Calle Lazaro Cardenas #204','33 3852-7890', '33 7865-7890',  150,'Estetica Canina $250 mxn', '7am', '8pm','true')),
+            (new veterinario("11",'Gustavo Reyes','josue.chavezlomeli@gmail.com',"Batman33!","otros",'../src/7.png','Veterinario Animales Exoticos','5 estrellas','Especialista en Medicina y Cirugía en Perros y Gatos', 'Calle Lazaro Cardenas #204','33 3852-7890', '33 7865-7890',  1000,'Estetica Canina $250 mxn', '7am', '8pm','true')),
+            (new veterinario("12",'Francisco Sandoval','josue.chavezlomeli@gmail.com',"Batman33!","vetG",'../src/4.png','Veterinario general','3.8 estrellas','Especialista en Medicina y Cirugía en Perros y Gatos', 'Calle Lazaro Cardenas #204','33 3852-7890', '33 7865-7890',  400,'Estetica Canina $250 mxn', '7am', '8pm','true')));
     
             localStorage.setItem("vets", JSON.stringify(listVetsDir));//llevarlos a localStorage
     
@@ -98,7 +54,7 @@ window.addEventListener("load", function(){
                                 <p class="card-text">${item.calificacion}</p>
                                 <p class="card-text">${item.descripcion}</p>
                                 <p class="card-text">Consulta General<strong> $${item.costoConsulta}.00 MXN</strong></p>
-                                <a href="${item.verMas}" type="buton" class="btn btn-dark" id="btnVerMas_${i}">Ver más</a>                                         
+                                <a href="../pages/doctorVerMas.html" type="buton" class="btn btn-dark" id="btnVerMas_${i}">Ver más</a>                                         
                             </div>
                         </div>
                 </div>
@@ -114,8 +70,8 @@ itemsContainer.addEventListener("click", function (event){
     let posCard = (event.target.id).slice(10);    
     localStorage.setItem("card", posCard);
    }
-
 });//Escuchar cualquier click en el contenedor
+
 btnFiltrar.addEventListener("click", function(event){    
     if(checkFilter[0].checked){
         checkFilter[0].click();
@@ -137,7 +93,7 @@ checkFilter[11].addEventListener("click", checkStatus);
 
 function checkAll(event) {    
 
-    for(i=1; i<checkFilter.length; i++){
+    for(let i=1; i<checkFilter.length; i++){
         if(checkFilter[i].checked){
             checkFilter[i].click();
         }
