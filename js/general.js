@@ -5,7 +5,7 @@ let loggedIn = document.getElementById("loggedIn");
 if((localStorage.getItem("loggedIn"))== "true"){  
   navBar[0].innerHTML = ` <div class="logo">
      <a href="../pages/index.html"><img src="../src/logoCircular.png" alt="logo" width="60px" height="60px"></a>
-     <div >Dr.Lomito</div>  
+     <div id = "lomito">Dr.Lomito</div>  
    </div>         
      <div class="hamburguer">
      <div class="line"></div>
@@ -107,19 +107,16 @@ let footer = document.getElementById("footer_olas");
 footer.innerHTML=`
 <div class="container__footer">
     <div class="box__footer">
-        <h2>Mapa del sitio</h2>
+        <h4>Mapa del sitio</h4>
         <a href="index.html">Inicio</a>
-        <a href="logIn.html">Iniciar sesión</a>
         <a href="registro.html">Regístrate</a>
         <a href="nosotros.html">Nosotros</a>
         <a href="contacto.html">Contacto</a>
         <a href="directorio.html">Directorio</a>
-        <a href="perfilUsuario.html">Perfil</a>
-        <a href="ingresarVet.html">Agregar Veterinario</a>
     </div>
 
     <div class="box__footer">
-        <h2>Legal</h2> 
+        <h4>Legal</h4> 
         <a href="#">Términos y condiciones</a>
         <a href="#">Política de privacidad y cookies</a>
         <a href="#">Aviso legal</a>
@@ -127,7 +124,7 @@ footer.innerHTML=`
     </div>
 
     <div class="box__footer">
-        <h2>Redes Sociales</h2>
+        <h4>Redes Sociales</h4>
         <a href="#"> <i class="fab fa-facebook-square"></i> Facebook</a>
         <a href="#"><i class="fab fa-twitter-square"></i> Twitter</a>
         <a href="#"><i class="fab fa-instagram-square"></i> Instagram</a>

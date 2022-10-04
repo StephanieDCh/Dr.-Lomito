@@ -1,9 +1,5 @@
 /*body nav y footer lo llevan igual todas las páginas*/
 
-body{
-  background:#FFF9E3;
-}
-
 /*Container del carrusel*/
 .card p{
   text-align: center;

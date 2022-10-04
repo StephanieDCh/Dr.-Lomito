@@ -1,8 +1,4 @@
 /*body nav y footer lo llevan igual todas las páginas*/
-body {
-    background: #FFF9E3;
-
-}
 .container {
     display: flex;
     width: 100%;
@@ -26,14 +22,7 @@ body {
     color: #7ED4B5;
     padding-left: 15px;
   }
- 
-  
-    
-    footer{
-      text-align: center;
-      padding-bottom: 15px;
-      
-    }
+
 
     /*Aniamción Botones*/
 
@@ -125,9 +114,6 @@ body {
           opacity: 1;
           }
       }
-  html {
-      background: #fff
-      }
   
   input, button, submit {
           border: none
@@ -149,7 +135,6 @@ body {
       border-radius: 100px;
       background: #fff;
       position: absolute;
-      
       border: 5px solid #7ED4B5;
       
        

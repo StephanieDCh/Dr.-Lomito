@@ -4,10 +4,6 @@
     box-sizing: border-box;    
 }
 
-body{      
-    background:#FFF9E3;
-   
-}
 .container_{
     min-height: 100vh;
     display: flex;
