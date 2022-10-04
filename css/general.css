@@ -2,15 +2,9 @@
     margin: 0;
     padding: 0;
     list-style: none;
-<<<<<<< HEAD
     text-decoration: none;   
     box-sizing: border-box;
     font-family: 'Varela Round', sans-serif;    
-=======
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;    
->>>>>>> 553e8d6279c981cfc4157ebf84e1aaf8778eeb1f
 } 
 
  body{
@@ -126,9 +120,6 @@ header{
      }
  }
 
-<<<<<<< HEAD
- /* Botones */
-=======
  /*AquÃ­ debajo va el FOOTER*/
 
 footer{
@@ -209,4 +200,3 @@ footer{
     height: 1px;
     background-color: #7a7a7a;
   }
->>>>>>> 553e8d6279c981cfc4157ebf84e1aaf8778eeb1f
