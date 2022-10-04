@@ -8,11 +8,6 @@
 body{
   background:#FFF9E3;
 }
-nav{
-font-family: Arial, Helvetica, sans-serif;
-font-size: 20px;
-background-color:#7ED4B5;
-}
 
 /*Container del carrusel*/
 
@@ -26,12 +21,12 @@ background-color:#7ED4B5;
 }
   
   h1{
-     color: mediumseagreen;
+     color: darkslategray;
      text-align: center;
      font-size: 37px;
   }
   h2{
-     color: white;
+     color: rgb(11, 54, 53);
      text-align: center;
      font-size: 24px;
   }
@@ -58,9 +53,6 @@ background-color:#7ED4B5;
     color: grey;
   }
   
-  footer{
-  text-align: center;
-  }
   #acerca{
   margin-top: 30px;
   }
@@ -135,7 +127,7 @@ align-items: flex-end;
   outline: 0;
   display: inline-block;
   padding: 8px;
-  color: #2c3e50;
+  color: #FFF9E3;
   background: transparent;
   text-align: center;
   cursor: pointer;
@@ -194,7 +186,7 @@ align-items: flex-end;
 }
 .card__back{
     transform:rotateY(180deg);
-    background: rgb(1, 16, 22);
+    background: #7ED4B5;
     
 }
 .body__card-front{
@@ -236,20 +228,20 @@ align-items: flex-end;
     font-size: 20px;
     font: weight 100px;;
     cursor: pointer;
-    color: mediumseagreen;
-    background-color:transparent;
+    color: #2c3e50;
+    background-color:g;
     box-shadow: 1px 1px 30px -5px transparent;
     border-radius: 10px;
     transition:box-shadow 800ms;
     border: solid;
     border-width: 2px;
-    border-color: mediumseagreen;
+    border-color: #2c3e50;
 }
 
 .body__card_back a:hover{
-    background-color:mediumseagreen ;
     font-weight:bold;
-    color:  rgb(1, 16, 22);
+    color: #2c3e50;
+    text-decoration: none;
     
 }
 
