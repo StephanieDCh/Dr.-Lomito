@@ -1,21 +1,21 @@
 -- insertar opinion
-INSERT INTO `drlomito`.`opiniones_vet` (`opiniones_id`, `opiniones_nombre_autor`, `opiniones_calificacion`, `opiniones_comentario`, `usuarios_usuario_id`) VALUES (NULL, NULL, NULL, NULL, NULL);
+-- INSERT INTO `drlomito`.`opiniones_vet` (`opiniones_id`, `opiniones_nombre_autor`, `opiniones_calificacion`, `opiniones_comentario`, `usuarios_usuario_id`) VALUES (NULL, NULL, NULL, NULL, NULL);
 -- insertar usuario
-INSERT INTO `drlomito`.`usuarios` (`usuario_id`, `usuario_nombre`, `usuario_correo`, `usuario_contrasena`, `veterinario_imagen`, `tipo_usuario_tipo_usuario_id`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL);
+-- INSERT INTO `drlomito`.`usuarios` (`usuario_id`, `usuario_nombre`, `usuario_correo`, `usuario_contrasena`, `veterinario_imagen`, `tipo_usuario_tipo_usuario_id`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL);
 -- insert categoria veterinario
-INSERT INTO `drlomito`.`categoria_vet` (`categoria_id`, `categoria_nombre`) VALUES (NULL, NULL);
+-- INSERT INTO `drlomito`.`categoria_vet` (`categoria_id`, `categoria_nombre`) VALUES (NULL, NULL);
 -- insert contacto_vet
-INSERT INTO `drlomito`.`contacto_vet` (`contacto_id`, `veterinario_direccion`, `veterinario_telefono1`, `veterinario_telefono2`, `veterinario_horario_inicio`, `veterinario_horario_cierre`, `veterinario_atencion_urgencias`, `usuarios_usuario_id`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+-- INSERT INTO `drlomito`.`contacto_vet` (`contacto_id`, `veterinario_direccion`, `veterinario_telefono1`, `veterinario_telefono2`, `veterinario_horario_inicio`, `veterinario_horario_cierre`, `veterinario_atencion_urgencias`, `usuarios_usuario_id`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 -- insert tipo usuario
-INSERT INTO `drlomito`.`tipo_usuario` (`tipo_usuario_id`, `tipo_usuario_nombre`) VALUES (NULL, NULL);
+-- INSERT INTO `drlomito`.`tipo_usuario` (`tipo_usuario_id`, `tipo_usuario_nombre`) VALUES (NULL, NULL);
 -- insert info veterinario
-INSERT INTO `drlomito`.`info_veterinario` (`info_veterinario_id`, `veterinario_especialidad`, `veterinario_calificacion`, `veterinario_descripcion`, `veterinario_costo_consulta`, `veterinario_servicios`, `categoria_vet_categoria_id`, `usuarios_usuario_id`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+-- INSERT INTO `drlomito`.`info_veterinario` (`info_veterinario_id`, `veterinario_especialidad`, `veterinario_calificacion`, `veterinario_descripcion`, `veterinario_costo_consulta`, `veterinario_servicios`, `categoria_vet_categoria_id`, `usuarios_usuario_id`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
-SELECT * FROM tipo_usuario;
+-- SELECT * FROM tipo_usuario;
 INSERT INTO `drlomito`.`tipo_usuario` (`tipo_usuario_nombre`) VALUES ('Usuario Paciente');
 INSERT INTO `drlomito`.`tipo_usuario` (`tipo_usuario_nombre`) VALUES ('Usuario Veterinario');
 
-SELECT * FROM drlomito.categoria_vet;
+-- SELECT * FROM drlomito.categoria_vet;
 
 INSERT INTO `drlomito`.`categoria_vet` (`categoria_id`, `categoria_nombre`) VALUES (0, 'Veterinario General');
 INSERT INTO `drlomito`.`categoria_vet` (`categoria_id`, `categoria_nombre`) VALUES (0, 'Veterinario Aviar');
@@ -31,7 +31,7 @@ INSERT INTO `drlomito`.`categoria_vet` (`categoria_id`, `categoria_nombre`) VALU
 INSERT INTO `drlomito`.`categoria_vet` (`categoria_id`, `categoria_nombre`) VALUES (0, 'Otros');
 
 
-SELECT * FROM drlomito.usuarios;
+-- SELECT * FROM drlomito.usuarios;
 -- INSERTAR LOS 8 USUARIOS DEL EQUIPO DR. LOMITO
 INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Josué Chávez Lomelí', 'josue.chavezlomeli@gmail.com', 'Batman33!', NULL, 1);
 INSERT INTO `drlomito`.`usuarios` VALUES (0, 'José Luis López Toledo', 'jltoledo@gmail.com', 'Batman33!', NULL, 1);
@@ -59,7 +59,7 @@ INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Diana Karen Ramos Vitar', 'dkr_v@g
 
 -- AHORA INSERTAMOS SU INFO DE CONTACTO
 
-SELECT * FROM contacto_vet;
+-- SELECT * FROM contacto_vet;
 INSERT INTO `drlomito`.`contacto_vet` VALUES (0, 'Av. Patria 888, Jardines de Guadalupe, 45030 Guadalajara, Jal.', '3313253748', '3344567892', 7, 20, true, 9);
 INSERT INTO `drlomito`.`contacto_vet` VALUES (0, 'Av. Acueducto 6050, Lomas del Bosque, Chedraui, 45110 Guadalajara, Jal.', '3367849340', '5567849231', 7, 21, false, 10);
 INSERT INTO `drlomito`.`contacto_vet` VALUES (0, 'Calle Federación 1861-B, San Juan Bosco, 44730 Guadalajara, Jal.', '3314407374','3321086688',7,20,true,11);
@@ -76,7 +76,7 @@ INSERT INTO `drlomito`.`contacto_vet` VALUES (0, 'Av. Iztacalco 22, Agrícola Pa
 INSERT INTO `drlomito`.`contacto_vet` VALUES (0, 'Ote. 253 169, Agrícola Oriental, Iztacalco, 08500 Ciudad de México, CDMX', '5598756412', '5588775964', 07, 20, true, 22);
 
 -- SE INSERTA LA INFO DE LOS VETERINARIOS
-SELECT * FROM info_veterinario;
+-- SELECT * FROM info_veterinario;
 INSERT INTO `drlomito`.`info_veterinario` VALUES (0, 'Odontólogo Felinos Grandes', 0, 'Soy un profesional de la salud apasionado por el cuidado bucal de los tigres y leones en cautiverio', 800.00, 'Profilaxis completa y remoción de sarro $2500 MXN', 11, 9);
 INSERT INTO `drlomito`.`info_veterinario` VALUES (0, 'Especialista en hipopótamos', 0, 'Soy un profesional de la salud apasionado por los hipopótamos en cautiverio', 5000.00, 'Limpieza de colmillos $7500 MXN', 12, 10);
 INSERT INTO `drlomito`.`info_veterinario` VALUES (0, 'Veterinario Oncólogo', 0,'La Oncología veterinaria es mi pasión', 500.00, 'Imagenología $250 mxn', 7,11);
@@ -93,7 +93,7 @@ INSERT INTO `drlomito`.`info_veterinario` VALUES (0, 'Especialidad Cirugía Zoot
 INSERT INTO `drlomito`.`info_veterinario` VALUES (0, 'Veterinario Ortopédico', '0', 'Médico Veterinario egresado de la Universidad Nacional de La Plata, Bs. As., Argentina. Especialidad en Medicina y Cirugía de Perros y Gatos en el Hospital Veterinario de Especialidades de la UNAM.', 3000.00, 'Traumatologia', 5, 22);
 
 -- AQUI SE INSERTAN LAS OPINIONES
-SELECT * FROM opiniones_vet;
+-- SELECT * FROM opiniones_vet;
 INSERT INTO `drlomito`.`opiniones_vet` VALUES (0, 'Josué Chávez Lomelí', 4, 'Me sentí muy a gusto con su profesionalismo, sin duda volvería a llevar a mi tigre a una limpieza dental', 9);
 INSERT INTO `drlomito`.`opiniones_vet` VALUES (0, 'Josué Chávez Lomelí', 5, 'Mi hipopótamo mejoró muchísimo con la medicina que le receto, sin duda un especialista con mucha experiencia en estos animales tan exóticos.', 10);
 INSERT INTO `drlomito`.`opiniones_vet` VALUES (0, 'Christian Iván Mendoza Díaz', 5,'No pensé que tendría a mi mascota por muchos años más, aumentó considerablemente su esperanza de vida',11 );

@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `drlomito`.`categoria_vet` (
   `categoria_nombre` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`categoria_id`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 13
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `drlomito`.`tipo_usuario` (
   `tipo_usuario_nombre` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`tipo_usuario_id`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 3
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
@@ -56,7 +56,7 @@ CREATE TABLE IF NOT EXISTS `drlomito`.`usuarios` (
   PRIMARY KEY (`usuario_id`, `tipo_usuario_tipo_usuario_id`),
   INDEX `fk_usuarios_tipo_usuario1_idx` (`tipo_usuario_tipo_usuario_id` ASC) VISIBLE)
 ENGINE = InnoDB
-AUTO_INCREMENT = 23
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
@@ -76,7 +76,7 @@ CREATE TABLE IF NOT EXISTS `drlomito`.`contacto_vet` (
   PRIMARY KEY (`contacto_id`, `usuarios_usuario_id`),
   INDEX `fk_contacto_vet_usuarios1_idx` (`usuarios_usuario_id` ASC) VISIBLE)
 ENGINE = InnoDB
-AUTO_INCREMENT = 15
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
@@ -97,7 +97,7 @@ CREATE TABLE IF NOT EXISTS `drlomito`.`info_veterinario` (
   INDEX `fk_info_veterinario_categoria_vet_idx` (`categoria_vet_categoria_id` ASC) VISIBLE,
   INDEX `fk_info_veterinario_usuarios1_idx` (`usuarios_usuario_id` ASC) VISIBLE)
 ENGINE = InnoDB
-AUTO_INCREMENT = 15
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
@@ -114,7 +114,7 @@ CREATE TABLE IF NOT EXISTS `drlomito`.`opiniones_vet` (
   PRIMARY KEY (`opiniones_id`, `usuarios_usuario_id`),
   INDEX `fk_opiniones_vet_usuarios1_idx` (`usuarios_usuario_id` ASC) VISIBLE)
 ENGINE = InnoDB
-AUTO_INCREMENT = 15
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
