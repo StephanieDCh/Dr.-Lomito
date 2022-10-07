@@ -168,32 +168,6 @@ PasswordCon.addEventListener("blur", function (e) {
 btnEnviar.addEventListener("click", function (e){
     e.preventDefault();
 
-    let sendNombre = campoNombre.value + " " + campoApellido.value;
-    let sendCorreo = Correo.value;
-    let sendAsunto = "Pregunta-Contacto ";
-    let sendCuerpo = "-El correo del usuario es: " + sendCorreo;
-    
-    sendCuerpo += " -El nombre del usuario es:  " +sendNombre+" -Y su mensaje es: " + msg.value;
-   
-     if(
-        (campoNombre.value!="" && campoApellido.value !="" && Correo.value != "" && msg.value != "")
-        &&
-        (flagMsg && flagTel && flagCorr && flagApe && flagNom)
-        ){ 
-        Email.send({
-            Host : "smtp.elasticemail.com",
-            Username : "hola.drlomito@gmail.com",
-            Password : "D2688BAD0F83F061575A92C02049DCD40FEE",
-            To : "hola.drlomito@gmail.com",
-            From : "hola.drlomito@gmail.com",
-            Subject : sendAsunto,
-            Body : sendCuerpo
-        }).then(
-          message => alert("Correo enviado con éxito")
-        );
-    }else{
-        alertSend.style.display = "block";
-        setTimeout( ()=>{alertSend.style.display = "none"}, 5000);
-  }    
+       
  
 })
