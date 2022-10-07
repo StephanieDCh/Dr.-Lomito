@@ -34,6 +34,7 @@ header{
     margin-right: 20px;
 
 }
+
 .hamburguer{
     display: none;
 }
@@ -124,9 +125,12 @@ header{
 
 footer{
     width: 100%;
-    padding: 50px 0px;
+    margin-top: 50px;
+    padding: 10px 0px;
     background-image: url(/src/background-footer.svg);
     background-size: cover;
+    
+
 
     /*
     background-color: #00f549; 
@@ -157,14 +161,12 @@ footer{
   
   .box__footer .terms{
     max-width: 350px;
-    margin-top: 20px;
     font-weight: 500;
     color: #7a7a7a;
     font-size: 18px;
   }
   
-  .box__footer h2{
-    margin-bottom: 30px;
+  .box__footer h4{
     color: #343434;
     font-weight: 700;
   }
@@ -191,7 +193,7 @@ footer{
   }
   
   .box__copyright p{
-    margin-top: 20px;
+    margin-top: 7px;
     color: #7a7a7a;
   }
   
