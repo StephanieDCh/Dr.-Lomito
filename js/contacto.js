@@ -92,7 +92,8 @@ Correo.addEventListener("blur", function(e){
     e.preventDefault()
     flagArroba=false;
     flagChar=false;
-    flagPunto=false;   
+    flagPunto=false;  
+    
 
     Correo.classList.remove("is-invalid");
     Correo.classList.add("is-valid");
