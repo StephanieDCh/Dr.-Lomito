@@ -94,7 +94,6 @@ Correo.addEventListener("blur", function(e){
     flagChar=false;
     flagPunto=false;  
     
-
     Correo.classList.remove("is-invalid");
     Correo.classList.add("is-valid");
 
