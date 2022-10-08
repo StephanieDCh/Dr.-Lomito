@@ -111,13 +111,6 @@ footer.innerHTML=`
         <a href="directorio.html">Directorio</a>
     </div>
 
-    <div class="box__footer">
-        <h4>Legal</h4> 
-        <a href="#">Términos y condiciones</a>
-        <a href="#">Política de privacidad y cookies</a>
-        <a href="#">Aviso legal</a>
-        <a href="#">Política de reseñas</a>              
-    </div>
 
     <div class="box__footer">
         <h4>Redes Sociales</h4>
