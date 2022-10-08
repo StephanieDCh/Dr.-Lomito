@@ -5,6 +5,8 @@ let tel = document.getElementById("Numero");
 let msg = document.getElementById("msgArea");
 let btnEnviar = document.getElementById("btnEnviar");
 let alertSend = document.getElementById("alertSend");
+let alertYes = document.getElementById("alertYes");
+let form = document.getElementById("formulario");
 
 let flagArroba = false;
 let flagPunto = false;
@@ -18,6 +20,7 @@ if(
     ){ //validacion nombre
     campoNombre.classList.remove("is-invalid");
     campoNombre.classList.add("is-valid");
+    btnEnviar.disabled = false;
 }else{
     campoNombre.classList.remove("is-valid");
     campoNombre.classList.add("is-invalid");
@@ -40,6 +43,7 @@ if(
             
             campoNombre.classList.remove("is-valid");
             campoNombre.classList.add("is-invalid"); 
+            btnEnviar.disabled = false;
             break;
             
         }else{
@@ -55,6 +59,7 @@ campoApellido.addEventListener("blur",function(e){
 if((campoApellido.value.length>=3)&&(campoApellido.value.length<=50)){ //validacion apellido
     campoApellido.classList.remove("is-invalid");
     campoApellido.classList.add("is-valid");
+    btnEnviar.disabled = false;
 }else{
     campoApellido.classList.remove("is-valid");
     campoApellido.classList.add("is-invalid");
@@ -77,7 +82,8 @@ if((campoApellido.value.length>=3)&&(campoApellido.value.length<=50)){ //validac
         {
             
             campoApellido.classList.remove("is-valid");
-            campoApellido.classList.add("is-invalid"); 
+            campoApellido.classList.add("is-invalid");
+            btnEnviar.disabled = false; 
             break;            
 
         }else{
@@ -92,14 +98,15 @@ Correo.addEventListener("blur", function(e){
     e.preventDefault()
     flagArroba=false;
     flagChar=false;
-    flagPunto=false;   
-
+    flagPunto=false;  
+    
     Correo.classList.remove("is-invalid");
     Correo.classList.add("is-valid");
 
     if ( (Correo.value.length<3) || (Correo.value.length>70) ){
         Correo.classList.remove("is-valid");
         Correo.classList.add("is-invalid");
+        btnEnviar.disabled = false;
     }//if
 
     for (let i = 0; i < Correo.value.length; i++) {
@@ -148,6 +155,7 @@ tel.addEventListener("blur", function (e) {
     if(telValor.length==10 && !isNaN(telValor)){
         tel.classList.remove("is-invalid")
         tel.classList.add("is-valid")
+        btnEnviar.disabled = false;
 
     }else{
         tel.classList.remove("is-valid")
@@ -165,6 +173,7 @@ msg.addEventListener("blur", function (e) {
     if(msgValor.length> 0 && msgValor.length<=280){
         msg.classList.remove("is-invalid")
         msg.classList.add("is-valid")
+        btnEnviar.disabled = false;
 
     }else{
         msg.classList.remove("is-valid")
@@ -192,12 +201,23 @@ btnEnviar.addEventListener("click", function (e){
             From : "hola.drlomito@gmail.com",
             Subject : sendAsunto,
             Body : sendCuerpo
-        }).then(
-          message => alert("Correo enviado con éxito")
-        );
+        });
+        
+        alertYes.style.display = "block";
+        setTimeout( ()=>{alertYes.style.display = "none"}, 5000);
+        //.reset(); limpia los campos del formulario una vez haciendo click en el botón
+        form.reset();
+        
+        //btnEnviar.disabled = false; --> si se deja aquí la sentencía, se debe actualizar la página para poder ingresar datos y que el botón se abilite
+        // colocándola en cada uno de los campos, permite que el botón se abilite cada vez que estos se llenan y validan.
+    
+        //aquí se manda la alerta de campos inválidos y el botón queda desabilitado, por lo tanto la naimación no sucederá
     }else{
         alertSend.style.display = "block";
         setTimeout( ()=>{alertSend.style.display = "none"}, 5000);
+        form.reset();
+        btnEnviar.disabled = true;
+
   }    
  
 })

@@ -28,7 +28,7 @@
 </div> -->
 <!-- <div class="row d-flex"> -->
 <main class="container-fluid">
-  <form>
+  <form id="formulario">
     <h1>Escríbenos</h1>
     <br>
     <div class="form-group">
@@ -85,7 +85,14 @@
     <div class="form-group col-md-4">
       <button id="btnEnviar"><span>Enviar</span>
         <img src="https://i.cloudup.com/2ZAX3hVsBE-3000x3000.png" height="55" width="55" class="flecha"></button>
-      <div id="alertSend" class="alert alert-danger" style="display: none" role="alert">
+      <br>
+      <br>
+      <br>
+        <div class="alert alert-success" style="display: none;" role="alert" id="alertYes">
+        ¡Listo! Tu mensaje ha sido enviado con éxito.
+        </div>
+
+        <div id="alertSend" class="alert alert-danger" style="display: none" role="alert">
         Ingrese los datos correspondientes antes de dar click en "Enviar".
       </div>
     

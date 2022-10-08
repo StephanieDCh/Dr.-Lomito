@@ -23,6 +23,13 @@
     padding-left: 15px;
   }
 
+  #alertSend, #alertYes
+  {
+    display:inline-block;
+    
+ 
+  }
+
 
     /*Aniamción Botones*/
 
