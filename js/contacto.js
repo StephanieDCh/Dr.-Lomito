@@ -207,6 +207,7 @@ btnEnviar.addEventListener("click", function (e){
         setTimeout( ()=>{alertYes.style.display = "none"}, 5000);
         //.reset(); limpia los campos del formulario una vez haciendo click en el botón
         form.reset();
+        
         //btnEnviar.disabled = false; --> si se deja aquí la sentencía, se debe actualizar la página para poder ingresar datos y que el botón se abilite
         // colocándola en cada uno de los campos, permite que el botón se abilite cada vez que estos se llenan y validan.
     
