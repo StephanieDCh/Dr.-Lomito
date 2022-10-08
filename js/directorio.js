@@ -43,7 +43,7 @@ window.addEventListener("load", function(){
             let item = listUsersDir[i];
             if(item.typeVet == "true"){
                 itemsContainer.innerHTML += `
-                <div class="card ${item.categoria} all col-md-5 m-1">
+                <div class="card ${item.categoria} all col-md-5 m-1" id="individual>
                     <div class="row no-gutters d-flex">
                             <div class="col-sm-4" >
                                 <img id="imagenTest" src="${item.img}" class="card-img-top"  alt="..." >

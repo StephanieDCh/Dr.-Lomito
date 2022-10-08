@@ -7,12 +7,19 @@
     font-family: 'Varela Round', sans-serif;    
 } 
 
- body{
-        background:#FFF9E3;       
+body{
+  background:#FFF9E3;
 }
-h1{
+h1,h2{
     font-family: 'Paytone One', sans-serif;
+    color: #7ED4B5;
+    align-content: center;
   }
+p{
+  font-size: large;
+    font-weight: bold;
+    color: black;
+}  
 
 header{
     width: 100%;
@@ -33,6 +40,11 @@ header{
     align-items: center;
     margin-right: 20px;
 
+}
+#lomito a{
+    color: beige;
+    display: flex;
+    margin-left: 20px;
 }
 
 .hamburguer{
