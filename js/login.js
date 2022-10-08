@@ -1,3 +1,12 @@
+////////////////////////////////// Animación
+function toggleForm(){
+    section = document.querySelector("section");
+    container = document.querySelector(".container");
+    container.classList.toggle("active");
+    section.classList.toggle("active");
+  }
+////////////////////////////////// Login
+
 let campoEmailLog = document.getElementById("emailLog");
 let campoPassLog = document.getElementById("passLog");
 let btnInicio = document.getElementById("btnInicio");
@@ -56,3 +65,4 @@ if(flagReady){
     }//si el usuario y contrasena existen, se anaden las clases de validacion y se manda a local storage el id del usuario logeado.
 }
 });
+
