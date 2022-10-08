@@ -67,7 +67,7 @@ else {
 }
 
 //Cont1
-let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?#$&_-])[A-Za-z\d$@$!%*?#&_-]{8,15}/;
+let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?#$&_-])[A-Za-z\d$@$!%*?#&_-]{8,15}$/;
 let result = regex.test(valorCont1);
 if(result){
     campoCont1.classList.remove("is-invalid");
