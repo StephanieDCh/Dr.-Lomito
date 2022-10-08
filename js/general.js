@@ -103,24 +103,11 @@ let footer = document.getElementById("footer_olas");
 
 footer.innerHTML=`
 <div class="container__footer">
-    <div class="box__footer">
-        <h4>Mapa del sitio</h4>
-        <a href="../index.html">Inicio</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="contacto.html">Contacto</a>
-        <a href="directorio.html">Directorio</a>
-    </div>
+
+
 
     <div class="box__footer">
-        <h4>Legal</h4> 
-        <a href="#">Términos y condiciones</a>
-        <a href="#">Política de privacidad y cookies</a>
-        <a href="#">Aviso legal</a>
-        <a href="#">Política de reseñas</a>              
-    </div>
-
-    <div class="box__footer">
-        <h4>Redes Sociales</h4>
+        
         <a href="#"><i class="fab fa-facebook-square"></i> Facebook</a>
         <a href="#"><i class="fab fa-twitter-square"></i> Twitter</a>
         <a href="#"><i class="fab fa-instagram-square"></i> Instagram</a>
@@ -131,3 +118,6 @@ footer.innerHTML=`
     <hr>
     <footer><p>Todos los derechos reservados © 2022 <strong> Doctor Lomito </strong></p></footer>  
 </div>`
+
+
+//<h4>Redes Sociales</h4>
