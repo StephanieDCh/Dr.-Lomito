@@ -57,9 +57,6 @@ if((localStorage.getItem("loggedIn"))== "true"){
 <nav class="navbar1 d-block">
   <ul id"listPages">   
     <li>
-      <a class="activePage" href="../pages/registro.html" style="text-decoration: none">Regístrate</a>
-    </li>
-    <li>
       <a class="activePage"  href="../pages/nosotros.html" style="text-decoration: none">Nosotros</a>
     </li>
     <li>
@@ -73,7 +70,7 @@ if((localStorage.getItem("loggedIn"))== "true"){
       <a class="activePage" href="../pages/ingresarVet.html" style="text-decoration: none">Agregar Vet</a>
     </li>
     <li>
-      <a class="activePage" id="loggedIn" href="../pages/logIn.html" style="text-decoration: none">Iniciar Sesión</a>
+      <a class="activePage" id="loggedIn" href="../pages/logIn.html" style="text-decoration: none">Inicia Sesión</a>
     </li>
   </ul>
 </nav>`;
@@ -109,7 +106,6 @@ footer.innerHTML=`
     <div class="box__footer">
         <h4>Mapa del sitio</h4>
         <a href="index.html">Inicio</a>
-        <a href="registro.html">Regístrate</a>
         <a href="nosotros.html">Nosotros</a>
         <a href="contacto.html">Contacto</a>
         <a href="directorio.html">Directorio</a>

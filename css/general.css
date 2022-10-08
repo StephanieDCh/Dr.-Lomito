@@ -11,9 +11,9 @@ body{
   background:#FFF9E3;
 }
 h1,h2{
-    padding: 30px;
     font-family: 'Paytone One', sans-serif;
     color: #7ED4B5;
+    align-content: center;
   }
 
 header{

@@ -309,6 +309,7 @@
       }
       section .container .user .formBx{
         width: 100%;
+        height: 70%;
       }
       section .container.active .signinBx .formBx{
         top: -100%
