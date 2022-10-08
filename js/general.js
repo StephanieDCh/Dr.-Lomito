@@ -4,7 +4,7 @@ let loggedIn = document.getElementById("loggedIn");
 
 if((localStorage.getItem("loggedIn"))== "true"){  
   navBar[0].innerHTML = ` <div class="logo">
-     <a href="../pages/index.html"><img src="../src/logoCircular.png" alt="logo" width="60px" height="60px"></a>
+     <a href="../index/index.html"><img src="../src/logoCircular.png" alt="logo" width="60px" height="60px"></a>
      <div id = "lomito">Dr.Lomito</div>  
    </div>         
      <div class="hamburguer">
