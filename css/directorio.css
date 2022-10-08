@@ -6,17 +6,33 @@ form{
     text-align: center;
     color:black;
     }
-h1{
-    color: #7ED4B5;
-    text-align: center;
+.vets{
+    margin: auto;
 }
-
 #list-items{
     justify-content: center;
+    margin-top: 190px;
 }
 #imagenTest{
     padding-top: 15%;
 }
+#btnFiltrar{
+    border-width: 1px;
+    width: 220px;
+    height: 40px;
+    /*border-radius*/
+    border-radius: 100px;
+    background: #7ED4B5;
+    position: absolute;
+    border: 5px solid #7ED4B5;
+    text-align: center;
+    padding-bottom:10px;
+    margin-bottom: 10px;
+}
+#vetCategory{
+    padding-top: 40px;
+}
+
 
 /*Animación btn*/
 
