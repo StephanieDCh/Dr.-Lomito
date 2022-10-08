@@ -4,7 +4,7 @@ let loggedIn = document.getElementById("loggedIn");
 
 if((localStorage.getItem("loggedIn"))== "true"){  
   navBar[0].innerHTML = ` <div class="logo">
-     <a href="../index/index.html"><img src="../src/logoCircular.png" alt="logo" width="60px" height="60px"></a>
+     <a href="../index.html"><img src="../src/logoCircular.png" alt="logo" width="60px" height="60px"></a>
      <div id = "lomito"><a href="../index/index.html">Dr.Lomito</a></div>  
    </div>         
      <div class="hamburguer">
@@ -31,7 +31,7 @@ if((localStorage.getItem("loggedIn"))== "true"){
          <a class="activePage" href="../pages/ingresarVet.html" style="text-decoration: none">Agregar Vet</a>
        </li>
        <li>
-       <a class="activePage" id="loggedIn" href="../index/index.html" style="text-decoration: none">Cerrar Sesión</a>
+       <a class="activePage" id="loggedIn" href="../index.html" style="text-decoration: none">Cerrar Sesión</a>
        </li>
      </ul>
    </nav>`
@@ -105,7 +105,7 @@ footer.innerHTML=`
 <div class="container__footer">
     <div class="box__footer">
         <h4>Mapa del sitio</h4>
-        <a href="../index/index.html">Inicio</a>
+        <a href="../index.html">Inicio</a>
         <a href="nosotros.html">Nosotros</a>
         <a href="contacto.html">Contacto</a>
         <a href="directorio.html">Directorio</a>
