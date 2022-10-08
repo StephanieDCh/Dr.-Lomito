@@ -1,3 +1,4 @@
+/*Carrusel*/
 @font-face {
   font-family: 'flexslider-icon';
   src: url('fonts/flexslider-icon.eot');
@@ -13,7 +14,9 @@
 }
 
 .flexslider{
-	width: 100%;
+	margin: auto;
+	width: 80%;
+	height: 100%;
 	max-height: 500px;
 	position: relative;
 
@@ -129,4 +132,146 @@
 
 .flexslider:hover .flex-direction-nav .flex-next:hover{
 	opacity: 1;
+}
+/* Mini formulario*/
+
+
+/*Contenedor de formulario y card*/
+.contenedorFormulario{
+    display: flex;
+    flex-direction: row-reverse;
+    width: auto;
+    margin: 20px 50px;
+    flex-wrap: wrap;
+    
+}
+
+
+/*Formulario*/
+.formato {
+    margin: 0 0 0 50px;
+    background-color: rgb(234, 229, 225);
+    width: 325px;
+    height: auto;
+    text-align: left;
+    padding: 10px 25px 0 12px;
+}
+
+.form-control{
+    margin: 0;
+    padding: 5px 10px 5px 5px;
+    width: 100%;
+    height: 30px;
+    
+}
+/*inputs*/
+
+.form-group label{
+    margin: 0;
+    padding: 0;
+}
+
+.form-group{
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    margin: 0;
+}
+
+/*checkbox*/
+.check{
+    display: flex;
+    justify-content: center;
+}
+.form-check input{
+    width: 1rem;
+}
+.form-check label{
+    font-size: 15px;
+}
+
+.form-check-input{
+    width: 30px;
+    height: 30px;
+}
+
+
+  /*Estilos del botón enviar*/
+.contentButton{
+    display: flex;
+    justify-content: center;
+}
+.button {
+    border: none;
+    outline: 0;
+    padding: 2px 20px;
+    margin-top: 7px;
+    color: white;
+    background-color: #47be6b;
+    text-align: center;
+    cursor: pointer;
+    height: 30px;
+    font-size: 15px;
+}
+
+
+
+.textRegistrate{
+    text-align: center;
+    font-size: 15px;
+    margin: 0;
+}
+
+.pregunta{
+    font-weight: normal;
+    margin: 0;
+}
+
+.registrate{
+    margin: 0;
+}
+
+@media (max-width:960px){
+
+.contenedorFormulario{
+    display: block;
+}
+
+.formato{
+    margin:2em;
+    width: auto;
+    padding: 10px 50px 0 25px;
+}
+
+.form-group input{
+    width: 100%;
+}
+
+.button{
+    position: relative;
+    margin: 0 40px 0 20px;
+    text-align: center;
+    width: 100%;
+    padding: 2px;
+    margin: 0;
+}
+
+}
+
+@media (max-width:768px) {
+  .formato{
+    width: auto;
+  }
+
+  #msgArea{
+    width: 100%;
+  }
+
 }
