@@ -10,6 +10,13 @@ let flagArroba = false;
 let flagPunto = false;
 let flagChar = false;
 
+
+
+
+
+
+
+
 campoNombre.addEventListener("blur",function(e){    
     e.preventDefault();
 //solo letras, incluyendo espacios y acentos. 
