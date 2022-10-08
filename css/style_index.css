@@ -57,6 +57,9 @@ h1 {
     text-align: left;
     margin: 0;
 }
+h2{
+    color: white;
+}
 
 /*checkbox*/
 .check{
