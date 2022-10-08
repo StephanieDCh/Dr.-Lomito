@@ -19,7 +19,9 @@ body{
     padding: 0 16px;
     
 }
-  
+  #acerca, #colab{
+    color: #7ED4B5;
+  }
   h1{
      color: darkslategray;
      text-align: center;
@@ -164,11 +166,15 @@ align-items: flex-end;
     transform-style: preserve-3d;
     transition: all 900ms;
     border-radius: 20px;
+    
+    
 
 }
 .card__front{
     background-size: cover;
     background-position: center;
+    
+    
 }
 
 .card__front, 
@@ -182,6 +188,8 @@ align-items: flex-end;
     backface-visibility: hidden;
     transform-style: preserve-3d;
     border-radius: 10px;
+   
+    
 
 }
 .card__back{
@@ -199,6 +207,8 @@ align-items: flex-end;
     align-items: center;
     color: aliceblue;
     transform: translateZ(-80px);
+    
+    
 
 }
 .bg{
@@ -207,8 +217,9 @@ align-items: flex-end;
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0,0,0,0.0574);
+    /*background-color: #FFF9E3;*/
     border-radius: 20px;
+    
 }
 
 .body__card_back{
@@ -245,6 +256,7 @@ align-items: flex-end;
     
 }
 
-.i{
-    transform: rotateX(180deg);
+#github, #linked{
+  width: 40px;
 }
+
