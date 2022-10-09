@@ -50,7 +50,7 @@ if(flagReady){
         console.log("CORRECTO");
         alertLogInExito.style.display = "block";
         setTimeout( ()=>{alertLogInExito.style.display = "none"}, 5000);  
-        location.href = "http://127.0.0.1:5501/pages/index.html";
+        location.href = "http://127.0.0.1:5501/index.html";
         
     }else{
 
