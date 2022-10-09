@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/perfilUsuario.css">
     <link rel="icon" href="/src/logoCircular.png">
     <!--Fuentes-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,198 +19,23 @@
     <title>Mi Perfil</title>
   </head> 
     <body>
-      <!-- Se inserta navbar desde js/general.js -->
-      <header class="insertNavbar"></header>
-      <br><br><br>     
-      <div>
+       <!-- Se inserta navbar desde js/general.js -->
+ <header class="insertNavbar"></header>
+
+ <div>
+  
+   <img src="../src/duenos-perros-personajes-dibujos-animados-personas-sus-mascotas-diferentes-razas-animales-domesticos-ilustracion_169479-411.jpg" alt=""  width="100%">
+ </div>
+ <br>
+ <main class="container-fluid">
+   <h1>Mi Perfil...</h1>  
    
-        <img src="../src/duenos-perros-personajes-dibujos-animados-personas-sus-mascotas-diferentes-razas-animales-domesticos-ilustracion_169479-411.jpg" alt=""  width="100%">
-      </div>
-      <br>
-      <main class="container-fluid">
-        <h1>Únete a Dr. Lomito</h1>
-        <form>
-          <br>
-    
-            <div class="form-group">
-              <!-- NOMBRE -->
-              <div class="form-group-row col-md-6">
-                <label for="inputNombre">Nombre:</label>
-                <input type="text" class="form-control" id="inputNombre" placeholder="Nombre">
-                <small  class="form-text text-muted">
-                  Ejemplo: Santiago
-                </small>
-                <div class="invalid-feedback">
-                  Recuerda este campo:
-                  Debe contener sólo letras (sin número o caráteres: @$-)
-                  Entre 3 y 20 caracteres
-                </div>
-              </div>   
-              
-    
-              <div class="form-group-row col-md-6">
-                <!-- Especialidad -->
-                <label for="inputEspecialidad">Especialidad:</label>
-                <input type="text" class="form-control" id="inputEspecialidad" placeholder="Especialidad" >
-                <small class="form-text text-muted">
-                  Ejemplo: Maestría en Perros y Gatos
-                </small>
-                <div class="invalid-feedback">
-                    Recuerda este campo debe contener entre 5 y 150 caracteres
-                </div>
-              </div>       
-    
-              <!-- Categoria -->
-              <div class="form-group-row col-md-6">            
-                    <label for="listCat">Categoría</label>
-                    <select class="custom-select" id="listCat">
-                    <option selected disabled value="">Elegír Categoría</option>            
-                    <option value="vetG">-Veterinario General</option>
-                    <option value="vetAv">-Veterinario Aviar</option>
-                    <option value="vetRep">-Veterinario Reptiles</option>
-                    <option value="vetGan">-Veterinario Ganadería</option>
-                    <option value="vetOrt">-Veterinario Ortopedista</option>
-                    <option value="vetCir">-Veterinario Cirujano</option>
-                    <option value="vetOnc">-Veterinario Oncologo</option>
-                    <option value="vetOft">-Veterinario Oftalmologo</option>
-                    <option value="vetFis">-Veterinario Fisioterapeuta</option>
-                    <option value="vetDer">-Veterinario Dermatologo</option>
-                    <option value="otros">-Otros</option>             
-                </select>
-                <small class="form-text text-muted">
-                    Seleccione SOLO una opción
-                  </small>
-              </div>
-              
-              <div class="form-group-row col-md-6">
-                <!-- Descripción -->
-                <label for="inputDescripcion">Descripción:</label>
-                <input type="text" class="form-control" id="inputDescripcion" placeholder="Descripción">
-                <small class="form-text text-muted">
-                  Ejemplo: Soy un profesional con experiencia en...
-                </small>
-                <div class="invalid-feedback">
-                  Recuerda este campo debe contener entre 5 y 300 caracteres
-                </div>
-              </div>
-    
-              <div class="form-group-row col-md-6">
-                <!-- Servicios -->
-                <label for="inputServicios">Servicios</label>
-                <input type="text" class="form-control" id="inputServicios" placeholder="Servicios">
-                <small class="form-text text-muted">
-                  Ejemplo: Estetica Canina $300.00 MXN
-                </small>
-                <div class="invalid-feedback">
-                    Recuerda este campo debe contener entre 5 y 300 caracteres
-                </div>
-              </div>
-    
-              <div class="form-group-row col-md-6">
-                <!-- Direccion -->
-                <label for="inputDireccion">Dirección</label>
-                <input type="text" class="form-control" id="inputDireccion" placeholder="Dirección">
-                <small class="form-text text-muted">
-                  Ejemplo: Calle y # exterior
-                </small>
-                <div class="invalid-feedback">
-                    Recuerda este campo debe contener entre 5 y 300 caracteres
-                </div>
-              </div>
-    
-    
-              <div class="form-group-row col-md-6">
-                <!-- Consulta -->
-                <label for="inputConsulta">Consulta</label>
-                <input type="text" class="form-control" id="inputConsulta" placeholder="Costo por consulta">
-                <small class="form-text text-muted">
-                  Ejemplo: 300
-                </small>
-                <div class="invalid-feedback">
-                  Recuerda este campo solo debe contener números.
-                </div>
-              </div>
-    
-              <div class="form-group col-md-6">
-                <!--correo-->
-                <label for="inputCorreo">Correo:</label>
-                <input type="email" class="form-control" id="inputCorreo" placeholder="ejemplo@correo.com">
-                <small class="form-text text-muted">
-                  Ejemplo: dr.lomito@gmail.com
-                </small>
-                <div class="invalid-feedback">
-                  Recuerda este campo: Debe contener un @
-                </div>
-              </div>
-    
-                <!-- Télefono Local -->
-              <div class="form-group col-md-6">
-                <label for="inputTelLocal">Teléfono Local:</label>
-                <input type="text" maxlength="10" class="form-control" id="inputTelLocal" placeholder="Número a 10 dígitos">
-                <small class="form-text text-muted">
-                  Ejemplo: 6527482684
-                </small>
-                <div class="invalid-feedback">
-                  Recuerda ingresar un número de 10 dígitos
-                </div>
-              </div>
-    
-                <!-- Teléfono Personal -->
-              <div class="form-group col-md-6">
-                <label for="inputTelPersonal">Teléfono Personal:</label>
-                <input type="text" maxlength="10" class="form-control" id="inputTelPersonal" placeholder="Número a 10 dígitos">
-                <small class="form-text text-muted">
-                  Ejemplo: 6527482684
-                </small>
-                <div class="invalid-feedback">
-                  Recuerda ingresar un número de 10 dígitos
-                </div>
-              </div>
-    
-                <!-- Hora Inicio -->
-              <div class="form-group col-md-6">
-                <label for="inputHoraIni">Hora Apertura:</label>
-                <input type="text" class="form-control" id="inputHoraIni" placeholder="Hora de Apertura a 2 dígitos">
-                <small class="form-text text-muted">
-                  Ejemplo: 07
-                </small>
-                <div class="invalid-feedback">
-                  Recuerda ingresar la hora de apertura a dos dígitos (00-24)
-                </div>
-              </div>
-    
-              <!-- Hora Cierre -->
-            <div class="form-group col-md-6">
-              <label for="inputHoraCie"> Hora de cierre:</label>
-              <input type="text" class="form-control" id="inputHoraCie" placeholder="Hora de cierre a 2 dígitos">
-              <small class="form-text text-muted">
-                Ejemplo: 21
-              </small>
-              <div class="invalid-feedback">
-                Recuerda ingresar la hora de cierre a dos dígitos (00-24)
-              </div>
-            </div>
-    
-              <!-- Disponibilidad Urgencias -->
-            <div class="form-group col-md-6">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="input247">
-                  <label class="form-check-label" for="input247">24-7 Urgencias</label>              
-                </div>
-            </div>
-    
-              <!-- Añadir -->
-            <div class="form-group col-md-6">
-              <button class="btn btn-primary btn-block" type="button" id="btnAgregar">Agregar Veterinario</button>          
-            </div>
-            <br>
-        </div>
-          
-    
-        </form>
-      </main>
+   <div id="caseVet"></div>
    
-    <footer id="footer_olas"></footer>
+ </main>
+
+
+ <footer id="footer_olas"></footer>
     <script src="../js/general.js"></script>
     <script src="/js/perfil.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

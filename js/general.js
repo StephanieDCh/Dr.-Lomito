@@ -1,11 +1,15 @@
 let navBar = document.getElementsByClassName("insertNavbar");
-console.log("Hay usuario firmado?" + localStorage.getItem("loggedIn"));
 let loggedIn = document.getElementById("loggedIn");
 
 if((localStorage.getItem("loggedIn"))== "true"){  
   navBar[0].innerHTML = ` <div class="logo">
+<<<<<<< HEAD
      <a href="../index.html"><img src="../src/logoCircular.png" alt="logo" width="60px" height="60px"></a>
      <div id = "lomito"><a href="../index.html">Dr.Lomito</a></div>  
+=======
+     <a href="/index.html"><img src="../src/logoCircular.png" alt="logo" width="60px" height="60px"></a>
+     <div id ="lomito"><a href="/index.html" style="text-decoration: none">Dr.Lomito</a></div>  
+>>>>>>> 9f4a56d (Se realiza el script para la pagina de perfiles)
    </div>         
      <div class="hamburguer">
      <div class="line"></div>
@@ -28,9 +32,6 @@ if((localStorage.getItem("loggedIn"))== "true"){
          <a class="activePage" href="../pages/perfilUsuario.html" style="text-decoration: none">Perfil</a>
        </li>
        <li>
-         <a class="activePage" href="../pages/ingresarVet.html" style="text-decoration: none">Agregar Vet</a>
-       </li>
-       <li>
        <a class="activePage" id="loggedIn" href="../index.html" style="text-decoration: none">Cerrar Sesión</a>
        </li>
      </ul>
@@ -46,8 +47,13 @@ if((localStorage.getItem("loggedIn"))== "true"){
 
 }else{
   navBar[0].innerHTML = ` <div class="logo">
+<<<<<<< HEAD
   <a href="../index.html"><img src="../src/logoCircular.png" alt="logo" width="60px" height="60px"></a>
   <div id = "lomito"><a href="../index.html">Dr.Lomito</a></div> 
+=======
+  <a href="/index.html"><img src="../src/logoCircular.png" alt="logo" width="60px" height="60px"></a>
+  <div id = "lomito"><a href="/index.html" style="text-decoration: none">Dr.Lomito</a></div> 
+>>>>>>> 9f4a56d (Se realiza el script para la pagina de perfiles)
 </div>         
   <div class="hamburguer">
   <div class="line"></div>
@@ -66,9 +72,6 @@ if((localStorage.getItem("loggedIn"))== "true"){
       <a class="activePage"  href="../pages/directorio.html" style="text-decoration: none">Directorio</a> 
       </a>
     </li>    
-    <li>
-      <a class="activePage" href="../pages/ingresarVet.html" style="text-decoration: none">Agregar Vet</a>
-    </li>
     <li>
       <a class="activePage" id="loggedIn" href="../pages/logIn.html" style="text-decoration: none">Inicia Sesión</a>
     </li>
