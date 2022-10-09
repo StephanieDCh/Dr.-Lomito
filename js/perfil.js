@@ -1,218 +1,142 @@
-import { veterinario } from "../js/classes.js";
-
-let btnAgregar = document.getElementById("btnAgregar");
-
-let campoNombre = document.getElementById("inputNombre"); //trae valor string
-let campoEspecialidad = document.getElementById("inputEspecialidad"); //ya
-
-
-let campoDescripcion = document.getElementById("inputDescripcion");//ya
-let campoServicios = document.getElementById("inputServicios"); //ya
-let campoDireccion = document.getElementById("inputDireccion"); //ya 
-let campoConsulta = document.getElementById("inputConsulta");//ya  
-
-let campoCorreo = document.getElementById("inputCorreo");//ya
-let campoTelLocal = document.getElementById("inputTelLocal");//ya
-let campoTelPersonal = document.getElementById("inputTelPersonal");//ya
-
-let campoHoraIni = document.getElementById("inputHoraIni"); //ya
-let campoHoraCie = document.getElementById("inputHoraCie");//ya
-
-
-let listVetsAdd = [];
-let flag= true;
-let imagenTemp = "../src/9.png"; 
-let puntuacionTemp = "5 estrellas";
-let indexVets = 0;
-let passVet = "";//Aquí guardamos la contrasena ingresada por el usuario en la pagina de registro
+let formContainer = document.getElementById("caseVet");
 
 window.addEventListener("load", function(e){
-    if(localStorage.getItem("nameRegisterVet") && localStorage.getItem("correoRegisterVet") && localStorage.getItem("passRegisterVet")){
-        campoNombre.value = localStorage.getItem("nameRegisterVet");
-        campoCorreo.value = localStorage.getItem("correoRegisterVet");
-        passVet = localStorage.getItem("passRegisterVet");
-    }
-
-})
-
-
-btnAgregar.addEventListener("click", function (e) {
 e.preventDefault();
+let userId = localStorage.getItem("userLogged");
+let listUsers = JSON.parse(localStorage.getItem("users"));
 
-flag = true;
-
-
-let valorNombre = document.getElementById("inputNombre").value; //trae valor string
-
-let valorEspecialidad = document.getElementById("inputEspecialidad").value; //ya
-let campoCategoria = document.getElementById("listCat");
-let cat = campoCategoria.options[campoCategoria.selectedIndex].value;
-
-
-let valorDescripcion = document.getElementById("inputDescripcion").value;//ya
-let valorServicios = document.getElementById("inputServicios").value; //ya
-let valorDireccion = document.getElementById("inputDireccion").value; //ya 
-let valorConsulta = parseInt(document.getElementById("inputConsulta").value);//ya  
-
-let valorCorreo = document.getElementById("inputCorreo").value;//ya
-let valorTelLocal = document.getElementById("inputTelLocal").value;//ya
-let valorTelPersonal = document.getElementById("inputTelPersonal").value;//ya
-
-let valorHoraIni = document.getElementById("inputHoraIni").value; //ya
-let valorHoraCie = document.getElementById("inputHoraCie").value;//ya
-let campo247 = document.getElementById("input247");//ya
-
-//campo nombre
-if (valorNombre.length >= 3 && valorNombre.length <= 20 && isNaN(valorNombre))  { //se cumple la condición
-    campoNombre.classList.remove("is-invalid");
-    campoNombre.classList.add("is-valid");
-
-} else { //falla la condición
-    campoNombre.classList.remove("is-valid");
-    campoNombre.classList.add("is-invalid");
-    flag = false;
-}//else
-
-
-//Especialidad
-if (valorEspecialidad.length >= 5 && valorEspecialidad.length <=150 && isNaN(valorEspecialidad)) {
-    campoEspecialidad.classList.remove("is-invalid");
-    campoEspecialidad.classList.add("is-valid");
-}
-else {
-    campoEspecialidad.classList.remove("is-valid");
-    campoEspecialidad.classList.add("is-invalid");
-    flag = false;
-}
-
-//categoria
-if (campoCategoria.selectedIndex != 0) {
-    campoCategoria.classList.remove("is-invalid");
-    campoCategoria.classList.add("is-valid");
-
-} else {
-
-    campoCategoria.classList.remove("is-valid");
-    campoCategoria.classList.add("is-invalid");
-    flag = false;
-
-}  
-
-//descripcion
-if (valorDescripcion.length >= 5 && valorDescripcion.length <=300 && isNaN(valorDescripcion)) {
-    campoDescripcion.classList.remove("is-invalid");
-    campoDescripcion.classList.add("is-valid");
-
-} else {
-    campoDescripcion.classList.remove("is-valid");
-    campoDescripcion.classList.add("is-invalid");
-    flag = false;
-}
-
-//Servicios
-if (valorServicios.length >= 6 && valorServicios.length <= 300 && isNaN(valorServicios)) {
-    campoServicios.classList.remove("is-invalid");
-    campoServicios.classList.add("is-valid");
-
-} else {
-    campoServicios.classList.remove("is-valid");
-    campoServicios.classList.add("is-invalid");
-    flag = false;
-}
-
-//direccion
-if (valorDireccion.length >= 6 && valorDireccion.length <= 150 && isNaN(valorDireccion)) {
-    campoDireccion.classList.remove("is-invalid");
-    campoDireccion.classList.add("is-valid");
-} else {
-    campoDireccion.classList.remove("is-valid");
-    campoDireccion.classList.add("is-invalid");
-    flag = false;
-}
-
-//consulta    
-if (!isNaN(valorConsulta)) {
-    campoConsulta.classList.remove("is-invalid");
-    campoConsulta.classList.add("is-valid");
-} else {
-    campoConsulta.classList.remove("is-valid");
-    campoConsulta.classList.add("is-invalid");
-    flag = false;
-}
-
-//correo
-if ((valorCorreo.includes("@")) && (valorCorreo.includes(".com"))) {
-    campoCorreo.classList.remove("is-invalid");
-    campoCorreo.classList.add("is-valid");
-
-} else {
-    campoCorreo.classList.remove("is-valid");
-    campoCorreo.classList.add("is-invalid");
-    flag = false;
-}    
-
-//teléfono local
-    if (valorTelLocal.length == 10 && !isNaN(valorTelLocal)) {
-    campoTelLocal.classList.remove("is-invalid");
-    campoTelLocal.classList.add("is-valid");
-}
-else {
-    campoTelLocal.classList.remove("is-valid");
-    campoTelLocal.classList.add("is-invalid");
-    flag = false;
-}
-
-//campoTelPersonal 
-if (valorTelPersonal.length == 10 && !isNaN(valorTelPersonal)) {
-    campoTelPersonal.classList.remove("is-invalid");
-    campoTelPersonal.classList.add("is-valid");
-}
-else {
-    campoTelPersonal.classList.remove("is-valid");
-    campoTelPersonal.classList.add("is-invalid");
-    flag = false;
-}
-
-//campoHoraIni
-if (valorHoraIni.length <= 2 && valorHoraIni.length >= 1 && valorHoraIni >= 0 && valorHoraIni <=24 && !isNaN(valorHoraIni)){
-    campoHoraIni.classList.remove("is-invalid");
-    campoHoraIni.classList.add("is-valid");
-}
-else {
-    campoHoraIni.classList.remove("is-valid");
-    campoHoraIni.classList.add("is-invalid");
-    flag = false;
-}
-
-//campoHoraCie   
-if (valorHoraCie.length <= 2 && valorHoraCie.length >= 1 && valorHoraCie >= 0 && valorHoraCie <=24 && !isNaN(valorHoraCie)) {
-    campoHoraCie.classList.remove("is-invalid");
-    campoHoraCie.classList.add("is-valid");
-}
-else {
-    campoHoraCie.classList.remove("is-valid");
-    campoHoraCie.classList.add("is-invalid");
-    flag = false;
-}
-
-///con que valor llegó la bandera despues de todas las validaciones
-if (flag == true) {        
-
-    if(localStorage.getItem("users")){
-
-        let savedVets = JSON.parse(localStorage.getItem("users"));
-        listVetsAdd = savedVets;
-        indexVets = listVetsAdd.length;
-
-    }
-    indexVets++;
-                                  //(typeVet, id, nombre, correo, password, categoria, img, especialidad, calificacion, descripcion, direccion, telLocal1, telPersonal,  costoConsulta, servicios, horAteIni, horaAteCierre, urgencia24_7)
-    listVetsAdd.push(new veterinario("true", indexVets, valorNombre, valorCorreo, passVet,cat, imagenTemp,  valorEspecialidad, puntuacionTemp, valorDescripcion,  valorDireccion, valorTelLocal, valorTelPersonal,  valorConsulta, valorServicios, valorHoraIni ,valorHoraCie, campo247.checked));
-    localStorage.setItem("users", JSON.stringify(listVetsAdd));
-    localStorage.removeItem("nameRegisterVet");
-    localStorage.removeItem("correoRegisterVet");
-    localStorage.removeItem("passRegisterVet");
+if(listUsers[userId].typeVet == "true"){
+    formContainer.innerHTML += `<form id="formVet">
+    <br>
+      <div class="form-group">
+        <!-- NOMBRE -->
+        <div class="form-row d-flex justify-content-center">
+          <div class="form-group col-md-4">
+          <label for="inputNombre">Nombre:</label>
+          <input type="text" class="form-control" id="inputNombre" value="${listUsers[userId].nombre}" readonly>
+          </div>
+          <div class="form-group col-md-4">
+            <!--correo-->
+            <label for="inputCorreo">Correo:</label>
+            <input type="email" class="form-control" id="inputCorreo" value="${listUsers[userId].correo}" placeholder="ejemplo@correo.com" readonly>            
+          </div>
+           <!-- Categoria -->
+          <div class="form-group col-md-3">            
+            <label for="listCat">Categoría</label>
+            <select class="custom-select" id="listCat" disabled>
+            <option selected disabled value="">Elegír Categoría</option>            
+            <option value="vetG">-Veterinario General</option>
+            <option value="vetAv">-Veterinario Aviar</option>
+            <option value="vetRep">-Veterinario Reptiles</option>
+            <option value="vetGan">-Veterinario Ganadería</option>
+            <option value="vetOrt">-Veterinario Ortopedista</option>
+            <option value="vetCir">-Veterinario Cirujano</option>
+            <option value="vetOnc">-Veterinario Oncólogo</option>
+            <option value="vetOft">-Veterinario Oftalmólogo</option>
+            <option value="vetFis">-Veterinario Fisioterapeuta</option>
+            <option value="vetDer">-Veterinario Dermatólogo</option>
+            <option value="otros">-Otros</option>             
+             </select>            
+          </div>
+        </div>          
     
-   
+        <div class="form-row d-flex justify-content-center">
+            <div class="form-group col-md-4">
+              <!-- Especialidad -->
+              <label for="inputEspecialidad">Especialidad:</label>
+              <input type="text" class="form-control" id="inputEspecialidad" value="${listUsers[userId].especialidad}" placeholder="Especialidad" readonly>
+            </div>  
+            <div class="form-group col-md-3">
+              <!-- Consulta -->
+              <label for="inputConsulta">Consulta</label>
+              <input type="text" class="form-control" id="inputConsulta" value="${listUsers[userId].costoConsulta}" placeholder="Costo por consulta" readonly>
+              <small class="form-text text-muted">
+                Ejemplo: 300.00
+              </small>
+              <div class="invalid-feedback">
+                Recuerda este campo solo debe contener números.
+              </div>
+            </div>
+            <div class="form-group col-md-4">
+              <!-- Direccion -->
+              <label for="inputDireccion">Dirección</label>
+              <input type="text" class="form-control" id="inputDireccion" value="${listUsers[userId].direccion}" placeholder="Dirección" readonly>
+              <small class="form-text text-muted">
+                Ejemplo: Calle y # exterior
+              </small>
+              <div class="invalid-feedback">
+                  Recuerda este campo debe contener entre 5 y 300 caracteres
+              </div>
+            </div>     
+        </div>
+       
+       
+        <div class="form-row d-flex justify-content-center">
+          <div class="form-group  col-md-6">
+            <!-- Descripción -->
+            <label for="inputDescripcion">Descripción:</label>
+            <textarea type="text" class="form-control" id="inputDescripcion" placeholder="Descripción" rows="3" readonly>${listUsers[userId].descripcion}</textarea>            
+          </div>
+          <div class="form-group col-md-5">
+            <!-- Servicios -->
+            <label for="inputServicios">Servicios</label>
+            <textarea type="text" class="form-control" id="inputServicios" placeholder="Servicios" rows="3" readonly>${listUsers[userId].servicios}</textarea>
+            </div>
+        </div>
+    
+        <div class="form-row d-flex justify-content-center">
+          <!-- Télefono Local -->
+        <div class="form-group col-md-3">
+          <label for="inputTelLocal">Teléfono Local:</label>
+          <input type="text" maxlength="10" class="form-control" id="inputTelLocal" value="${listUsers[userId].telLocal1}" placeholder="Número a 10 dígitos" readonly>          
+        </div>
+    
+          <!-- Teléfono Personal -->
+        <div class="form-group col-md-3">
+          <label for="inputTelPersonal">Teléfono Personal:</label>
+          <input type="text" maxlength="10" class="form-control" id="inputTelPersonal" value="${listUsers[userId].telPersonal}" placeholder="Número a 10 dígitos" readonly>          
+        </div>
+    
+          <!-- Hora Inicio -->
+        <div class="form-group col-md-3">
+          <label for="inputHoraIni">Hora Apertura:</label>
+          <input type="text" class="form-control" id="inputHoraIni" value="${listUsers[userId].horAteIni}" placeholder="Hora de Apertura a 2 dígitos" readonly>          
+        </div>
+    
+        <!-- Hora Cierre -->
+      <div class="form-group col-md-2">
+        <label for="inputHoraCie"> Hora de cierre:</label>
+        <input type="text" class="form-control" id="inputHoraCie" value="${listUsers[userId].horaAteCie}" placeholder="Hora de cierre a 2 dígitos" readonly>        
+      </div>  
+        <!-- Disponibilidad Urgencias -->
+        <div class="form-group col-md-2">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="input247" disabled>
+            <label class="form-check-label" for="input247">24-7 Urgencias</label>              
+          </div>
+      </div>     
+    </div>    
+    </div>
+    </form>`;
+}else{
+    formContainer.innerHTML +=`<form id="formVet" class="form-group col-sm-5">
+      <br>
+        <div class="form-group">
+          <!-- NOMBRE -->
+          <div class="form-row d-flex justify-content-start">
+            <div class="form-group col-md-12">
+            <label for="inputNombre">Nombre:</label>
+            <input type="text" class="form-control" id="inputNombre" value="${listUsers[userId].nombre}" readonly>
+            </div>
+          </div>
+          <div class="form-row d-flex justify-content-start">
+            <div class="form-group col-md-12">
+              <!--correo-->
+              <label for="inputCorreo">Correo:</label>
+              <input type="email" class="form-control" id="inputCorreo" value="${listUsers[userId].correo}" placeholder="ejemplo@correo.com" readonly>
+            </div>
+          </div>
+   </div>
+   </form>`
 }
-});//campo boton
+})
