@@ -4,6 +4,11 @@
     box-sizing: border-box;    
 }
 
+h2{
+    color: #333;
+    align-content: center;
+}
+
 .container_{
     min-height: 100vh;
     display: flex;
@@ -28,6 +33,7 @@
     background-color: #7ED4B5; 
     border-radius: 25px;  
 }
+
 .cardHeader h2, h4, p{
     text-align: center;
 }
