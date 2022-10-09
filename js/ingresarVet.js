@@ -21,7 +21,7 @@ let campoHoraCie = document.getElementById("inputHoraCie");//ya
 
 let listVetsAdd = [];
 let flag= true;
-let imagenTemp = "../src/9.png"; 
+let imagenTemp = "../src/veterinarios/vet16.jpg"; 
 let puntuacionTemp = "5 estrellas";
 let indexVets = 0;
 let passVet = "";//Aquí guardamos la contrasena ingresada por el usuario en la pagina de registro
