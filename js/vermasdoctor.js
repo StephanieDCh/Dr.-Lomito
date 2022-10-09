@@ -1,6 +1,7 @@
 import { opinion } from "../js/classes.js";
 let posCardVerMas = "";
 let listVet = [];
+
 let itemsContainer = document.getElementById("list-items");
 let opinionContainer = document.getElementsByClassName("listOpiniones");
 let checkOpiAutor = document.getElementById("checkAnoni");
@@ -10,6 +11,16 @@ let msgOpi = document.getElementById("Opinion");
 let btnOpinar = document.getElementById("btnOpinar");
 let btnCerrarModal = document.getElementById("btnCerrarModal");
 let cardOpinTmp = document.getElementById("opinionTemporal");;
+
+
+
+
+let estrellas =`<i class="fa fa-paw " style="cursor: pointer;  color:orange; text-shadow: 0 0 3px #000;" id="1"></i>
+<i class="fa fa-paw "  style="cursor: pointer;  color:orange; text-shadow: 0 0 3px #000;" id="2"></i>
+<i class="fa fa-paw "  style="cursor: pointer;  color:orange; text-shadow: 0 0 3px #000;" id="3"></i>
+<i class="fa fa-paw "  style="cursor: pointer;  color:orange; text-shadow: 0 0 3px #000;" id="4"></i>
+<i class="fa fa-paw "  style="cursor: pointer;  color:orange; text-shadow: 0 0 3px #000;" id="5"></i>`;
+
 
 let nameLoggedIn = "";
 let userLoggedIn = false;
@@ -22,6 +33,25 @@ window.addEventListener("load", function (e){
         
         posCardVerMas = localStorage.getItem("card");
         listVet = JSON.parse(localStorage.getItem("users"));
+
+        let cali=listVet[posCardVerMas].calificacion;
+        var contador;
+    function calificar(item){ //item es la estrella en la que se hace click
+       
+        contador=item.id[0];//trata el id como string y toma el primer caracter
+        console.log(item.id[0]);
+        let nombre = item.id.substring(1);//captura el resto del string
+        console.log(nombre);
+
+        for(let i=0;i<5;i++){
+            
+            if(i<contador){ //contador es el número de la estrella a la que le di click
+          document.getElementById((i+1)+nombre).style.color="orange";
+            }else{
+                document.getElementById((i+1)+nombre).style.color="black";
+            }
+        }//for calificacion
+    }
         
         itemsContainer.innerHTML += `<div class="vetCardContainer">
         <div class="cardHeader">
@@ -30,7 +60,7 @@ window.addEventListener("load", function (e){
           </a>
           <h2>${listVet[posCardVerMas].nombre}</h2>
           <h4>${listVet[posCardVerMas].especialidad}</h4>
-          <p>${listVet[posCardVerMas].calificacion}</p>
+          <p>${estrellas} </p> <!--esta es la parte a modificar-->
         </div>
         <div class="descripcion">
           <p><strong>Descripcion: </strong> ${listVet[posCardVerMas].descripcion}</p>
@@ -47,7 +77,9 @@ window.addEventListener("load", function (e){
                 <a href="#escribirOpinion" data-toggle="modal" id="btnOpinar">Escribir Opinión</a>
               </div>
         </div>
-      </div>`;   
+      </div>`;
+      
+      
 
       if((listVet[posCardVerMas]).opiniones.length > 0){
         cardOpinTmp.style.display = "none";        

@@ -85,7 +85,7 @@ itemsContainer.addEventListener("click", function (event){
    console.log(event.target.id)  //muestra el lugar donde se hizo click
    if((event.target.id).includes("btnVerMas_")){    
         console.log(event.target.id);
-    let posCard = (event.target.id).slice(10);    
+    let posCard = (event.target.id).slice(10);     
     localStorage.setItem("card", posCard);
    }
 });//Escuchar cualquier click en el contenedor
