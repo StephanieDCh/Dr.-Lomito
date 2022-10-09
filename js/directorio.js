@@ -40,7 +40,21 @@ window.addEventListener("load", function(){
 
 
         for (let i=0; i<listUsersDir.length; i++){        
-            let item = listUsersDir[i];  //se inyecta una tarjeta 
+            let item = listUsersDir[i];  //se inyecta una tarjeta
+            
+            //letrero patitas
+        let contador=item.calificacion;
+        console.log(contador)
+        let letrero="";
+        for(let i=0;i<5;i++){
+            
+          if(i<contador){ //contador es el número de la estrella a la que le di click
+          letrero+=`<i class="fa fa-paw " style="color:orange; text-shadow: 0 0 3px #000;" id="pata1"></i>`
+         
+          }else{
+            letrero+=`<i class="fa fa-paw " style="color:black; text-shadow: 0 0 3px #000;" id="pata1"></i>`
+          }}
+
             if(item.typeVet == "true"){
                 itemsContainer.innerHTML += `   
                 <div class="card ${item.categoria} all col-md-5 m-1" id="individual>
@@ -52,11 +66,7 @@ window.addEventListener("load", function(){
                                 <div class="card-body">     
                                     <p class="card-text">
                                 
-                                    <i class="fa fa-paw " onclick="calificar(this)" style="cursor: pointer; color:orange;" id="1estrella"></i>
-                                    <i class="fa fa-paw " onclick="calificar(this)" style="cursor: pointer;  color:orange;" id="2estrella"></i>
-                                    <i class="fa fa-paw " onclick="calificar(this)" style="cursor: pointer;  color:orange;" id="3estrella"></i>
-                                    <i class="fa fa-paw " onclick="calificar(this)" style="cursor: pointer;  color:orange;" id="4estrella"></i>
-                                    <i class="fa fa-paw fa-2xl" onclick="calificar(this)" style="cursor: pointer;  color:orange;" id="5estrella"></i>
+                                    ${letrero}
                                 
                                     </p> <!-- div estrellas -->               
                                     <h5 class="card-title">${item.nombre}</h5>

@@ -1,7 +1,7 @@
 var contador;
     function calificar(item){ //item es la estrella en la que se hace click
        
-        contador=item.id[0];//trata el id como string y toma el primer caracter
+        contador=item.id[0];//trata el id como string y toma el primer caracter recupera el numero
         console.log(item.id[0]);
         let nombre = item.id.substring(1);//captura el resto del string
         console.log(nombre);

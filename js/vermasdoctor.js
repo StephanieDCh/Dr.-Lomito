@@ -14,12 +14,8 @@ let cardOpinTmp = document.getElementById("opinionTemporal");;
 
 
 
+let estrellas =[document.getElementById("pata1"),document.getElementById("pata2"),document.getElementById("pata3"),document.getElementById("pata4"),document.getElementById("pata5")];
 
-let estrellas =`<i class="fa fa-paw " style="cursor: pointer;  color:orange; text-shadow: 0 0 3px #000;" id="1"></i>
-<i class="fa fa-paw "  style="cursor: pointer;  color:orange; text-shadow: 0 0 3px #000;" id="2"></i>
-<i class="fa fa-paw "  style="cursor: pointer;  color:orange; text-shadow: 0 0 3px #000;" id="3"></i>
-<i class="fa fa-paw "  style="cursor: pointer;  color:orange; text-shadow: 0 0 3px #000;" id="4"></i>
-<i class="fa fa-paw "  style="cursor: pointer;  color:orange; text-shadow: 0 0 3px #000;" id="5"></i>`;
 
 
 let nameLoggedIn = "";
@@ -34,25 +30,20 @@ window.addEventListener("load", function (e){
         posCardVerMas = localStorage.getItem("card");
         listVet = JSON.parse(localStorage.getItem("users"));
 
-        let cali=listVet[posCardVerMas].calificacion;
-        var contador;
-
-    function calificar(item){ //item es la estrella en la que se hace click
+        //letrero patitas
+        let contador=listVet[posCardVerMas].calificacion;
        
-        contador=item.id[0];//trata el id como string y toma el primer caracter
-        console.log(item.id[0]);
-        let nombre = item.id.substring(1);//captura el resto del string
-        console.log(nombre);
-
+        let letrero="";
         for(let i=0;i<5;i++){
             
-            if(i<contador){ //contador es el número de la estrella a la que le di click
-          document.getElementById((i+1)+nombre).style.color="orange";
-            }else{
-                document.getElementById((i+1)+nombre).style.color="black";
-            }
-        }//for calificacion
-    }
+          if(i<contador){ //contador es el número de la estrella a la que le di click
+          letrero+=`<i class="fa fa-paw " style="color:orange; text-shadow: 0 0 3px #000;" id="pata1"></i>`
+         
+          }else{
+            letrero+=`<i class="fa fa-paw " style="color:black; text-shadow: 0 0 3px #000;" id="pata1"></i>`
+          }
+      }//for calificacion
+
         
         itemsContainer.innerHTML += `<div class="vetCardContainer">
         <div class="cardHeader">
@@ -61,7 +52,7 @@ window.addEventListener("load", function (e){
           </a>
           <h2>${listVet[posCardVerMas].nombre}</h2>
           <h4>${listVet[posCardVerMas].especialidad}</h4>
-          <p>${estrellas} </p> <!--esta es la parte a modificar-->
+          <p>${letrero} </p> <!--esta es la parte a modificar-->
         </div>
         <div class="descripcion">
           <p><strong>Descripcion: </strong> ${listVet[posCardVerMas].descripcion}</p>
@@ -95,14 +86,14 @@ window.addEventListener("load", function (e){
               </div>
             </div>
               <div class="puntuacion">
-                <p>${estrellas}</p>
+                <p>${element.calificacion}</p>
               </div>
               
               <div class="card-content">
                 <h2 class="nombre">${element.autor}</h2>
                 <p class="opinion">${element.opinion}</p>
               </div>`)
-            
+            console.log(typeof(element.calificacion))
           
         });
        
@@ -154,8 +145,25 @@ window.addEventListener("load", function (e){
           e.preventDefault();
         
           if(validarCalif() && validaOpinion()){    
+
+            let imgcalif=califOpi.options[califOpi.selectedIndex].value;
+            console.log(imgcalif);
+
+             //letrero patitas
+        let contadoropi=imgcalif;
+        console.log(contadoropi)
+        let letrero_opi="";
+        for(let i=0;i<5;i++){
+            
+          if(i<contadoropi){ //contador es el número de la estrella a la que le di click
+          letrero_opi+=`<i class="fa fa-paw " style="color:orange; text-shadow: 0 0 3px #000;" id="pata1"></i>`
+         
+          }else{
+            letrero_opi+=`<i class="fa fa-paw " style="color:black; text-shadow: 0 0 3px #000;" id="pata1"></i>`
+          }
+      }//for calificacion
            
-            (listVet[posCardVerMas]).opiniones.push(new opinion (autorOpi.value, califOpi.options[califOpi.selectedIndex].value, msgOpi.value));
+            (listVet[posCardVerMas]).opiniones.push(new opinion (autorOpi.value, letrero_opi, msgOpi.value));
             localStorage.setItem("users", JSON.stringify(listVet));
 
             
@@ -191,7 +199,13 @@ window.addEventListener("load", function (e){
       }         
     }
     
-});//se inserta la card principal
+});//se inserta la card 
+
+
+
+
+
+
 var swiper = new Swiper(".slide-content", {
   slidesPerView: 3,
   spaceBetween: 25,
@@ -221,3 +235,4 @@ var swiper = new Swiper(".slide-content", {
       },
   },
 });//propiedad responsiva del carrusel
+

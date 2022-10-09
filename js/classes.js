@@ -53,7 +53,7 @@ export class veterinario extends usuario{
 
 export class opinion {
     autor = "";
-    calificacion = 0;
+    calificacion ;
     opinion = "";  
 
     constructor (autor, calificacion, opinion){
