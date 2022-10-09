@@ -19,7 +19,7 @@ export class veterinario extends usuario{
     categoria = "";
     img = "";    
     especialidad = "";
-    calificacion = "";
+    calificacion = 0;
     descripcion = "";
     direccion = "";
     telLocal1 = 0;
