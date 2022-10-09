@@ -52,7 +52,7 @@ window.addEventListener("load", function(){
                                 <div class="card-body">     
                                     <p class="card-text">
                                 
-                                    <i class="fa fa-paw " onclick="calificar(this)" style="cursor: pointer; color:orange;" id="1estrella"></i>
+                                    <i class="fa fa-paw " onclick="$calificar{this)" style="cursor: pointer; color:orange;" id="1estrella"></i>
                                     <i class="fa fa-paw " onclick="calificar(this)" style="cursor: pointer;  color:orange;" id="2estrella"></i>
                                     <i class="fa fa-paw " onclick="calificar(this)" style="cursor: pointer;  color:orange;" id="3estrella"></i>
                                     <i class="fa fa-paw " onclick="calificar(this)" style="cursor: pointer;  color:orange;" id="4estrella"></i>

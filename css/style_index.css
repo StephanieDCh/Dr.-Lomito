@@ -79,9 +79,6 @@ h2{
 }
 
 
-
-
-
 .textRegistrate{
     text-align: center;
     font-size: 15px;
@@ -135,15 +132,6 @@ h2{
     width: 100%;
   }
 
-}body {
-    background: #FFF9E3;
-
-}
-nav{
- font-family: Arial, Helvetica, sans-serif;
- font-size: 20px;
- color: black;
- background-color:#7ED4B5;
 }
 
 /*Contenedor de formulario y card*/
