@@ -25,7 +25,7 @@ let estrellas =`<i class="fa fa-paw " style="cursor: pointer;  color:orange; tex
 let nameLoggedIn = "";
 let userLoggedIn = false;
 
-
+//clases de patitas  
 
 window.addEventListener("load", function (e){  
 
@@ -36,6 +36,7 @@ window.addEventListener("load", function (e){
 
         let cali=listVet[posCardVerMas].calificacion;
         var contador;
+
     function calificar(item){ //item es la estrella en la que se hace click
        
         contador=item.id[0];//trata el id como string y toma el primer caracter
@@ -94,7 +95,7 @@ window.addEventListener("load", function (e){
               </div>
             </div>
               <div class="puntuacion">
-                <p>${element.calificacion}</p>
+                <p>${estrellas}</p>
               </div>
               
               <div class="card-content">
