@@ -2,12 +2,6 @@ body {
     background: #FFF9E3;
 
 }
-nav{
- font-family: Arial, Helvetica, sans-serif;
- font-size: 20px;
- color: black;
- background-color:#7ED4B5;
-}
 
 /*Contenedor de formulario y card*/
 .contenedorFormulario{
@@ -54,6 +48,9 @@ nav{
 .invalid-feedback{
     font-size: 10px;
     font-weight: 500;
+}
+h2{
+    color: white;
 }
 
 

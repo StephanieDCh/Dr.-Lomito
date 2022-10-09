@@ -39,44 +39,33 @@ window.addEventListener("load", function () {
     }//si no tiene nada, inicializar
 
 
-        for (let i=0; i<listUsersDir.length; i++){        
-            let item = listUsersDir[i];  //se inyecta una tarjeta 
-            if(item.typeVet == "true"){
-                itemsContainer.innerHTML += `   
-                <div class="card ${item.categoria} all col-md-5 m-1" id="individual>
-                    <div class="row no-gutters d-flex">
-                            <div class="col-sm-4" >
-                                <img id="imagenTest" src="${item.img}" class="card-img-top"  alt="..." >
-                            </div>
-                            <div class="col-sm-8">
-                                <div class="card-body">     
-                                    <p class="card-text">
-                                
-                                    <i class="fa fa-paw " onclick="$calificar{this)" style="cursor: pointer; color:orange;" id="1estrella"></i>
-                                    <i class="fa fa-paw " onclick="calificar(this)" style="cursor: pointer;  color:orange;" id="2estrella"></i>
-                                    <i class="fa fa-paw " onclick="calificar(this)" style="cursor: pointer;  color:orange;" id="3estrella"></i>
-                                    <i class="fa fa-paw " onclick="calificar(this)" style="cursor: pointer;  color:orange;" id="4estrella"></i>
-                                    <i class="fa fa-paw fa-2xl" onclick="calificar(this)" style="cursor: pointer;  color:orange;" id="5estrella"></i>
-                                
-                                    </p> <!-- div estrellas -->               
-                                    <h5 class="card-title">${item.nombre}</h5>
-                            
-                                    <p class="card-text">${item.especialidad}</p> 
-                                    
-                    
-                                    <p class="card-text">${item.descripcion}</p>
-                                    <p class="card-text">Consulta General<strong> $${item.costoConsulta}.00 MXN</strong></p>
-                                    <a href="../pages/doctorVerMas.html" type="buton" class="btn btn-dark" id="btnVerMas_${i}">Ver más</a>                                         
-                                </div>
-                            </div>
+    for (let i = 0; i < listUsersDir.length; i++) {
+        let item = listUsersDir[i];
+        if (item.typeVet == "true") {
+            itemsContainer.innerHTML += `
+            <div class="card  all col-md-5 m-1">
+                <div class="presentacion">
+                     <div class="img">
+                        <img id="imagenTest" src="${item.img}" class="card-img-top"  alt="...">
                     </div>
-                </div>  
-                <br/>`
-            }  
-          
-            
-            
-        };//sacar todos los elementos del arreglo para mostrar las cards y enviarlas al local storage
+                    <div class="producto-info">
+                        <div class="producto-texto">
+                        <div>
+                        <h1 class="card-title">${item.nombre}</h1>
+                        <h2 class="card-text">${item.especialidad}</h2>
+                        <p class="card-text">${item.calificacion}</p>
+                        <p class="card-text">${item.descripcion}</p>
+                        <p class="card-text">Consulta General____<strong> $${item.costoConsulta}.00 MXN</strong></p>
+                        </div>
+
+                    <div class="precio-btn">
+                        <a href="../pages/doctorVerMas.html"type="buton" class="btn btn-dark" id="btnVerMas_${i}">Agendar cita</a>
+                    </div>
+                </div>
+            </div>
+            `
+        }
+    };//sacar todos los elementos del arreglo para mostrar las cards y enviarlas al local storage
 });
 
 itemsContainer.addEventListener("click", function (event) {
