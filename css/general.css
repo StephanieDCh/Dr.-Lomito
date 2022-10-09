@@ -15,6 +15,11 @@ h1,h2{
     color: #7ED4B5;
     align-content: center;
   }
+p{
+  font-size: large;
+    font-weight: bold;
+    color: black;
+}  
 
 header{
     width: 100%;
@@ -35,6 +40,11 @@ header{
     align-items: center;
     margin-right: 20px;
 
+}
+#lomito a{
+    color: beige;
+    display: flex;
+    margin-left: 20px;
 }
 
 .hamburguer{
@@ -127,11 +137,12 @@ header{
 
 footer{
     width: 100%;
-    margin-top: 50px;
+    margin-top: 10px;
     padding: 10px 0px;
     background-image: url(/src/background-footer.svg);
     background-size: cover;
-    
+    text-align: center;
+    color:black;
 
 
     /*
@@ -141,20 +152,22 @@ footer{
     -webkit-mask-size: cover;
     mask-size: cover;*/
   }
-  
-  .container__footer{
-    display: flex;
+  /*container>box*/
+  .container__footer{ 
+    display:flex;
     flex-wrap: wrap;
     justify-content: space-between;
     max-width: 1200px;
     margin: auto;
     margin-top: 100px;
+      
   }
   
   .box__footer{
     display: flex;
-    flex-direction: column;
-    padding: 10px;
+    flex-direction: row;
+    margin:auto;
+    
   }
   
   .box__footer .logo img{
@@ -175,7 +188,7 @@ footer{
   
   .box__footer a{
     margin-top: 10px;
-    color: #7a7a7a;
+    color: #343434;
     font-weight: 600;
   }
   
@@ -185,6 +198,7 @@ footer{
   
   .box__footer a .fab{
     font-size: 20px;
+    margin: 10px;
   }
   
   .box__copyright{
