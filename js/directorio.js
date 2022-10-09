@@ -20,7 +20,7 @@ window.addEventListener("load", function(){
     }else{
 
         listUsersDir.push(
-            (new veterinario("true","1",'Juan Pérez','josue.chavezlomeli@gmail.com', "Batman33!","vetG",'../src/8.png','Veterinario general','4.8 estrellas','Especialista en Medicina y Cirugía en Perros y Gatos', 'Calle Lazaro Cardenas #204','33 3852-7890', '33 7865-7890',  600,'Estetica Canina $250 mxn', '7am', '8pm','true')),
+            (new veterinario("true","1",'Juan Pérez','josue.chavezlomeli@gmail.com', "Batman33!","vetG",'../src/8.png','Veterinario general','5 estrellas','Especialista en Medicina y Cirugía en Perros y Gatos', 'Calle Lazaro Cardenas #204','33 3852-7890', '33 7865-7890',  600,'Estetica Canina $250 mxn', '7am', '8pm','true')),
             (new veterinario("true","2",'Josué Chávez','josue.chavezlomeli@gmail.com',"Batman33!","vetRep",'../src/9.png','Veterinario Reptiles','5 estrellas','Especialista en Medicina y Cirugía en Perros y Gatos', 'Calle Lazaro Cardenas #204','33 3852-7890', '33 7865-7890',  550,'Estetica Canina $250 mxn', '7am', '8pm','true')),
             (new veterinario("true","3",'Juan Carlos Rojas','josue.chavezlomeli@gmail.com',"Batman33!","vetAv",'../src/6.png','Veterinario Aviar','4.5 estrellas','Especialista en Medicina y Cirugía en Perros y Gatos', 'Calle Lazaro Cardenas #204','33 3852-7890', '33 7865-7890',  350,'Estetica Canina $250 mxn', '7am', '8pm','true')),
             (new veterinario("true","4",'José Toledo','josue.chavezlomeli@gmail.com',"Batman33!","vetGan",'../src/7.png','Veterinario Ganadero','3 estrellas','Especialista en Medicina y Cirugía en Perros y Gatos', 'Calle Lazaro Cardenas #204','33 3852-7890', '33 7865-7890', 370,'Estetica Canina $250 mxn', '7am', '8pm','true')),

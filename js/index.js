@@ -1,173 +1,132 @@
-let Nombre=document.getElementById("Nombre");
-let Correo = document.getElementById("Email");
-let Contrasena = document.getElementById("Password");
+let campoNombre=document.getElementById("Nombre");
+let Correo = document.getElementById("Correo");
+let Password = document.getElementById("Password");
 let PasswordCon = document.getElementById("PasswordCon");
-let checkVet = document.getElementById("inlineCheckbox2");
-let checkUsu = document.getElementById("inlineCheckbox3");
-
 let btnEnviar = document.getElementById("btnEnviar");
 let alertSend = document.getElementById("alertSend");
-
-let flagArroba = false;
-let flagPunto = false;
-let flagChar = false;
+let alertYes = document.getElementById("alertYes");
+let form = document.getElementById("formato");
 
 
-let flagPasCon = false;
-let flagPass = false;
-let flagCorr = false;
-let flagApe = false;
-let flagNom = false;
-
-Nombre.addEventListener("blur",function(e){    
+//Validar Nombre
+campoNombre.addEventListener("keyup",function(e){    
     e.preventDefault();
-    //solo letras, incluyendo espacios y acentos. 
-    if(
-        (Nombre.value.length>=10)&&(Nombre.value.length<=50)    
-        ){ //validacion nombre
-        flagNom = true;
-        Nombre.classList.remove("is-invalid");
-        Nombre.classList.add("is-valid");
+    validarNombre();
+});
+function validarNombre(){
+    let flag = false;
+    let regex = /^[\sA-Záéíóú']{3,50}$/i;
+    let testNombre = regex.test(campoNombre.value);
+
+    if(testNombre && isNaN(campoNombre.value)){
+        campoNombre.classList.remove("is-invalid");
+        campoNombre.classList.add("is-valid");
+        flag=true;
+        btnEnviar.disabled=false;
     }else{
-        flagNom = false;
-        Nombre.classList.remove("is-valid");
-        Nombre.classList.add("is-invalid");
+        campoNombre.classList.remove("is-valid");
+        campoNombre.classList.add("is-invalid");
     }
-
-    //validación caracteres en Nombre
-    for (let i = 0; i < Nombre.value.length; i++) {
-        if(
-                    
-            ((Nombre.value.toUpperCase().charCodeAt(i)<65)
-            || //or
-            (Nombre.value.toUpperCase().charCodeAt(i)>90))
-
-            && ((Nombre.value.toUpperCase().charCodeAt(i)!=32))
-            && ((Nombre.value.toUpperCase().charCodeAt(i)!=193))
-            && ((Nombre.value.toUpperCase().charCodeAt(i)!=201))
-            && ((Nombre.value.toUpperCase().charCodeAt(i)!=205))
-            && ((Nombre.value.toUpperCase().charCodeAt(i)!=211))
-            && ((Nombre.value.toUpperCase().charCodeAt(i)!=209))      )
-        {
-            flagNom = false;
-            Nombre.classList.remove("is-valid");
-            Nombre.classList.add("is-invalid"); 
-            break;
-            
-        }else{
-         
-            console.log(Nombre.value.charAt(i));
-        }
-    }
-});//fin funcion anonima y boton
-
-
-
+    return flag;
+}
 //validacion de correo, minimo un arroba y un punto.
-Correo.addEventListener("blur", function(e){
-    e.preventDefault()
-    flagArroba=false;
-    flagChar=false;
-    flagPunto=false;   
-
-    flagCorr = true;
-    Correo.classList.remove("is-invalid");
-    Correo.classList.add("is-valid");
-
-    if ( (Correo.value.length<3) || (Correo.value.length>70) ){
-        flagCorr = false;
+Correo.addEventListener("keyup", function(e){
+    e.preventDefault();
+    validarCorreo();
+});
+function validarCorreo() {
+    let flag = false;
+    let regex = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,5})+$/;
+    let testCorreo = regex.test(Correo.value);
+    if(testCorreo) {
+        Correo.classList.remove("is-invalid");
+        Correo.classList.add("is-valid");
+        flag=true;
+        btnEnviar.disabled=false;
+    }else{
         Correo.classList.remove("is-valid");
         Correo.classList.add("is-invalid");
-    }//if
-
-    for (let i = 0; i < Correo.value.length; i++) {
-
-    if(Correo.value.charCodeAt(i)==64 && flagArroba ==false){
-        flagArroba= true;        
-    }if (Correo.value.charCodeAt(i)==46 && flagPunto ==false){
-        flagPunto=true;
     }
-
-    if(  (
-             ( Correo.value.toLowerCase().charCodeAt(i)<97)
-             ||
-             (Correo.value.toLowerCase().charCodeAt(i)>122)
-        )
-        && ((Correo.value.toLowerCase().charCodeAt(i)!=32) ) // espacio
-        && ((Correo.value.toLowerCase().charCodeAt(i)!=193) ) // Á
-        && ((Correo.value.toLowerCase().charCodeAt(i)!=201) ) // É
-        && ((Correo.value.toLowerCase().charCodeAt(i)!=205) ) // Í
-        && ((Correo.value.toLowerCase().charCodeAt(i)!=211) ) // Ó
-        && ((Correo.value.toLowerCase().charCodeAt(i)!=218) ) // Ú
-        && ((Correo.value.toLowerCase().charCodeAt(i)!=209) ) // Ñ
-        && ((Correo.value.toLowerCase().charCodeAt(i)!=64) )//@
-        && ((Correo.value.toLowerCase().charCodeAt(i)!=46) )// .
-   ) {      
-        flagChar=true;
-        break;
-   }//if 
-}; 
-
-if(flagArroba==false || flagPunto==false || flagChar==true)
- {
-    flagCorr = false;
-    Correo.classList.remove("is-valid");
-    Correo.classList.add("is-invalid");
- }
-
+    return flag;
+}
+//Validacion de contraseña
+Password.addEventListener("keyup", function (e) {
+    e.preventDefault()    
+    validarPass();
 });
-//Validacion de numero
-
-Contrasena.addEventListener("blur", function (e) {
-    e.preventDefault()
+function validarPass() {
+    let flag = false;
+    let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?#$&_-])[A-Za-z\d$@$!%*?#&_-]{8,15}$/;
+let result = regex.test(Password.value);
+if(result){
+    Password.classList.remove("is-invalid");
+    Password.classList.add("is-valid");
+    flag = true;
+    btnEnviar.disabled=false;
+} 
+else {
+    Password.classList.remove("is-valid");
+    Password.classList.add("is-invalid");
     
-    let PasswordValor = Contrasena.value;
-
-    let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?#$&_-])[A-Za-z\d$@$!%*?#&_-]{8,15}/;
-    let result = regex.test(PasswordValor);
-    if(result){
-        Contrasena.classList.remove("is-invalid");
-        Contrasena.classList.add("is-valid");
-        flagPasCon = true;
-    } 
-    else {
-        Contrasena.classList.remove("is-valid");
-        Contrasena.classList.add("is-invalid");
-        flagPasCon = false;
-    }
-
-})
-
-
-PasswordCon.addEventListener("blur", function (e) {
-    e.preventDefault()
-
-    PasswordConValor = PasswordCon.value;
-
-    if ((PasswordValor === PasswordConValor) && PasswordConValor != "") {
+    
+}
+    return flag;
+};
+//Validacion de confirmacion de contraseña
+PasswordCon.addEventListener("keyup", function (e) {
+    e.preventDefault()    
+    validarPassCon();
+});
+function validarPassCon() {
+    let flag = false;
+    if(Password.value==PasswordCon.value && PasswordCon.value.length > 0){
         PasswordCon.classList.remove("is-invalid");
         PasswordCon.classList.add("is-valid");
-        flagPasCon = true;
+        flag = true;
+        btnEnviar.disabled=false;
     } 
     else {
         PasswordCon.classList.remove("is-valid");
-        PasswordCon.classList.add("is-invalid");
-        flagPasCon = false;
+        PasswordCon.classList.add("is-invalid");         
     }
-})
+    return flag;
+};
 
-    if (checkVet.checked) {
-        checkUsu.classList.remove("disabled");
-        checkUsu.classList.add("disabled");
-    }else if(checkUsu.checked){
-        checkVet.classList.remove("disabled");
-        checkVet.classList.add("disabled");
-    }
 
 
 btnEnviar.addEventListener("click", function (e){
     e.preventDefault();
+    
+    if(validarNombre() && validarCorreo() && validarPass() && validarPassCon()){
+        console.log("campos correctos");
+        setTimeout(() => {
+            campoNombre.value= "";
+            Correo.value="";
+            Password.value="";
+            PasswordCon.value="";
+            campoNombre.classList.remove("is-valid");
+            Correo.classList.remove("is-valid");
+            Password.classList.remove("is-valid");
+            PasswordCon.classList.remove("is-valid");
+        }, 1000);
 
-       
- 
+
+    }else{ validarNombre();
+           validarCorreo();
+            validarPass();
+            validarPassCon();
+                            btnEnviar.disabled=true;
+                            setTimeout(() => {
+                                campoNombre.value= "";
+                                Correo.value="";
+                                Password.value="";
+                                PasswordCon.value="";
+                                campoNombre.classList.remove("is-invalid");
+                                Correo.classList.remove("is-invalid");
+                                Password.classList.remove("is-invalid");
+                                PasswordCon.classList.remove("is-invalid");
+                            }, 1000);
+    }
+    
+  
 })

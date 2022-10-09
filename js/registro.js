@@ -19,6 +19,97 @@ window.addEventListener("load", function(e){
         }
 });
 
+//validación nombre:
+campoNombre.addEventListener("keyup",function(e){    
+    e.preventDefault();
+    validarNombre();
+});
+function validarNombre(){
+    let flag = false;
+    let regex = /^[\sA-Záéíóú']{3,50}$/i;
+    let testNombre = regex.test(campoNombre.value);
+
+    if(testNombre && isNaN(campoNombre.value)){
+        campoNombre.classList.remove("is-invalid");
+        campoNombre.classList.add("is-valid");
+        flag=true;
+        btnRegistro.disabled=false;
+    }else{
+        campoNombre.classList.remove("is-valid");
+        campoNombre.classList.add("is-invalid");
+    }
+    return flag;
+}
+
+//validacion de correo, minimo un arroba y un punto.
+campoCorreo.addEventListener("keyup", function(e){
+    e.preventDefault();
+    validarCorreo();
+});
+function validarCorreo() {
+    let flag = false;
+    let regex = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,5})+$/;
+    let testCorreo = regex.test(campoCorreo.value);
+    if(testCorreo) {
+        campoCorreo.classList.remove("is-invalid");
+        campoCorreo.classList.add("is-valid");
+        flag=true;
+        btnRegistro.disabled=false;
+    }else{
+        campoCorreo.classList.remove("is-valid");
+        campoCorreo.classList.add("is-invalid");
+    }
+    return flag;
+}
+
+//Validacion de contraseña
+campoCont1.addEventListener("keyup", function (e) {
+    e.preventDefault()    
+    validarPass();
+});
+function validarPass() {
+    let flag = false;
+    let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?#$&_-])[A-Za-z\d$@$!%*?#&_-]{8,15}$/;
+let result = regex.test(campoCont1.value);
+if(result){
+    campoCont1.classList.remove("is-invalid");
+    campoCont1.classList.add("is-valid");
+    flag = true;
+    btnRegistro.disabled=false;
+} 
+else {
+    campoCont1.classList.remove("is-valid");
+    campoCont1.classList.add("is-invalid");
+    
+    
+}
+    return flag;
+};
+
+//Validacion de confirmacion de contraseña
+campoCont2.addEventListener("keyup", function (e) {
+    e.preventDefault()    
+    validarPassCon();
+});
+function validarPassCon() {
+    let flag = false;
+    if(Password.value==campoCont2.value && campoCont2.value.length > 0){
+        campoCont2.classList.remove("is-invalid");
+        campoCont2.classList.add("is-valid");
+        flag = true;
+        btnRegistro.disabled=false;
+    } 
+    else {
+        campoCont2.classList.remove("is-valid");
+        campoCont2.classList.add("is-invalid");         
+    }
+    return flag;
+};
+
+
+
+
+
 
 btnRegistro.addEventListener("click", function (e) {
     e.preventDefault();
@@ -31,69 +122,16 @@ btnRegistro.addEventListener("click", function (e) {
     let valorCont2 = document.getElementById("inputCont2").value;
  
 
-//Nombre 
-for (let index = 0; index < valorNombre.length; index++) {
-
-      if(!isNaN(valorNombre.charAt(index)) && valorNombre.charAt(index)!= " "){
-        flag = false;
-        
-      }
-
-    }
-    console.log(flag);
-   
-    if (valorNombre.length >= 3 && valorNombre.length <= 80 && flag == true) {
-        campoNombre.classList.remove("is-invalid");
-         campoNombre.classList.add("is-valid");
-        } 
-    else {
-        campoNombre.classList.remove("is-valid");
-        campoNombre.classList.add("is-invalid");
-        flag = false;
-        }
-        
 
 
 
-//Correo
-if ((valorCorreo.includes("@","")) && (valorCorreo.includes("."))) {
-    campoCorreo.classList.remove("is-invalid");
-    campoCorreo.classList.add("is-valid");
-} 
-else {
-    campoCorreo.classList.remove("is-valid");
-    campoCorreo.classList.add("is-invalid");
-    flag = false;
-}
 
-//Cont1
-let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?#$&_-])[A-Za-z\d$@$!%*?#&_-]{8,15}$/;
-let result = regex.test(valorCont1);
-if(result){
-    campoCont1.classList.remove("is-invalid");
-    campoCont1.classList.add("is-valid");
+
+
+
     
-} 
-else {
-    campoCont1.classList.remove("is-valid");
-    campoCont1.classList.add("is-invalid");
-    flag = false;
-    
-}
-    
-//Cont2
-if (valorCont2 === valorCont1 && valorCont2 != "") {
-    campoCont2.classList.remove("is-invalid");
-    campoCont2.classList.add("is-valid");
-} 
-else {
-    campoCont1.classList.remove("is-valid");
-    campoCont1.classList.add("is-invalid");
-    campoCont2.classList.remove("is-valid");
-    campoCont2.classList.add("is-invalid");
-    flag = false;
-}
 
+//no tocar
 if(flag){
 
     let flag2 = true    
@@ -105,7 +143,7 @@ if(flag){
 
     if(flag2){
             if(vetCheck.checked){
-                location.href = "http://127.0.0.1:5501/pages/perfilUsuario.html"
+                location.href = "http://127.0.0.1:5501/pages/ingresarVet.html"
                 localStorage.setItem("nameRegisterVet", valorNombre);
                 localStorage.setItem("correoRegisterVet", valorCorreo);
                 localStorage.setItem("passRegisterVet", valorCont1);

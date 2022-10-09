@@ -25,113 +25,78 @@
     
     
       <div class="contenedorFormulario">
-        <form class="formato">
+        <div class="formato">
+        <div class="form-group">
+            <div class="form-group" id="divNombre">
+              <label for="Nombre">Nombre:</label>
+              <input type="text" class="form-control" id="Nombre" placeholder="Nombre">
+              <small id="passwordHelpBlock" class="form-text text-muted">
+                Ejemplo: Santiago Uribe
+              </small>
+              <div class="invalid-feedback">
+                Recuerde ingresar 3 y 20 letras          
+              </div>
+            </div>  
+            <div class="form-group ">
+              <label for="Correo">Correo:</label>
+              <input type="email" class="form-control" id="Correo" placeholder="ejemplo@correo.com">
+              <small id="passwordHelpBlock" class="form-text text-muted">
+                Ejemplo: dr.lomito@gmail.com
+              </small>
+              <div class="invalid-feedback">
+                Este campo debe contener un @
+              </div>
+             </div>
+              <div class="form-group ">
+                <label for="Password">Contraseña:</label>
+                <input type="password" class="form-control" id="Password" placeholder="**********">
+                <small id="passwordHelpBlock" class="form-text text-muted">
+                  Ejemplo: Batman33!!
+                </small>
+                <div class="invalid-feedback">
+                Recuerda ingresar entre 8 y 15 caracteres alfanumericos y un caracter especial
+                </div>     
+            </div>
             <div class="form-group">
-            <div class="form-group-row">
-                <label for="Nombre">Nombre:</label>
-                <input type="text" class="form-control" id="Nombre" placeholder="Juan Torres Uribe" required>
+                <label for="PasswordCon">Confirmar contraseña:</label>
+                <input type="password" class="form-control" id="PasswordCon" placeholder="**********">
                 <small id="passwordHelpBlock" class="form-text text-muted">
+                  Ejemplo: Batman33!!
                 </small>
                 <div class="invalid-feedback">
-                Ingrese su nombre completo          
-                </div>
+                La contraseña debe de ser la misma
+                </div>     
             </div>
 
-            <div class="form-group-row">
-                <label for="Email">Correo electrónico</label>
-                <input type="email" class="form-control" id="Email" placeholder="ejemplo@correo.com" required>
-                <small id="passwordHelpBlock" class="form-text text-muted">
-                </small>
-                <div class="invalid-feedback">
-                    Recuerda este campo:
-                    Debe contener un @        
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="Password">Contraseña</label>
-                <input type="password" class="form-control" id="Password" placeholder="*********" required>
-                <small id="passwordHelpBlock" class="form-text text-muted">
-                </small>
-                <div class="invalid-feedback">
-                Ingrese entre 8 a 15 caracteres,  minimo 1 número, 1 carácter especial y 1 mayuscula
-                </div>
-
-            <div class="form-group"></div>
-                <label for="PasswordCon">Confirmar contraseña</label>
-                <input type="password" class="form-control" id="PasswordCon" placeholder="*********">
-                <small id="passwordHelpBlock" class="form-text text-muted">
-                </small>
-                <div class="invalid-feedback">
-                Las contraseñas deben coincidir
-                </div>
-            </div>
-
-            <h1 class="soy">Soy un: </h1>
-            
             <div class="check">
-             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                <label class="form-check-label" for="inlineCheckbox2">Usuario</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" >
-                <label class="form-check-label" for="inlineCheckbox3">Veterinario</label>
+            <div class="form-group custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="vetCheck">
+                <label class="custom-control-label" for="vetCheck"> Soy un Veterianario</label><br> 
               </div>
             </div>
             
-            <div class="contentButton">
-            <button class="button btn btn-success" type="button" id="btnEnviar">Registrate</button>
-            <div id="alertSend" class="alert alert-danger" style="display: none" role="alert">
-                Alguno de los campos se encuentran vacíos, verifique por favor!
-            </div>
-            </div>
-
-            <!--<div class="textRegistrate">
-                <p class="pregunta">Ya tienes cuenta?</p>
-                <p class="registrate">Registrate</p>
-            </div>-->
-
-            </div>
-            <br>
-        </form>
-        <br>
-        
+            
+            <div class="form-group d-flex justify-content-center">
+                
+                <button id="btnEnviar"><span>Regístrate</span>
+                    <img src="https://i.cloudup.com/2ZAX3hVsBE-3000x3000.png" height="55" width="55" class="registro"></button>
+                     <br> <br> <br>  
+                </div>
+                
+                
+              <div class="form-group d-flex justify-content-center">
+                <p>¿Ya tienes cuenta?</p>                
+              </div>   
+              
+              <div class="form-group d-flex justify-content-center">
+                <a href="../pages/logIn.html">Ingresa</a>
+              </div>
+<br>
         <div>
             <img src="./imgPrueba.png" alt="logo" width="700px">
         </div>
-        <div class="container" id="puntaje">
-            <h4>Mejor calificados</h4>
-            <div class="card-deck">
-              <div class="card">
-                <img class="card-img-top" src="#" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Nombre doctor</h5>
-                  <p class="card-text">Descripción</p>
-                  <p class="card-text"><small class="text-muted">★★★★★</small></p>
-                  <a href="#" class="btn btn-dark">Agendar</a>
-                </div>
-              </div>
-              <div class="card">
-                <img class="card-img-top" src="#" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Nombre doctor</h5>
-                  <p class="card-text">Descripción</p>
-                  <p class="card-text"><small class="text-muted">★★★★★</small></p>
-                  <a href="#" class="btn btn-dark">Agendar</a>
-                </div>
-              </div>
-              <div class="card">
-                <img class="card-img-top" src="#" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Nombre doctor</h5>
-                  <p class="card-text">Descripción</p>
-                  <p class="card-text"><small class="text-muted">★★★★★</small></p>
-                  <a href="#" class="btn btn-dark">Agendar</a>
-                </div>
-              </div>
     </div>
-
+</div>
 
       <br><br><br><br><br>
     </main>
@@ -140,6 +105,7 @@
 <footer id="footer_olas"></footer>
 <!-- se pasó al script principal
     <footer>
+
       <div class="container__footer">
           <div class="box__footer">
               <h2>Mapa del sitio</h2>
@@ -152,6 +118,7 @@
               <a href="perfilUsuario.html">Perfil</a>
               <a href="ingresarVet.html">Agregar Veterinario</a>
           </div>
+
           <div class="box__footer">
               <h2>Legal</h2> 
               <a href="#">Términos y condiciones</a>
@@ -159,6 +126,7 @@
               <a href="#">Aviso legal</a>
               <a href="#">Política de reseñas</a>              
           </div>
+
           <div class="box__footer">
               <h2>Redes Sociales</h2>
              
@@ -166,7 +134,9 @@
               <a href="#"><i class="fab fa-twitter-square"></i> Twitter</a>
               <a href="#"><i class="fab fa-instagram-square"></i> Instagram</a>
           </div>
+
       </div>
+
       <div class="box__copyright">
           <hr>
           <p>Todos los derechos reservados © 2022 <b>Doctor Lomito</b></p>
