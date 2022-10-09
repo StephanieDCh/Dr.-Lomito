@@ -45,6 +45,17 @@ header{
     color: beige;
     display: flex;
     margin-left: 20px;
+    padding: 10px 5px;
+    border-radius: 30px;
+    transition: 0.2s;
+}
+#lomito a:hover{
+  color:#7ED4B5;
+  background-color: beige;
+}
+#lomito a.active{
+  color:#7ED4B5;
+  background-color: beige;
 }
 
 .hamburguer{

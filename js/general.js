@@ -4,7 +4,7 @@ let loggedIn = document.getElementById("loggedIn");
 if((localStorage.getItem("loggedIn"))== "true"){  
   navBar[0].innerHTML = ` <div class="logo">
      <a href="/index.html"><img src="../src/logoCircular.png" alt="logo" width="60px" height="60px"></a>
-     <div id ="lomito"><a href="/index.html" style="text-decoration: none">Dr.Lomito</a></div>  
+     <div id ="lomito"><a class="activePage" href="/index.html" style="text-decoration: none">Dr.Lomito</a></div>  
    </div>         
      <div class="hamburguer">
      <div class="line"></div>
@@ -43,7 +43,7 @@ if((localStorage.getItem("loggedIn"))== "true"){
 }else{
   navBar[0].innerHTML = ` <div class="logo">
   <a href="/index.html"><img src="../src/logoCircular.png" alt="logo" width="60px" height="60px"></a>
-  <div id = "lomito"><a href="/index.html" style="text-decoration: none">Dr.Lomito</a></div> 
+  <div id = "lomito"><a class="activePage" href="/index.html" style="text-decoration: none">Dr.Lomito</a></div> 
 </div>         
   <div class="hamburguer">
   <div class="line"></div>
