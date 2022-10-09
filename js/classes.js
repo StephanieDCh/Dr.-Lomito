@@ -28,7 +28,8 @@ export class veterinario extends usuario{
     servicios = "";
     horAteIni = 0;
     horaAteCierre = 0;
-    urgencia24_7 = false;   
+    urgencia24_7 = false; 
+    opiniones = [];     
     
 
     constructor (typeVet, id, nombre, correo, password, categoria, img, especialidad, calificacion, descripcion, direccion, telLocal1, telPersonal,  costoConsulta, servicios, horAteIni, horaAteCierre, urgencia24_7){
@@ -49,3 +50,16 @@ export class veterinario extends usuario{
     } //constructor heredado de person  
 
 };//class veterinario
+
+export class opinion {
+    autor = "";
+    calificacion = 0;
+    opinion = "";  
+
+    constructor (autor, calificacion, opinion){
+        this.autor = autor;
+        this.calificacion = calificacion;
+        this.opinion = opinion;
+       
+    }
+}
