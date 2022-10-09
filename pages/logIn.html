@@ -5,62 +5,139 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/general.css">
-    <link rel="stylesheet" href="../css/loginstyles.css">
+
+    <link rel="stylesheet" href="../css/style_log_reg.css">
     <!--Fuentes-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Varela+Round&display=swap" rel="stylesheet">
 
-    
+     <!--estios de fontawesome, no borrar-->
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+
     <link rel="icon" href="/src/logoCircular.png">
     <title>Iniciar Sesión</title>
   </head>
   <body>
      <!-- Se inserta navbar desde js/general.js -->
      <header class="insertNavbar"></header>
-     <br><br><br>
-    <main class="container">
-       
-  
-  
-  
-    <h1>Inicio sesión</h1>
-    <br>
-    <div class="alert alert-danger" role="alert" id="alertLogInError" style="display: none">
-      El correo o contraseña introducidos son incorrectos, porfavor verifique.
-    </div>
-    <div class="alert alert-success" role="alert" id="alertLogInExito" style="display: none">
-      Bienvenido, nos da gusto tenerte de nuevo!
-    </div>
-    <form>
-      <div class="form-group">
-        <label for="emailLog">Correo Electrónico</label>
-        <input type="email" class="form-control" id="emailLog" aria-describedby="emailLog" placeholder="usuario@ejemplo.com">
-        <small id="emailHelp" class="form-text text-muted">Ingrese su correo de usuario.</small>
-      </div>
-      <div class="form-group">
-        <label for="passLog">Contraseña</label>
-        <input type="password" class="form-control" id="passLog" placeholder="Contraseña">
-      </div>
-    
-      <div class="form-group">
-        <button id="btnInicio"><span>Iniciar Sesión</span>
-          <img src="https://i.cloudup.com/2ZAX3hVsBE-3000x3000.png" height="55" width="55" class="flecha"></button>
-      </div>  
-      
-      
-    
-    </form>
-    
-    
-    
-    </main>
-    
+     <h1 style="text-align:center ;"> Ayuda a tu lomito a sentirse mejor</h1> 
+     <section>
+      <div class = "container">
+        
+        <div class="user signinBx">
           
- <br><br><br>
+          <div class="imgBx"><img src="../src/imagenes/lomito.jpg" alt="imgInicio"></div>
+          <div class="formBx">
+            <form>
+              <h2>Inicia sesión</h2>
+              <div class="form-group textFormat">
+                <label for="emailLog">Correo electrónico</label>
+                <input type="email" class="form-control" id="emailLog" aria-describedby="emailLog">
+              </div>
+              <div class="form-group textFormat">
+                <label for="passLog">Contraseña</label>
+                <input type="text" class="form-control" id="passLog">
+              </div>
+            
+              <div class="form-group textFormat">
+                <button id="btnInicio"><span>Entrar</span>
+                  <img src="https://i.cloudup.com/2ZAX3hVsBE-3000x3000.png" height="55" width="55" class="flecha"></button>
+              </div>
+              <br> <br> <br>  
+              <p class="registro">¿No tienes una cuenta? <a style="color: darkslategray" href="#" onclick="toggleForm();"><strong>Registrate</strong></a></p>
+              
+              <div class="alert alert-danger" role="alert" id="alertLogInError" style="display: none;">
+                El correo o contraseña introducidos son incorrectos, porfavor verifique.
+              </div>
+              <div class="alert alert-success" role="alert" id="alertLogInExito" style="display: none">
+                Bienvenido, nos da gusto tenerte de nuevo!
+              </div>
+
+            </form>
+          </div> <!--formBx-->
+        </div> <!--inicio-->
+
+        <div class="user signupBx">
+          <div class="formBx">
+            <form>
+              <h2>Regístrate</h2>  
+            <hr>  
+              <div class="form-group textFormat">
+                <label for="inputNombre">Nombre Completo</label>
+                <input type="text" class="form-control" id="inputNombre" placeholder="Ingresar Nombre">
+                <small id="nombreHelp" class="form-text text-muted">Ejemplo: Juan Perez</small>
+                <div class="invalid-feedback">
+                  Nombre inválido, no debe contener números. Max 80 car.
+                </div>
+              </div>
+  
+              <div class="form-group textFormat">
+                <label for="inputCorreo">Correo Electrónico</label>
+                <input type="email" class="form-control" id="inputCorreo" aria-describedby="emailHelp" placeholder="usuario@ejemplo.com">
+                <small id="emailHelp" class="form-text text-muted">Descuida, en Dr. Lomito tus datos están protegidos.</small>
+                <div class="invalid-feedback">
+                  Correo inválido, deben contener 1 arroba y un punto.
+                </div>
+              </div>            
+              
+                <div class="form-group textFormat">
+                <label for="inputCont1">Contraseña</label>
+                <input type="password" class="form-control" id="inputCont1" placeholder="Ingresar contraseña">
+                <small class="form-text text-muted">Min. 8, Max 15, al menos 1 número, 1 caracter especial, 1 mayúscula y 1 minúscula </small>
+                <div class="invalid-feedback">
+                  Contraseña inválida, debe contener, Min. 8, Max 15, al menos 1 número, 1 caracter especial, 1 mayúscula y 1 minúscula.
+                </div>
+                </div>
+  
+                <div class="form-group textFormat">
+                  <label for="inputCont2">Confirmar Contraseña</label>
+                  <input type="password" class="form-control" id="inputCont2" placeholder="Ingresar nuevamente su contraseña">
+                  <small class="form-text text-muted">Los campos deben coincidir.</small>
+                  <div class="invalid-feedback">
+                   Las contraseñas no coinciden.
+                  </div>
+                </div>                 
+             
+                
+                <div class="form-group custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="vetCheck">
+                  <label class="custom-control-label" for="vetCheck"> Soy un Veterianario</label><br> 
+                </div>        
+                
+                <div class="form-group d-flex justify-content-center">
+                  
+                  <button id="btnRegistro"><span>Regístrate</span>
+                      <img src="https://i.cloudup.com/2ZAX3hVsBE-3000x3000.png" height="55" width="55" class="registro"></button>       
+                  </div>
+                  <br> <br> <br>
+                  <p class="Inicio">¿Ya tienes una cuenta? <a style="color: darkslategray;" href="#" onclick="toggleForm();"><strong>Inicia sesión</strong></a></p>
+                  <div class="alert alert-success mt-2" role="alert" id="alertExito" style="display:none">
+                    <h4 class="alert-heading">¡Felicidades!</h4>
+                    <p>Ahora formas parte de la comunidad Dr. Lomito, en breve recibirás tu usuario y contraseña al correo proporcionado.</p>
+                    <hr>
+                    <p class="mb-0">Para nosotros tus comentarios son muy importantes, no dudes en contactarnos por medio de nuestra pagina "Contacto".</p>
+                  </div>
+                  <div class="alert alert-danger mt-2" role="alert" id="alertError" style="display:none">
+                    <h4 class="alert-heading">Lo sentimos!</h4>
+                    <p>Parece que el correo que has ingresado ya está vinculado con una cuenta de Dr. Lomito, por favor intenta con un correo diferente.</p>
+                   </div>
+                </form>
+          </div> <!--formBx-->
+          <div class="imgBx"><img src="../src/imagenes/lomito1.jpg" alt="imgRegistro"></div>
+        </div> <!--registro-->
+
+
+      </div> <!--container-->
+    </section>
+
+    
     <footer id="footer_olas"></footer>   
+
     <script src="../js/general.js"></script>
     <script src="/js/login.js"></script>
+    <script src="/js/registro.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
   </body>

@@ -4,8 +4,8 @@ let loggedIn = document.getElementById("loggedIn");
 
 if((localStorage.getItem("loggedIn"))== "true"){  
   navBar[0].innerHTML = ` <div class="logo">
-     <a href="../pages/index.html"><img src="../src/logoCircular.png" alt="logo" width="60px" height="60px"></a>
-     <div id = "lomito">Dr.Lomito</div>  
+     <a href="../index.html"><img src="../src/logoCircular.png" alt="logo" width="60px" height="60px"></a>
+     <div id = "lomito"><a href="../index/index.html">Dr.Lomito</a></div>  
    </div>         
      <div class="hamburguer">
      <div class="line"></div>
@@ -31,7 +31,7 @@ if((localStorage.getItem("loggedIn"))== "true"){
          <a class="activePage" href="../pages/ingresarVet.html" style="text-decoration: none">Agregar Vet</a>
        </li>
        <li>
-       <a class="activePage" id="loggedIn" href="../pages/index.html" style="text-decoration: none">Cerrar Sesión</a>
+       <a class="activePage" id="loggedIn" href="../index.html" style="text-decoration: none">Cerrar Sesión</a>
        </li>
      </ul>
    </nav>`
@@ -46,8 +46,8 @@ if((localStorage.getItem("loggedIn"))== "true"){
 
 }else{
   navBar[0].innerHTML = ` <div class="logo">
-  <a href="./index.html"><img src="../src/logoCircular.png" alt="logo" width="60px" height="60px"></a>
-  <div >Dr.Lomito</div>  
+  <a href="../index/index.html"><img src="../src/logoCircular.png" alt="logo" width="60px" height="60px"></a>
+  <div id = "lomito"><a href="../index/index.html">Dr.Lomito</a></div> 
 </div>         
   <div class="hamburguer">
   <div class="line"></div>
@@ -56,9 +56,6 @@ if((localStorage.getItem("loggedIn"))== "true"){
   </div>
 <nav class="navbar1 d-block">
   <ul id"listPages">   
-    <li>
-      <a class="activePage" href="../pages/registro.html" style="text-decoration: none">Regístrate</a>
-    </li>
     <li>
       <a class="activePage"  href="../pages/nosotros.html" style="text-decoration: none">Nosotros</a>
     </li>
@@ -73,7 +70,7 @@ if((localStorage.getItem("loggedIn"))== "true"){
       <a class="activePage" href="../pages/ingresarVet.html" style="text-decoration: none">Agregar Vet</a>
     </li>
     <li>
-      <a class="activePage" id="loggedIn" href="../pages/logIn.html" style="text-decoration: none">Iniciar Sesión</a>
+      <a class="activePage" id="loggedIn" href="../pages/logIn.html" style="text-decoration: none">Inicia Sesión</a>
     </li>
   </ul>
 </nav>`;
@@ -106,26 +103,12 @@ let footer = document.getElementById("footer_olas");
 
 footer.innerHTML=`
 <div class="container__footer">
-    <div class="box__footer">
-        <h4>Mapa del sitio</h4>
-        <a href="index.html">Inicio</a>
-        <a href="registro.html">Regístrate</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="contacto.html">Contacto</a>
-        <a href="directorio.html">Directorio</a>
-    </div>
+
+
 
     <div class="box__footer">
-        <h4>Legal</h4> 
-        <a href="#">Términos y condiciones</a>
-        <a href="#">Política de privacidad y cookies</a>
-        <a href="#">Aviso legal</a>
-        <a href="#">Política de reseñas</a>              
-    </div>
-
-    <div class="box__footer">
-        <h4>Redes Sociales</h4>
-        <a href="#"> <i class="fab fa-facebook-square"></i> Facebook</a>
+        
+        <a href="#"><i class="fab fa-facebook-square"></i> Facebook</a>
         <a href="#"><i class="fab fa-twitter-square"></i> Twitter</a>
         <a href="#"><i class="fab fa-instagram-square"></i> Instagram</a>
     </div>
@@ -135,3 +118,6 @@ footer.innerHTML=`
     <hr>
     <footer><p>Todos los derechos reservados © 2022 <strong> Doctor Lomito </strong></p></footer>  
 </div>`
+
+
+//<h4>Redes Sociales</h4>

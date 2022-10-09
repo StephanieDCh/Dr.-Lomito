@@ -1,7 +1,7 @@
 import { veterinario } from "./classes.js";
 
 let listUsersDir = [];//Arreglo de objetos JSON, 1 por cada usuario
-let itemsContainer = document.getElementById("list-items");
+let itemsContainer = document.getElementById("list-items"); //es un alsita que se llena on info del usuario
 let checkFilter = document.getElementsByClassName("custom-control-input");
 let btnFiltrar = document.getElementById("btnFiltrar");
 let filter = false;
@@ -17,10 +17,10 @@ window.addEventListener("load", function(){
         listUsersDir = savedVetsDir;
         indexVetsDir = listUsersDir.length;
 
-    }else{
-
+    }else{                                                                                                                                          
+                                                                                                                                                //estrellas
         listUsersDir.push(
-            (new veterinario("true","1",'Juan Pérez','josue.chavezlomeli@gmail.com', "Batman33!","vetG",'../src/8.png','Veterinario general','4.8 estrellas','Especialista en Medicina y Cirugía en Perros y Gatos', 'Calle Lazaro Cardenas #204','33 3852-7890', '33 7865-7890',  600,'Estetica Canina $250 mxn', '7am', '8pm','true')),
+            (new veterinario("true","1",'Juan Pérez','josue.chavezlomeli@gmail.com', "Batman33!","vetG",'../src/8.png','Veterinario general',5,'Especialista en Medicina y Cirugía en Perros y Gatos', 'Calle Lazaro Cardenas #204','33 3852-7890', '33 7865-7890',  600,'Estetica Canina $250 mxn', '7am', '8pm','true')),
             (new veterinario("true","2",'Josué Chávez','josue.chavezlomeli@gmail.com',"Batman33!","vetRep",'../src/9.png','Veterinario Reptiles','5 estrellas','Especialista en Medicina y Cirugía en Perros y Gatos', 'Calle Lazaro Cardenas #204','33 3852-7890', '33 7865-7890',  550,'Estetica Canina $250 mxn', '7am', '8pm','true')),
             (new veterinario("true","3",'Juan Carlos Rojas','josue.chavezlomeli@gmail.com',"Batman33!","vetAv",'../src/6.png','Veterinario Aviar','4.5 estrellas','Especialista en Medicina y Cirugía en Perros y Gatos', 'Calle Lazaro Cardenas #204','33 3852-7890', '33 7865-7890',  350,'Estetica Canina $250 mxn', '7am', '8pm','true')),
             (new veterinario("true","4",'José Toledo','josue.chavezlomeli@gmail.com',"Batman33!","vetGan",'../src/7.png','Veterinario Ganadero','3 estrellas','Especialista en Medicina y Cirugía en Perros y Gatos', 'Calle Lazaro Cardenas #204','33 3852-7890', '33 7865-7890', 370,'Estetica Canina $250 mxn', '7am', '8pm','true')),
@@ -40,19 +40,30 @@ window.addEventListener("load", function(){
 
 
         for (let i=0; i<listUsersDir.length; i++){        
-            let item = listUsersDir[i];
+            let item = listUsersDir[i];  //se inyecta una tarjeta 
             if(item.typeVet == "true"){
-                itemsContainer.innerHTML += `
-                <div class="card ${item.categoria} all col-md-5 m-1">
+                itemsContainer.innerHTML += `   
+                <div class="card ${item.categoria} all col-md-5 m-1" id="individual>
                     <div class="row no-gutters d-flex">
                             <div class="col-sm-4" >
                                 <img id="imagenTest" src="${item.img}" class="card-img-top"  alt="..." >
                             </div>
                             <div class="col-sm-8">
-                                <div class="card-body">                    
+                                <div class="card-body">     
+                                    <p class="card-text">
+                                
+                                    <i class="fa fa-paw " onclick="calificar(this)" style="cursor: pointer; color:orange;" id="1estrella"></i>
+                                    <i class="fa fa-paw " onclick="calificar(this)" style="cursor: pointer;  color:orange;" id="2estrella"></i>
+                                    <i class="fa fa-paw " onclick="calificar(this)" style="cursor: pointer;  color:orange;" id="3estrella"></i>
+                                    <i class="fa fa-paw " onclick="calificar(this)" style="cursor: pointer;  color:orange;" id="4estrella"></i>
+                                    <i class="fa fa-paw fa-2xl" onclick="calificar(this)" style="cursor: pointer;  color:orange;" id="5estrella"></i>
+                                
+                                    </p> <!-- div estrellas -->               
                                     <h5 class="card-title">${item.nombre}</h5>
+                            
                                     <p class="card-text">${item.especialidad}</p> 
-                                    <p class="card-text">${item.calificacion}</p>
+                                    
+                    
                                     <p class="card-text">${item.descripcion}</p>
                                     <p class="card-text">Consulta General<strong> $${item.costoConsulta}.00 MXN</strong></p>
                                     <a href="../pages/doctorVerMas.html" type="buton" class="btn btn-dark" id="btnVerMas_${i}">Ver más</a>                                         
@@ -61,9 +72,13 @@ window.addEventListener("load", function(){
                     </div>
                 </div>  
                 <br/>`
-            }                 
+            }  
+          
+            
+            
         };//sacar todos los elementos del arreglo para mostrar las cards y enviarlas al local storage
 });
+
 
 itemsContainer.addEventListener("click", function (event){
     //event.preventDefault();
