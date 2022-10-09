@@ -1,18 +1,17 @@
 let puntajeCard = [
-    {id: puntajes, img:'',nombre:'Juan Pérez',descripcion:'Especialista en Medicina y Cirugía en Perros y Gatos',calificacion:'5 estrellas'},
-    {id: puntajes, img:'',nombre:'Josué Chávez',descripcion:'Especialista en Medicina y Cirugía en Perros y Gatos',calificacion:'5 estrellas'},
-    {id: puntajes, img:'',nombre:'Juan Carlos Rojas',descripcion:'Especialista en Medicina y Cirugía en Perros y Gatos',calificacion:'5 estrellas'}
+    {"id":1, puntajes, img:'',nombre:'Juan Pérez',descripcion:'Especialista en Medicina y Cirugía en Perros y Gatos',calificacion:'5 estrellas'},
+    {"id":2, puntajes, img:'',nombre:'Josué Chávez',descripcion:'Especialista en Medicina y Cirugía en Perros y Gatos',calificacion:'5 estrellas'},
+    {"id":3, puntajes, img:'',nombre:'Juan Carlos Rojas',descripcion:'Especialista en Medicina y Cirugía en Perros y Gatos',calificacion:'5 estrellas'}
 ];
 let cards = " ";
 
-puntajeCard.forEach((item) => {
+puntajeCard.forEach((id) => {
     cards += `<div class="card-deck">
     <div class="card" id="puntaje1">
-      <img class="card-img-top" src="${item.img}" alt="Card image cap">
+      <img class="card-img-top" src="${id.img}" alt="Card image cap">
       <div class="card-body">
-        <h5 class="card-title">${item.nombre}</h5>
-        <p class="card-text">${item.descripcion}</p>
-        <p class="card-text"><small class="text-muted">${item.calificacion}</small></p>
+id        <p class="card-text">${id.descripcion}</p>
+        <p class="card-text"><small class="text-muted">${id.calificacion}</small></p>
         <a href="#" class="btn btn-dark">Agendar</a>
       </div>
     </div>
