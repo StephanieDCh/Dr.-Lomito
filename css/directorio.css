@@ -2,38 +2,20 @@ form{
     background-color: #fff
 }
 
+  footer{
+    text-align: center;
+    color:black;
+    }
 
-.vets{
-    margin: auto;
-}
+
 #list-items{
     justify-content: center;
-    margin-top: 190px;
-}
-#imagenTest{
-    padding-top: 15%;
-}
-#btnFiltrar{
-    border-width: 1px;
-    width: 220px;
-    height: 40px;
-    /*border-radius*/
-    border-radius: 100px;
-    background: #7ED4B5;
-    position: absolute;
-    border: 5px solid #7ED4B5;
-    text-align: center;
-    padding-bottom:10px;
-    margin-bottom: 10px;
-}
-#vetCategory{
-    padding-top: 40px;
 }
 
 
 /*Animación btn*/
 
-@-webkit-keyframes extend {
+ @-webkit-keyframes extend {
     0% {
         width: 150px;
         height: 60px;
@@ -120,103 +102,168 @@ form{
         } 100% {
         opacity: 1;
         }
-    }
+    } 
+    html {
+        background: #fff
+        }
+    
+    input, button, submit {
+            border: none
+            }
+    
+    
+    
+    button {
+        border-width: 1px;
+        width: 150px;
+        height: 60px;
+        /*border-radius*/
+        border-radius: 100px;
+        background: #fff;
+        position: absolute;
+        
+        border: 5px solid #7ED4B5;
+        
+         
+        }
+    
+    
+    
+    .flecha {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+        opacity: 0
+        }
+    
+    button:focus {
+        /*animation*/
+        -webkit-animation: extend 1s ease-in-out;
+        -ms-animation: extend 1s ease-in-out;
+        animation: extend 1s ease-in-out;
+        -webkit-animation-fill-mode: forwards;
+        /* Chrome, Safari, Opera */
+        animation-fill-mode: forwards
+        }
+    
+    button:focus > span {
+        /*animation*/
+        -webkit-animation: disappear 1s ease-in-out;
+        -ms-animation: disappear 1s ease-in-out;
+        animation: disappear 1s ease-in-out;
+        -webkit-animation-fill-mode: forwards;
+        /* Chrome, Safari, Opera */
+        animation-fill-mode: forwards
+        }
+    
+    button:focus > img {
+        /*animation*/
+        -webkit-animation: appear 1s ease-in-out;
+        -ms-animation: appear 1s ease-in-out;
+        animation: appear 1s ease-in-out;
+        -webkit-animation-fill-mode: forwards;
+        /* Chrome, Safari, Opera */
+        animation-fill-mode: forwards
+        }
+    
+        #btn{
+            
+            padding-bottom: 40px;
+        }
 html {
     background: #fff
     }
 
-input, button, submit {
-        border: none
-        }
+
+    .presentacion{
+        width: 100%;
+        height: 250px;
+        display:flex;
+        margin: auto;
+        border-radius: 10px;
+        overflow: visible;
+        box-sizing:content-box;
 
 
-
-button {
-    border-width: 1px;
-    width: 150px;
-    height: 60px;
-    /*border-radius*/
-    border-radius: 100px;
-    background: #fff;
-    position: absolute;
+    }  
+    .card:hover{
+        box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+        transform: translateY(-1%);
+    }
     
-    border: 5px solid #7ED4B5;
+    .presentacion .img{
+        width: 50%;
+    }
+    .presentacion .img{
+        width: 40%;
+
+        vertical-align:middle;
+    }
+    .producto-info{
+        width: 100%;
+    }
+
+    .producto-texto{
+        width: 100%;
+    }
+    .producto-texto h1{
+        margin: 0 20px 0 15px;
+        width: 100%;
+        text-align: left;
+        color: white;
+        background-color: mediumaquamarine;
+
+    }
+    .producto-texto h2{
+        margin: 0 0 0 15px;
+        margin: 10;
+        font-size: 23px;
+        font-weight:normal;
+        text-transform: uppercase;
+        color: rgb(44, 83, 70);
     
+        
+    }
+    .producto-texto p{
+        text-align:start;
+        font-size: 20px;
+        font-weight: 500;
+        height:2px;
+        font-family: serif;
+        color: black;
      
     }
+    .precio-btn {
+        height: 10px;
+        margin-top: 20px;
+    
 
-
-
-.flecha {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-    opacity: 0
     }
-
-button:focus {
-    /*animation*/
-    -webkit-animation: extend 1s ease-in-out;
-    -ms-animation: extend 1s ease-in-out;
-    animation: extend 1s ease-in-out;
-    -webkit-animation-fill-mode: forwards;
-    /* Chrome, Safari, Opera */
-    animation-fill-mode: forwards
-    }
-
-button:focus > span {
-    /*animation*/
-    -webkit-animation: disappear 1s ease-in-out;
-    -ms-animation: disappear 1s ease-in-out;
-    animation: disappear 1s ease-in-out;
-    -webkit-animation-fill-mode: forwards;
-    /* Chrome, Safari, Opera */
-    animation-fill-mode: forwards
-    }
-
-button:focus > img {
-    /*animation*/
-    -webkit-animation: appear 1s ease-in-out;
-    -ms-animation: appear 1s ease-in-out;
-    animation: appear 1s ease-in-out;
-    -webkit-animation-fill-mode: forwards;
-    /* Chrome, Safari, Opera */
-    animation-fill-mode: forwards
-    }
-
-    #btn{
+    .precio-btn a{
         
-        padding-bottom: 40px;
-    }
-.card {
-    width: 100%;
-    margin: 20px;
-    border-radius: 6px;
-    overflow: hidden;
-    background: #fff;
-    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
-    cursor: default;
-    transition: all 400ms ease;
+   
+        width: 200px;
+        border-radius:13px;
+        font-family: sans-serif;
+        text-transform: uppercase;
+        letter-spacing: .2em;
+        color: #7ED4B5;
+        text-align: center;
+        line-height: 25px;
+        cursor: pointer;
+        text-decoration: none;
+     
 
-}
-.card:hover{
-    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
-    transform: translateY(-30%);
-}
-.card img{
-    width: 100%;
-    height: 210px;
+
+
+    } 
+    .precio-btn a:hover{
+        background: #34495e;
     }
-.card::before{
-    content:"";
-    position: absolute;
-    height: 40%;
-    width: 100%;
-    background: #7ED4B5;
-    border-radius: 20px 20px 0 0;
-}
+
+    
