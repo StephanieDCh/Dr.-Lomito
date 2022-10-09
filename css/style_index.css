@@ -2,12 +2,6 @@ body {
     background: #FFF9E3;
 
 }
-nav{
- font-family: Arial, Helvetica, sans-serif;
- font-size: 20px;
- color: black;
- background-color:#7ED4B5;
-}
 
 /*Contenedor de formulario y card*/
 .contenedorFormulario{
@@ -51,35 +45,29 @@ nav{
     font-weight: bold;
 }
 
-h1 {
-    font-size: 18px;
-    font-weight: bold;
-    text-align: left;
-    margin: 0;
+.invalid-feedback{
+    font-size: 10px;
+    font-weight: 500;
 }
 h2{
     color: white;
 }
 
+
+
 /*checkbox*/
 .check{
-    display: flex;
-    justify-content: center;
+    position: relative;
+    left: 40px;
 }
-.form-check input{
-    width: 1rem;
-}
-.form-check label{
+
+.custom-switch label{
     font-size: 15px;
 }
 
-.form-check-input{
-    width: 30px;
-    height: 30px;
+.custom-switch input{
+    height: 10px;
 }
-
-
-
 
 
 .textRegistrate{
@@ -103,26 +91,24 @@ h2{
     display: block;
 }
 
-.formato{
-    margin:2em;
-    width: auto;
-    padding: 10px 50px 0 25px;
-}
-
-.form-group input{
-    width: 100%;
-}
-
-.button{
-    position: relative;
-    margin: 0 40px 0 20px;
-    text-align: center;
-    width: 100%;
-    padding: 2px;
-    margin: 0;
-}
-
-}
+@-webkit-keyframes disappear {
+    0% {
+        opacity: 1;
+        } 20% {
+        color: #fff;
+        } 100% {
+        opacity: 0;
+        }
+    }
+@keyframes disappear {
+    0% {
+        opacity: 1;
+        } 20% {
+        color: #fff;
+        } 100% {
+        opacity: 0;
+        }
+    }
 
 
 
@@ -135,15 +121,6 @@ h2{
     width: 100%;
   }
 
-}body {
-    background: #FFF9E3;
-
-}
-nav{
- font-family: Arial, Helvetica, sans-serif;
- font-size: 20px;
- color: black;
- background-color:#7ED4B5;
 }
 
 /*Contenedor de formulario y card*/
@@ -382,35 +359,49 @@ h1 {
         margin-top: 10px;
     }
 
-/*calificación
-  
-  .card-deck {
-    margin: 0 -15px;
-    justify-content: space-between;
-  }
-  
-  .card-deck .card {
-    margin: 0 0 1rem;
-  }
-  
-  @media (min-width: 576px) and (max-width: 767.98px) {
-    .card-deck .card {
-      -ms-flex: 0 0 48.7%;
-      flex: 0 0 48.7%;
+button > span {
+    font-size: 20px;
+    color: #FFF9E3;
     }
-  }
-  
-  @media (min-width: 768px) and (max-width: 991.98px) {
-    .card-deck .card {
-      -ms-flex: 0 0 32%;
-      flex: 0 0 32%;
+
+img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0
     }
-  }
-  
-  @media (min-width: 992px)
-  {
-    .card-deck .card {
-      -ms-flex: 0 0 24%;
-      flex: 0 0 24%;
+
+button:focus {
+    /*animation*/
+    -webkit-animation: extend 1s ease-in-out;
+    -ms-animation: extend 1s ease-in-out;
+    animation: extend 1s ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    /* Chrome, Safari, Opera */
+    animation-fill-mode: forwards
     }
-  }*/
+
+button:focus > span {
+    /*animation*/
+    -webkit-animation: disappear 1s ease-in-out;
+    -ms-animation: disappear 1s ease-in-out;
+    animation: disappear 1s ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    /* Chrome, Safari, Opera */
+    animation-fill-mode: forwards
+    }
+
+button:focus > img {
+    /*animation*/
+    -webkit-animation: appear 1s ease-in-out;
+    -ms-animation: appear 1s ease-in-out;
+    animation: appear 1s ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    /* Chrome, Safari, Opera */
+    animation-fill-mode: forwards
+    }
