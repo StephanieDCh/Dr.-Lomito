@@ -143,11 +143,14 @@ if(flag){
 
     if(flag2){
             if(vetCheck.checked){
-                location.href = "http://127.0.0.1:5501/pages/ingresarVet.html"
+                
                 localStorage.setItem("nameRegisterVet", valorNombre);
                 localStorage.setItem("correoRegisterVet", valorCorreo);
                 localStorage.setItem("passRegisterVet", valorCont1);
-               
+                setTimeout(() => {
+                    location.href = "http://127.0.0.1:5501/pages/ingresarVet.html"
+                }, 1500);
+                
                 /* indexUser++;
                 usuarios.push(new veterinario("true",indexUser, valorNombre, valorCorreo, valorCont1));
                 localStorage.setItem("users", JSON.stringify(usuarios)); */
@@ -156,21 +159,26 @@ if(flag){
                 indexUser++;
                 usuarios.push(new usuario("false",indexUser, valorNombre, valorCorreo, valorCont1));
                 localStorage.setItem( "users", JSON.stringify(usuarios));
+
+                Email.send({
+                    Host : "smtp.elasticemail.com",
+                    Username : "hola.drlomito@gmail.com",
+                    Password : "D2688BAD0F83F061575A92C02049DCD40FEE",
+                    To : valorCorreo,
+                    From : "hola.drlomito@gmail.com",
+                    Subject : "Bienvenido a Dr. Lomito",
+                    Body : sendCuerpo
+                })/* .then(
+                message => alert("Correo enviado con éxito")
+                ); */
                     
                     alertExito.style.display = "block";
-                    setTimeout( ()=>{alertExito.style.display = "none"}, 5000);
+                    setTimeout( ()=>{
+                    alertExito.style.display = "none"
+                    location.reload();
+                }, 5000);
             
-                    Email.send({
-                        Host : "smtp.elasticemail.com",
-                        Username : "hola.drlomito@gmail.com",
-                        Password : "D2688BAD0F83F061575A92C02049DCD40FEE",
-                        To : valorCorreo,
-                        From : "hola.drlomito@gmail.com",
-                        Subject : "Bienvenido a Dr. Lomito",
-                        Body : sendCuerpo
-                    })/* .then(
-                    message => alert("Correo enviado con éxito")
-                    ); */
+                    
             }  
 
     campoNombre.value = "";
