@@ -6,8 +6,6 @@ let campoCont2 = document.getElementById("inputCont2");
 let btnRegistro = document.getElementById("btnRegistro");//Botón
 let usuarios = [];
 let indexUser = 0;
-let alertExito = document.getElementById("alertExito");
-let alertError = document.getElementById("alertError");
 let vetCheck = document.getElementById("vetCheck");
 
 window.addEventListener("load", function(e){
@@ -33,7 +31,7 @@ function validarNombre(){
         campoNombre.classList.remove("is-invalid");
         campoNombre.classList.add("is-valid");
         flag=true;
-        btnRegistro.disabled=false;
+        
     }else{
         campoNombre.classList.remove("is-valid");
         campoNombre.classList.add("is-invalid");
@@ -54,7 +52,7 @@ function validarCorreo() {
         campoCorreo.classList.remove("is-invalid");
         campoCorreo.classList.add("is-valid");
         flag=true;
-        btnRegistro.disabled=false;
+        
     }else{
         campoCorreo.classList.remove("is-valid");
         campoCorreo.classList.add("is-invalid");
@@ -75,7 +73,7 @@ if(result){
     campoCont1.classList.remove("is-invalid");
     campoCont1.classList.add("is-valid");
     flag = true;
-    btnRegistro.disabled=false;
+   
 } 
 else {
     campoCont1.classList.remove("is-valid");
@@ -93,11 +91,10 @@ campoCont2.addEventListener("keyup", function (e) {
 });
 function validarPassCon() {
     let flag = false;
-    if(Password.value==campoCont2.value && campoCont2.value.length > 0){
+    if(campoCont1.value==campoCont2.value && campoCont2.value.length > 0){
         campoCont2.classList.remove("is-invalid");
         campoCont2.classList.add("is-valid");
-        flag = true;
-        btnRegistro.disabled=false;
+        flag = true;        
     } 
     else {
         campoCont2.classList.remove("is-valid");
@@ -106,33 +103,15 @@ function validarPassCon() {
     return flag;
 };
 
-
-
-
-
-
 btnRegistro.addEventListener("click", function (e) {
     e.preventDefault();
-
     let flag = true;
-
     let valorNombre = document.getElementById("inputNombre").value;
     let valorCorreo = document.getElementById("inputCorreo").value;
-    let valorCont1 = document.getElementById("inputCont1").value;
-    let valorCont2 = document.getElementById("inputCont2").value;
+    let valorCont1 = document.getElementById("inputCont1").value; 
  
-
-
-
-
-
-
-
-
-    
-
 //no tocar
-if(flag){
+if(validarNombre() && validarCorreo() && validarPass() && validarPassCon){
 
     let flag2 = true    
     usuarios.forEach(e => {
@@ -168,15 +147,22 @@ if(flag){
                     From : "hola.drlomito@gmail.com",
                     Subject : "Bienvenido a Dr. Lomito",
                     Body : sendCuerpo
-                })/* .then(
-                message => alert("Correo enviado con éxito")
-                ); */
-                    
-                    alertExito.style.display = "block";
-                    setTimeout( ()=>{
-                    alertExito.style.display = "none"
-                    location.reload();
-                }, 5000);
+                }).then(
+                    Swal.fire({
+                        background: '#FFF9E3',
+                        position: 'center',
+                        icon: 'success',
+                        title: 'Su cuenta ha sido registrada con exito!',
+                        showConfirmButton: false,
+                        timer: 2500,
+                        timerProgressBar: true
+                        })
+                );      
+                   
+                    setTimeout( ()=>{ 
+                    location.href = "http://127.0.0.1:5501/pages/logIn.html"                
+                   
+                }, 2500);
             
                     
             }  
@@ -195,10 +181,31 @@ if(flag){
 
     }else{
         campoCorreo.classList.add("is-invalid");
-        alertError.style.display = "block";
-        setTimeout( ()=>{alertError.style.display = "none"}, 5000);
+        Swal.fire({
+            background: '#FFF9E3',
+            position: 'center',
+            icon: 'error',
+            title: 'Ups, el correo ya ha sido registrado.',
+            showConfirmButton: false,
+            timer: 3500,
+            timerProgressBar: true
+            })
 
     }//si ya existe el correo envia el alert de que ya existe
+}else{
+    validarNombre();
+    validarCorreo();
+    validarPass();
+    validarPassCon(); 
+    Swal.fire({
+        background: '#FFF9E3',
+        position: 'center',
+        icon: 'error',
+        title: 'Por favor verifica los campos',
+        showConfirmButton: false,
+        timer: 2500,
+        timerProgressBar: true
+        })
 }
 
 });

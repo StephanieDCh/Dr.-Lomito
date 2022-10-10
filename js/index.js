@@ -3,8 +3,7 @@ let Correo = document.getElementById("Correo");
 let Password = document.getElementById("Password");
 let PasswordCon = document.getElementById("PasswordCon");
 let btnEnviar = document.getElementById("btnEnviar");
-let alertSend = document.getElementById("alertSend");
-let alertYes = document.getElementById("alertYes");
+
 let form = document.getElementById("formato");
 
 
@@ -42,7 +41,7 @@ function validarCorreo() {
         Correo.classList.remove("is-invalid");
         Correo.classList.add("is-valid");
         flag=true;
-        btnEnviar.disabled=false;
+        
     }else{
         Correo.classList.remove("is-valid");
         Correo.classList.add("is-invalid");
@@ -61,14 +60,11 @@ let result = regex.test(Password.value);
 if(result){
     Password.classList.remove("is-invalid");
     Password.classList.add("is-valid");
-    flag = true;
-    btnEnviar.disabled=false;
+    flag = true;  
 } 
 else {
     Password.classList.remove("is-valid");
-    Password.classList.add("is-invalid");
-    
-    
+    Password.classList.add("is-invalid");    
 }
     return flag;
 };
@@ -83,7 +79,7 @@ function validarPassCon() {
         PasswordCon.classList.remove("is-invalid");
         PasswordCon.classList.add("is-valid");
         flag = true;
-        btnEnviar.disabled=false;
+       
     } 
     else {
         PasswordCon.classList.remove("is-valid");
