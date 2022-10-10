@@ -198,17 +198,20 @@ h1 {
 
 }
 
-#btnEnviar{
-    width: 40px;
+#btnRegistro{
+    width: 60px;
     height: 40px;
-    padding: 10px 45px;
+    padding: 5px 65px;
     border: 1px solid #7ED4B5;
     border-radius: 10px;
     background-color: #7ED4B5;
-    margin: auto;
-    
+    transition: all 200ms ease;   
 }
-
+#btnRegistro:hover{
+    color: beige;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4); 
+     transform: translateY(-1%);
+}
 span{
     color: #FFF9E3;
     font-size: 20px;
