@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
     flex-wrap: wrap;
 }
@@ -172,6 +173,8 @@ html {
     background: #fff
     }
 
+=======
+>>>>>>> 8c55cc03c910e56468e65a1cf7cdd90bd51e698d
 
     .presentacion{
         width: 100%;
@@ -182,8 +185,11 @@ html {
         overflow: visible;
         box-sizing:content-box;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 8c55cc03c910e56468e65a1cf7cdd90bd51e698d
     }  
     .card:hover{
         box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
@@ -253,6 +259,7 @@ html {
         line-height: 25px;
         cursor: pointer;
         text-decoration: none;
+<<<<<<< HEAD
      
 
 
@@ -263,3 +270,6 @@ html {
     }
 
     
+=======
+    } 
+>>>>>>> 8c55cc03c910e56468e65a1cf7cdd90bd51e698d
