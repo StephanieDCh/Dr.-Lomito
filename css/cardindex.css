@@ -1,0 +1,80 @@
+
+    .presentacion{
+        width: 100%;
+        height: 100%;
+        display:flex;
+        margin: auto;
+        border-radius: 7px;
+        overflow: visible;
+        box-sizing:content-box;
+
+    }  
+    .card:hover{
+        box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+        transform: translateY(-1%);
+    }
+    
+    .presentacion .img{
+        width: 100%;
+        background-color: #34495e;
+        vertical-align: auto;
+    }
+   
+      
+    
+    .producto-info{
+        width: 100%;
+    }
+
+    .producto-texto{
+        width: 100%;
+    }
+    .producto-texto h1{
+        width: 100%;
+        text-align: left;
+        font-weight:lighter;
+        font-size: 35px;
+        color: white;
+        background-color: mediumaquamarine;
+
+    }
+    .producto-texto h2{
+        margin: 10;
+        font-size: 20px;
+        font-weight:lighter;
+        color: rgb(44, 83, 70);
+    
+        
+    }
+    .producto-texto p{
+        text-align:start;
+        font-size: 20px;
+        font-weight: 100;
+        height:2px;       
+       column-gap: 20px;
+     
+    }
+    .precio-btn {
+        height: 38px;
+        margin-top: 20px;
+        display:flex;
+        justify-content:center;
+
+    
+
+    }
+    .precio-btn a{
+        
+   
+        width: 200px;
+        border-radius:13px;
+        margin-top: 20px;
+        font-family: sans-serif;
+        text-transform: uppercase;
+        letter-spacing: .2em;
+        color: white;
+        text-align: center;
+        line-height: 25px;
+        cursor: pointer;
+        text-decoration: none;
+    } 

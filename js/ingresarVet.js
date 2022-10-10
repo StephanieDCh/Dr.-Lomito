@@ -1,3 +1,5 @@
+
+
 import { veterinario } from "../js/classes.js";
 let btnAgregar = document.getElementById("btnAgregar");
 let campoNombre = document.getElementById("inputNombre"); //trae valor string

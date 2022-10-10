@@ -1,32 +1,23 @@
-body {
-    background: #FFF9E3;
-
-}
-#logo{
-    margin-right: 500px;
-    padding-top: 15px;
-}
 
 /*Contenedor de formulario y card*/
 .contenedorFormulario{
     display: flex;
     flex-direction: row-reverse;
     width: auto;
-    margin: 20px 50px;
+    margin: auto;
     flex-wrap: wrap;
+    padding-bottom: 50px;
     
 }
 
 
 /*Formulario*/
 .formato {
-    margin: 0 0 0 50px;
-    background-color: rgb(234, 229, 225);
+    margin:auto;
     width: 325px;
     height: auto;
     text-align: left;
     padding: 10px 25px 0 12px;
-    border-radius: 2rem;
     
 }
 
@@ -54,17 +45,7 @@ body {
     font-size: 10px;
     font-weight: 500;
 }
-h2{
-    color: white;
-}
 
-
-
-/*checkbox*/
-.check{
-    position: relative;
-    left: 40px;
-}
 
 .custom-switch label{
     font-size: 15px;
@@ -118,6 +99,9 @@ h2{
 
 
 @media (max-width:768px) {
+  .contenedorFormulario{
+    width: 100%;
+  }
   .formato{
     width: auto;
   }
@@ -171,12 +155,6 @@ h2{
     font-weight: bold;
 }
 
-h1 {
-    font-size: 18px;
-    font-weight: bold;
-    text-align: left;
-    margin: 0;
-}
 
 /*checkbox*/
 .check{
@@ -198,20 +176,7 @@ h1 {
 
 }
 
-#btnRegistro{
-    width: 60px;
-    height: 40px;
-    padding: 5px 65px;
-    border: 1px solid #7ED4B5;
-    border-radius: 10px;
-    background-color: #7ED4B5;
-    transition: all 200ms ease;   
-}
-#btnRegistro:hover{
-    color: beige;
-    box-shadow: 5px 5px 20px rgba(0,0,0,0.4); 
-     transform: translateY(-1%);
-}
+
 span{
     color: #FFF9E3;
     font-size: 20px;
@@ -223,9 +188,6 @@ span{
  #logo{
      width: 600px;
      display: flex;
-     margin: 0 0 50px 0;
-     padding-left: 150px;
-     padding-top: 60px;
-
-     
+     margin: auto;
+     padding-right: 50px;
  }

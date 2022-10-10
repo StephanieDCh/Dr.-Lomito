@@ -34,22 +34,3 @@
     height: 50%;
     margin-bottom: 30px;
   }
-
-
-  h1 {
-    color: #7ED4B5;
-    padding-left: 15px;
-  }
-#btnEnviar{
-    padding: 10px 45px;
-    border: 1px solid #7ED4B5;
-    border-radius: 10px;
-    background-color: #7ED4B5;
-    margin: auto;  
-    transition: all 200ms ease;  
-}
-#btnEnviar:hover{
-  color: beige;
-  box-shadow: 5px 5px 20px rgba(0,0,0,0.4); 
-   transform: translateY(-1%);
-}
