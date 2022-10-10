@@ -8,7 +8,7 @@
     
     <link rel="stylesheet" href="../css/style_index.css">
     <link rel="stylesheet" href="../css/general.css">
-    
+    <link rel="stylesheet" href="../css/cardindex.css">
     
     <!--Fuentes-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,6 +18,8 @@
     <!--estios de fontawesome, no borrar-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
 
+    <!--Huellas-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
 
     <link rel="icon" href="/src/logoCircular.png">
     <title>Dr. Lomito</title>  
@@ -113,15 +115,14 @@
         </button>
       </div>
     </div>
-  
+    <div style="background-color:white; border:darkslategray;">
+      <h2 style="font-family: 'Varela Round', sans-serif;   ;">En Doctor Lomito nos preocupamos por la salud y bienestar de tus mascotas si importar su tamaño o especie.
+        <br>Aquí encontaras especialistas experimentados y además podrás calificar los servicios que te haya brindado.
+    </div>
     <main class="container">  
-      
 
-      
-
-
-      <div class="contenedorFormulario">
-
+      <div class="contenedorFormulario" style="background-color: rgba(209, 207, 207, 0.678);">
+        <div><h1 style="color: darkslategray;">¡No lo pienses más y forma parte de nuestra hermosa comunidad!</h1></div>
         <div>
           <img src="/src/imagenes/bienestar.png" alt="logo Dr.Lomito en png" id="logo">
         </div>
@@ -168,116 +169,64 @@
               Las contraseñas deben coincidir
             </div>
           </div>
-
-            <p class="soy">Soy un: </p>
             
-            <div class="check">            
+            <!-- <div class="check">            
               <div class="form-check form-check-inline">
                 <input class="form-check-input" type="checkbox" id="vetCheck" >
                 <label class="form-check-label" for="inlineCheckbox3">Veterinario</label>
               </div>
-            </div>
+            </div> -->
+            <div class="form-group custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="vetCheck">
+              <label class="custom-control-label" for="vetCheck" style="margin-left: 40px"> Soy un Veterianario</label><br> 
+            </div>  
             
             <div class="form-group d-flex justify-content-center">
               
                 <button class="d-flex justify-content-center" type="button" id="btnRegistro"><span>Regístrate</span>   
-             
-                       
-            
-            <br><br>
           </div>
-
-          <!--<div class="textRegistrate">
-                <p class="pregunta">Ya tienes cuenta?</p>
-                <p class="registrate">Registrate</p>
-            </div>-->
 
             </div>
-            <br>
         </form>
-        <br>   
           
-        
-        <div class="container" id="puntaje">
-            <h4>Mejor calificados</h4>
-            <div class="card-deck">
-              <div class="card">
-                <img class="card-img-top" src="#" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Nombre doctor</h5>
-                  <p class="card-text">Descripción</p>
-                  <p class="card-text"><small class="text-muted">★★★★★</small></p>
-                  <a href="#" class="btn btn-dark">Agendar</a>
-                </div>
-              </div>
-              <div class="card">
-                <img class="card-img-top" src="#" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Nombre doctor</h5>
-                  <p class="card-text">Descripción</p>
-                  <p class="card-text"><small class="text-muted">★★★★★</small></p>
-                  <a href="#" class="btn btn-dark">Agendar</a>
-                </div>
-              </div>
-              <div class="card">
-                <img class="card-img-top" src="#" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Nombre doctor</h5>
-                  <p class="card-text">Descripción</p>
-                  <p class="card-text"><small class="text-muted">★★★★★</small></p>
-                  <a href="#" class="btn btn-dark">Agendar</a>
-                </div>
-              </div>
     </div>
+    <div class="container" id="puntaje">
+      <h2>Mira a los veterinarios mejor calificados</h2>
+      <div class="card-deck">
+        <div class="card">
+          <img class="card-img-top" src="#" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Nombre doctor</h5>
+            <p class="card-text">Descripción</p>
+            <p class="card-text"><small class="text-muted">★★★★★</small></p>
+            <button><a href="./pages/doctorVerMas.html" class="btn">Ver más</a></button>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="#" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Nombre doctor</h5>
+            <p class="card-text">Descripción</p>
+            <p class="card-text"><small class="text-muted">★★★★★</small></p>
+            <button><a href="./pages/doctorVerMas.html" class="btn">Ver más</a></button>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="#" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Nombre doctor</h5>
+            <p class="card-text">Descripción</p>
+            <p class="card-text"><small class="text-muted">★★★★★</small></p>
+            <button><a href="./pages/doctorVerMas.html" class="btn">Ver más</a></button>
+          </div>
+        </div>
 
-
-        <br><br><br><br><br>
   </main>
-  <br><br><br><br><br>
 
   <footer id="footer_olas"></footer>
-  <!-- se pasó al script principal
-    <footer>
 
-      <div class="container__footer">
-          <div class="box__footer">
-              <h2>Mapa del sitio</h2>
-              <a href="index.html">Inicio</a>
-              <a href="logIn.html">Iniciar sesión</a>
-              <a href="registro.html">Regístrate</a>
-              <a href="nosotros.html">Nosotros</a>
-              <a href="contacto.html">Contacto</a>
-              <a href="directorio.html">Directorio</a>
-              <a href="perfilUsuario.html">Perfil</a>
-              <a href="ingresarVet.html">Agregar Veterinario</a>
-          </div>
-
-          <div class="box__footer">
-              <h2>Legal</h2> 
-              <a href="#">Términos y condiciones</a>
-              <a href="#">Política de privacidad y cookies</a>
-              <a href="#">Aviso legal</a>
-              <a href="#">Política de reseñas</a>              
-          </div>
-
-          <div class="box__footer">
-              <h2>Redes Sociales</h2>
-             
-              <a href="#"> <i class="fab fa-facebook-square"></i> Facebook</a>
-              <a href="#"><i class="fab fa-twitter-square"></i> Twitter</a>
-              <a href="#"><i class="fab fa-instagram-square"></i> Instagram</a>
-          </div>
-
-      </div>
-
-      <div class="box__copyright">
-          <hr>
-          <p>Todos los derechos reservados © 2022 <b>Doctor Lomito</b></p>
-      </div>
-  </footer>
--->
     <script src="../js/general.js"></script>
-    <!-- <script src="../js/index.js"></script>   -->  
+    <script src="/js/altosPunt.js"></script> 
     <script src="/js/registro.js" type="module"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>    
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
