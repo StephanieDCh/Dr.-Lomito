@@ -65,15 +65,21 @@ h2{
     display:inline-block;
     margin-top: 25px;
     padding: 5px 25px;
-    border:  2px solid #599881;
+    border:  2px solid #7ED4B5;
     border-radius: 5px;
-    background-color: #6a6a6a;
+    background-color: #7ED4B5;
     text-decoration: none;
     color: beige;
     font-size: 20px;
     font-weight: 500;
+    transition: all 200ms ease;
 
 }
+.descripcion .botones a:hover{
+    color: beige;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4); 
+     transform: translateY(-1%);
+  }
 
 @media (max-width:800px){
     .vetCardContainer{
