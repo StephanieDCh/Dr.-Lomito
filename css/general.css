@@ -10,16 +10,32 @@
 body{
   background:#FFF9E3;
 }
-h1,h2{
+h1{
     font-family: 'Paytone One', sans-serif;
     color: #7ED4B5;
-    align-content: center;
+    text-align: center;
+    margin: 20px;
+  }
+h2{
+    font-family: 'Paytone One', sans-serif;
+    color:darkslategray
+    text-align: center;
+    margin: 20px;
   }
 p{
   font-size: large;
     font-weight: bold;
     color: black;
 }  
+
+button{
+  padding: 10px 45px;
+  border: 1px solid #7ED4B5;
+  border-radius: 100px;
+  background-color: #7ED4B5;
+  margin: auto;  
+  transition: all 200ms ease;  
+}
 
 header{
     width: 100%;

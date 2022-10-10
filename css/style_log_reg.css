@@ -91,23 +91,13 @@
     font-size: 20px;
     color: beige;
   }
-html {
-  background: #fff
-  }
-
-input, button, submit {
-      border: none
-      }
-
-
-  
 
 button {
   border-width: 1px;
   width: 200px;
   height: 60px;
   /*border-radius*/
-  border-radius: 100px;
+ 
   background: #7ED4B5;
   position: absolute;
   border: 5px solid #7ED4B5;
