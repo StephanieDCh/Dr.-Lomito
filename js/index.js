@@ -99,6 +99,16 @@ btnEnviar.addEventListener("click", function (e){
     
     if(validarNombre() && validarCorreo() && validarPass() && validarPassCon()){
         console.log("campos correctos");
+            Swal.fire({
+                background: '#FFF9E3',
+                position: 'center',
+                type: 'success',
+                title: 'Registro completado.',
+                showConfirmButton: false,
+                timer: 2500,
+                timerProgressBar: true
+                })
+            
         setTimeout(() => {
             campoNombre.value= "";
             Correo.value="";
