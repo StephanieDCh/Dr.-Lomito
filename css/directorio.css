@@ -1,18 +1,15 @@
-*{
+ *{
     flex-wrap: wrap;
-}
+} 
 form{
     background-color: #fff;
 }
 
-  footer{
-    text-align: center;
-    color:black;
-    }
-
+  
 
 #list-items{
     justify-content: center;
+   
 }
 
 

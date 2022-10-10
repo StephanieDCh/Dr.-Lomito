@@ -92,8 +92,6 @@ function validarPassCon() {
     return flag;
 };
 
-
-
 btnEnviar.addEventListener("click", function (e){
     e.preventDefault();
     

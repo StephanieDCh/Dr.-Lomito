@@ -91,7 +91,7 @@ btnEnviar.addEventListener("click", function (e){
     
     if(validarNombre() && validarCorreo() && validarTel() && validarMsg()){
     
-    console.log("correcto")
+   
     let sendNombre = campoNombre.value;
     let sendCorreo = Correo.value;
     let sendAsunto = "Pregunta-Contacto ";
