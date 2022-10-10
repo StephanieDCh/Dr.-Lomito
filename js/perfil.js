@@ -22,21 +22,8 @@ if(listUsers[userId].typeVet == "true"){
           </div>
            <!-- Categoria -->
           <div class="form-group col-md-3">            
-            <label for="listCat">Categoría</label>
-            <select class="custom-select" id="listCat" disabled>
-            <option selected disabled value="">Elegír Categoría</option>            
-            <option value="vetG">-Veterinario General</option>
-            <option value="vetAv">-Veterinario Aviar</option>
-            <option value="vetRep">-Veterinario Reptiles</option>
-            <option value="vetGan">-Veterinario Ganadería</option>
-            <option value="vetOrt">-Veterinario Ortopedista</option>
-            <option value="vetCir">-Veterinario Cirujano</option>
-            <option value="vetOnc">-Veterinario Oncólogo</option>
-            <option value="vetOft">-Veterinario Oftalmólogo</option>
-            <option value="vetFis">-Veterinario Fisioterapeuta</option>
-            <option value="vetDer">-Veterinario Dermatólogo</option>
-            <option value="otros">-Otros</option>             
-             </select>            
+          <label for="inputCorreo">Categoría:</label>
+          <input type="text" class="form-control" id="categoriaPerf" value="${listUsers[userId].categoria}" placeholder="ejemplo@correo.com" readonly>           
           </div>
         </div>          
     
@@ -106,15 +93,8 @@ if(listUsers[userId].typeVet == "true"){
         <!-- Hora Cierre -->
       <div class="form-group col-md-2">
         <label for="inputHoraCie"> Hora de cierre:</label>
-        <input type="text" class="form-control" id="inputHoraCie" value="${listUsers[userId].horaAteCie}" placeholder="Hora de cierre a 2 dígitos" readonly>        
-      </div>  
-        <!-- Disponibilidad Urgencias -->
-        <div class="form-group col-md-2">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="input247" disabled>
-            <label class="form-check-label" for="input247">24-7 Urgencias</label>              
-          </div>
-      </div>     
+        <input type="text" class="form-control" id="inputHoraCie" value="${listUsers[userId].horaAteCierre}" placeholder="Hora de cierre a 2 dígitos" readonly>        
+      </div>              
     </div>    
     </div>
     </form>`;
