@@ -56,32 +56,30 @@ window.addEventListener("load", function () {
           }}
 
             if(item.typeVet == "true"){
-                itemsContainer.innerHTML += `   
-                <div class="card ${item.categoria} all col-md-5 m-1" id="individual>
-                    <div class="row no-gutters d-flex">
-                            <div class="col-sm-4" >
-                                <img id="imagenTest" src="${item.img}" class="card-img-top"  alt="..." >
-                            </div>
-                            <div class="col-sm-8">
-                                <div class="card-body">     
-                                    <p class="card-text">
-                                
-                                    ${letrero}
-                                
-                                    </p> <!-- div estrellas -->               
-                                    <h5 class="card-title">${item.nombre}</h5>
+                itemsContainer.innerHTML += `
+                <div class="card  all col-md-4 m-3">
+                    <div class="presentacion">
+                         <div class="img">
+                            <img id="imagenTest" src="${item.img}" height="300px" class="card-img-top"  alt="...">
+                        </div>
+                        <div class="producto-info">
+                            <div class="producto-texto">
                             
-                                    <p class="card-text">${item.especialidad}</p> 
-                                    
-                    
-                                    <p class="card-text">${item.descripcion}</p>
-                                    <p class="card-text">Consulta General<strong> $${item.costoConsulta}.00 MXN</strong></p>
-                                    <a href="../pages/doctorVerMas.html" type="buton" class="btn btn-dark" id="btnVerMas_${i}">Ver más</a>                                         
-                                </div>
-                            </div>
+                            <h1 class="card-title">${item.nombre}</h1>
+                            <p class="card-text">${letrero}</p>
+                            <br>
+                            <h2 class="card-text">${item.especialidad}</h2>
+                            <p class="card-text">${item.descripcion}</p>
+                            <br>
+                            <p class="card-text">Consulta General<strong> $${item.costoConsulta}.00 MXN</strong></p>
+                            
+                            <br>
+                        <div class="precio-btn">
+                            <a href="../pages/doctorVerMas.html"type="buton" class="btn btn-dark" id="btnVerMas_${i}">Ver más</a>
+                        </div>
                     </div>
-                </div>  
-                <br/>`
+                </div>
+                `;
             }  
           
             
