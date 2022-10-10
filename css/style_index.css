@@ -1,28 +1,24 @@
-body {
-    background: #FFF9E3;
-
-}
 
 /*Contenedor de formulario y card*/
 .contenedorFormulario{
     display: flex;
     flex-direction: row-reverse;
     width: auto;
-    margin: 20px 50px;
+    margin: auto;
     flex-wrap: wrap;
+    padding-bottom: 50px;
     
 }
 
 
 /*Formulario*/
 .formato {
-    margin: 0 0 0 50px;
-    background-color: rgb(234, 229, 225);
+    margin:auto;
     width: 325px;
     height: auto;
     text-align: left;
     padding: 10px 25px 0 12px;
-    border-radius: 2rem;
+    
 }
 
 .form-control{
@@ -49,17 +45,7 @@ body {
     font-size: 10px;
     font-weight: 500;
 }
-h2{
-    color: white;
-}
 
-
-
-/*checkbox*/
-.check{
-    position: relative;
-    left: 40px;
-}
 
 .custom-switch label{
     font-size: 15px;
@@ -113,6 +99,9 @@ h2{
 
 
 @media (max-width:768px) {
+  .contenedorFormulario{
+    width: 100%;
+  }
   .formato{
     width: auto;
   }
@@ -130,6 +119,7 @@ h2{
     width: auto;
     margin: 20px 50px;
     flex-wrap: wrap;
+    padding-right: 50px;
     
 }
 
@@ -165,12 +155,6 @@ h2{
     font-weight: bold;
 }
 
-h1 {
-    font-size: 18px;
-    font-weight: bold;
-    text-align: left;
-    margin: 0;
-}
 
 /*checkbox*/
 .check{
@@ -190,218 +174,20 @@ h1 {
 }
 
 
-  /*Estilos del botón enviar*/
-
-  @-webkit-keyframes extend {
-    0% {
-        width: 100px;
-        height: 60px;
-        border-radius: 100px;
-        } 10% {
-        width: 110px;
-        height: 61px;
-        background: #fff;
-        margin-left: - 5px;
-        margin-top: - 5px;
-        } 20% {
-        width: 100px;
-        height: 60px;
-        background: #7ED4B5;
-        margin-left: 0px;
-        margin-top: 0px;
-        } 100% {
-        width: 60px;
-        height: 60px;
-        border-radius: 100px;
-        margin-left: 10px;
-        background: #7ED4B5;
-        }
-    }
-  @keyframes extend {
-    0% {
-        width: 100px;
-        height: 60px;
-        border-radius: 100px;
-        } 10% {
-        width: 110px;
-        height: 61px;
-        background: #fff;
-        margin-left: - 5px;
-        margin-top: - 5px;
-        } 20% {
-        width: 100px;
-        height: 60px;
-        background: #7ED4B5;
-        margin-left: 0px;
-        margin-top: 0px;
-        } 100% {
-        width: 60px;
-        height: 60px;
-        border-radius: 100px;
-        margin-left: 10px;
-        background: #7ED4B5;
-        }
-    }
-
-  @-webkit-keyframes disappear {
-    0% {
-        opacity: 1;
-        } 20% {
-        color: #fff;
-        } 100% {
-        opacity: 0;
-        }
-    }
-  @keyframes disappear {
-    0% {
-        opacity: 1;
-        } 20% {
-        color: #fff;
-        } 100% {
-        opacity: 0;
-        }
-    }
-
-  @-webkit-keyframes appear {
-    0% {
-        opacity: 0;
-        } 70% {
-        opacity: 0;
-        } 100% {
-        opacity: 1;
-        }
-    }
-  @keyframes appear {
-    0% {
-        opacity: 0;
-        } 70% {
-        opacity: 0;
-        } 100% {
-        opacity: 1;
-        }
-    }
-    span{
-      font-weight: bold;
-      font-size: 15px;
-      color: white;
-    }
-  html {
-    background: #fff
-    }
-
-  input, button, submit {
-        border: none
-        }
+}
 
 
-
-
-  button {
-    border-width: 1px;
-    width: 100px;
-    height: 60px;
-    /*border-radius*/
-    border-radius: 100px;
-    background: #7ED4B5;
-    position: absolute;
-
-    border: 5px solid #7ED4B5;
-
-
-    }
-
-
-
-  #flecha {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-    opacity: 0
-    }
-
-  button:focus {
-    /*animation*/
-    -webkit-animation: extend 1s ease-in-out;
-    -ms-animation: extend 1s ease-in-out;
-    animation: extend 1s ease-in-out;
-    -webkit-animation-fill-mode: forwards;
-    /* Chrome, Safari, Opera */
-    animation-fill-mode: forwards
-    }
-
-  button:focus > span {
-    /*animation*/
-    -webkit-animation: disappear 1s ease-in-out;
-    -ms-animation: disappear 1s ease-in-out;
-    animation: disappear 1s ease-in-out;
-    -webkit-animation-fill-mode: forwards;
-    /* Chrome, Safari, Opera */
-    animation-fill-mode: forwards
-    }
-
-  button:focus >  {
-    /*animation*/
-    -webkit-animation: appear 1s ease-in-out;
-    -ms-animation: appear 1s ease-in-out;
-    animation: appear 1s ease-in-out;
-    -webkit-animation-fill-mode: forwards;
-    /* Chrome, Safari, Opera */
-    animation-fill-mode: forwards
-    }
-
-    #button{
-        margin-left: 100px;
-        margin-top: 10px;
-    }
-
-button > span {
-    font-size: 20px;
+span{
     color: #FFF9E3;
-    }
+    font-size: 20px;
+    justify-content: center;
+    
+    
+  }
 
-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-    opacity: 0
-    }
-
-button:focus {
-    /*animation*/
-    -webkit-animation: extend 1s ease-in-out;
-    -ms-animation: extend 1s ease-in-out;
-    animation: extend 1s ease-in-out;
-    -webkit-animation-fill-mode: forwards;
-    /* Chrome, Safari, Opera */
-    animation-fill-mode: forwards
-    }
-
-button:focus > span {
-    /*animation*/
-    -webkit-animation: disappear 1s ease-in-out;
-    -ms-animation: disappear 1s ease-in-out;
-    animation: disappear 1s ease-in-out;
-    -webkit-animation-fill-mode: forwards;
-    /* Chrome, Safari, Opera */
-    animation-fill-mode: forwards
-    }
-
-button:focus > img {
-    /*animation*/
-    -webkit-animation: appear 1s ease-in-out;
-    -ms-animation: appear 1s ease-in-out;
-    animation: appear 1s ease-in-out;
-    -webkit-animation-fill-mode: forwards;
-    /* Chrome, Safari, Opera */
-    animation-fill-mode: forwards
-    }
+ #logo{
+     width: 600px;
+     display: flex;
+     margin: auto;
+     padding-right: 50px;
+ }

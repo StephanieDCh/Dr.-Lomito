@@ -10,8 +10,6 @@ function toggleForm(){
 let campoEmailLog = document.getElementById("emailLog");
 let campoPassLog = document.getElementById("passLog");
 let btnInicio = document.getElementById("btnInicio");
-let alertLogInError = document.getElementById("alertLogInError");
-let alertLogInExito = document.getElementById("alertLogInExito");
 let flagReady = false;
 let listUsuarios = [];
 
@@ -36,8 +34,8 @@ let flagInicio = false;
 if(flagReady){
 
     for (let i = 0; i < listUsuarios.length; i++) {
-       if(listUsuarios[i].correo == emailLog){
-        if(listUsuarios[i].password == passLog){
+       if(listUsuarios[i].correo == emailLog && emailLog.length > 0){
+        if(listUsuarios[i].password == passLog && passLog.length > 0){
             flagInicio = true;
             localStorage.setItem("userLogged", i)
             localStorage.setItem("loggedIn", "true")
@@ -47,17 +45,28 @@ if(flagReady){
     }//for para validar todos los usuarios
 
     if (flagInicio) {  
-        console.log("CORRECTO");
-        alertLogInExito.style.display = "block";
-        setTimeout( ()=>{alertLogInExito.style.display = "none"}, 5000);  
-        location.href = "http://127.0.0.1:5501/index.html";
+        Swal.fire({
+            background: '#FFF9E3',
+            position: 'center',
+            icon: 'success',
+            title: 'Bienvenido!',
+            showConfirmButton: false,
+            timer: 2500,
+            timerProgressBar: true
+            })
+        setTimeout( ()=>{location.href = "http://127.0.0.1:5501/index.html";}, 2500);  
         
-    }else{
-
-        console.log("ERROR");
-        alertLogInError.style.display = "block";
-        setTimeout( ()=>{alertLogInError.style.display = "none"}, 5000);     
-
+        
+    }else{ 
+        Swal.fire({
+            background: '#FFF9E3',
+            position: 'center',
+            icon: 'error',
+            title: 'Ups, ha ocurrido un error, porfavor verifica los campos.',
+            showConfirmButton: false,
+            timer: 2500,
+            timerProgressBar: true
+            })
         campoEmailLog.value = "";
         campoPassLog.value = "";
         
