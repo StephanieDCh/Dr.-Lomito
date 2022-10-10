@@ -7,17 +7,10 @@ e.preventDefault();
 if(localStorage.getItem("users")){
 listCards = JSON.parse(localStorage.getItem("users"));
 
-<<<<<<< HEAD
-for (let i = 0; i < 2; i++) {
-  let item = listCards[i];
-  cardIndex.innerHTML += `
-  <div class="card  all col-md-5 m-1">
-=======
 for (let i = 0; i < 3; i++) {
   let item = listCards[i];
   cardIndex.innerHTML += `
   <div class="card  all col-md-3 m-0">
->>>>>>> 8c55cc03c910e56468e65a1cf7cdd90bd51e698d
       <div class="presentacion">
            <div class="img">
               <img id="imagenTest" src="${item.img}" height="300px" class="card-img-top"  alt="...">
@@ -37,11 +30,6 @@ for (let i = 0; i < 3; i++) {
               <h2 class="card-text">${item.especialidad}</h2>
               <p class="card-text">${item.descripcion}</p>
               <br>
-<<<<<<< HEAD
-              <br>
-              <br>
-=======
->>>>>>> 8c55cc03c910e56468e65a1cf7cdd90bd51e698d
               <p class="card-text">Consulta General<strong> $${item.costoConsulta}.00 MXN</strong></p>
               
               <br>
