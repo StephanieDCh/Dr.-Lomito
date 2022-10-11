@@ -65,7 +65,7 @@ window.addEventListener("load", function (e){
               <p><strong>Disponibilidad Urgencias 24/7: </strong>${((listVet[posCardVerMas].urgencia24_7) == true)?"Disponible": "No disponible"}</p>
               <p><strong>Costo Consulta: </strong>${listVet[posCardVerMas].costoConsulta} mxn</p>
               <div class="botones">
-                <button><a href="#escribirOpinion" type="buton"  data-toggle="modal" id="btnOpinar">Escribir Opinión</a></button>
+                <button><a href="#escribirOpinion" type="button"  data-toggle="modal" id="btnOpinar">Escribir Opinión</a></button>
               </div>
         </div>
       </div>`;
