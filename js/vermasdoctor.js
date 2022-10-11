@@ -191,9 +191,9 @@ window.addEventListener("load", function (e){
 
         })
       }else{
-        let btnAgendar = document.getElementById("btnAgendar");
+      
         let btnOpinar = document.getElementById("btnOpinar");
-        btnAgendar.classList.add("d-none");
+       
         btnOpinar.classList.add("d-none");
       }         
     }

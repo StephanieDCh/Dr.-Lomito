@@ -53,6 +53,11 @@
     margin-bottom: 20px;
 
 }
+.descripcion .botones a:hover{
+    color: beige;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4); 
+     transform: translateY(-1%);
+  }
 
 @media (max-width:800px){
     .vetCardContainer{
