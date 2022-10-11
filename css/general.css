@@ -23,9 +23,10 @@ h2{
     margin: 20px;
   }
 p{
-  font-size: large;
-    font-weight: bold;
+    font-size: large;
     color: black;
+    text-align: center;
+    font-family: 'Varela Round', sans-serif;
 }  
 
 button{
@@ -35,12 +36,20 @@ button{
   background-color: #7ED4B5;
   margin: auto;  
   transition: all 200ms ease;  
+  color:white;
+  font-weight: 10px;
 }
 button:hover{
   color: beige;
   box-shadow: 5px 5px 20px rgba(0,0,0,0.4); 
-   transform: translateY(-1%);
+  transform: translateY(-1%);
 }
+@media (max-width:800px) {
+    bottom{
+      width: 20%;
+    }
+  }
+
 
 header{
     width: 100%;

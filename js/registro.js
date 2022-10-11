@@ -185,7 +185,7 @@ if(validarNombre() && validarCorreo() && validarPass() && validarPassCon){
             background: '#FFF9E3',
             position: 'center',
             icon: 'error',
-            title: 'Ups, el correo ya ha sido registrado.',
+            title: 'UPS, el correo ya ha sido registrado.',
             showConfirmButton: false,
             timer: 3500,
             timerProgressBar: true
@@ -201,7 +201,7 @@ if(validarNombre() && validarCorreo() && validarPass() && validarPassCon){
         background: '#FFF9E3',
         position: 'center',
         icon: 'error',
-        title: 'Por favor verifica los campos',
+        title: 'ERROR: Verifique los campos por favor.',
         showConfirmButton: false,
         timer: 2500,
         timerProgressBar: true

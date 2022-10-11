@@ -16,7 +16,7 @@ for (let i = 0; i < 3; i++) {
               <img id="imagenTest" src="${item.img}" height="300px" class="card-img-top"  alt="...">
           </div>
           <div class="producto-info">
-              <div class="producto-texto">
+              <div class="producto-texto" style="text-align: center;">
               
               <h1 class="card-title">${item.nombre}</h1>
               <p class="card-text">
@@ -26,15 +26,13 @@ for (let i = 0; i < 3; i++) {
               <i class="fa fa-paw " style="color:orange; text-shadow: 0 0 3px #000;" id="pata"></i>
               <i class="fa fa-paw " style="color:orange; text-shadow: 0 0 3px #000;" id="pata"></i>
               </i></p>
-              <br>
               <h2 class="card-text">${item.especialidad}</h2>
               <p class="card-text">${item.descripcion}</p>
-              <br>
               <p class="card-text">Consulta General<strong> $${item.costoConsulta}.00 MXN</strong></p>
               
               <br>
               <div class="precio-btn">
-              <a href="../pages/doctorVerMas.html"type="buton" class="btn btn-dark" id="btnVerMas_${i}">Ver más</a>
+              <button><a href="../pages/doctorVerMas.html"type="buton" class="btn" id="btnVerMas_${i}">Ver más</a></button>
           </div>
       </div>
   </div>
