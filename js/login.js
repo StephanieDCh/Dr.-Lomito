@@ -49,7 +49,7 @@ if(flagReady){
             background: '#FFF9E3',
             position: 'center',
             icon: 'success',
-            title: 'Bienvenido!',
+            title: '¡Gracias por formar parte de nuestra comunidad!',
             showConfirmButton: false,
             timer: 2500,
             timerProgressBar: true
@@ -62,7 +62,7 @@ if(flagReady){
             background: '#FFF9E3',
             position: 'center',
             icon: 'error',
-            title: 'Ups, ha ocurrido un error, porfavor verifica los campos.',
+            title: 'ERROR: Verifique los campos por favor.',
             showConfirmButton: false,
             timer: 2500,
             timerProgressBar: true

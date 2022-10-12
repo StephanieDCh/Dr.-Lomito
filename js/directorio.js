@@ -67,16 +67,12 @@ window.addEventListener("load", function () {
                             
                             <h1 class="card-title">${item.nombre}</h1>
                             <p class="card-text">${letrero}</p>
-                            <br>
                             <h2 class="card-text">${item.especialidad}</h2>
                             <p class="card-text">${item.descripcion}</p>
-                            <br>
-                            <br>
                             <p class="card-text">Consulta General<strong> $${item.costoConsulta}.00 MXN</strong></p>
                             
-                            <br>
                         <div class="precio-btn">
-                            <a href="../pages/doctorVerMas.html"type="buton" class="btn btn-dark" id="btnVerMas_${i}">Ver más</a>
+                            <button><a href="../pages/doctorVerMas.html"type="buton" class="btn" id="btnVerMas_${i}">Ver más</a></button>
                         </div>
                     </div>
                 </div>

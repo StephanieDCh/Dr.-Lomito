@@ -112,7 +112,7 @@ btnEnviar.addEventListener("click", function (e){
             background: '#FFF9E3',
             position: 'center',
             icon: 'success',
-            title: 'Gracias por sus comentarios, pronto estaremos en contacto con Usted.',
+            title: 'Gracias por tus comentarios, pronto estaremos en contacto contigo.',
             showConfirmButton: false,
             timer: 2500,
             timerProgressBar: true
@@ -139,7 +139,7 @@ btnEnviar.addEventListener("click", function (e){
         background: '#FFF9E3',
         position: 'center',
         icon: 'error',
-        title: 'ERROR: Verifique los campos por favor',
+        title: 'ERROR: Verifique los campos por favor.',
         showConfirmButton: false,
         timer: 1500,
         timerProgressBar: true

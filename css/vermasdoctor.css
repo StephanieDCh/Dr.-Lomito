@@ -3,12 +3,10 @@
     padding: 0;
     box-sizing: border-box;    
 }
-
-h2{
-    color: #333;
-    align-content: center;
+#btnOpinar{
+    color: white;
+    text-decoration: none;
 }
-
 .container_{
     min-height: 100vh;
     display: flex;
@@ -34,14 +32,6 @@ h2{
     border-radius: 25px;  
 }
 
-.cardHeader h2, h4, p{
-    text-align: center;
-}
-
-.cardHeader a{
-    position: relative;
-    display: block;
-}
 .cardHeader img{
     border-radius: 50%;
     box-shadow: 0 0 0 8px rgba(0,0,0,0.06);
@@ -56,23 +46,11 @@ h2{
 .descripcion p{
     margin: 20px 30px;
     text-align: left;
+    font-weight: 5px;
 }
 .descripcion .botones{
     text-align: center;
     margin-bottom: 20px;
-}
-.descripcion .botones a{
-    display:inline-block;
-    margin-top: 25px;
-    padding: 5px 25px;
-    border:  2px solid #7ED4B5;
-    border-radius: 5px;
-    background-color: #7ED4B5;
-    text-decoration: none;
-    color: beige;
-    font-size: 20px;
-    font-weight: 500;
-    transition: all 200ms ease;
 
 }
 .descripcion .botones a:hover{
