@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS `drlomito`.`usuarios` (
   `usuario_nombre` VARCHAR(50) NOT NULL,
   `usuario_correo` VARCHAR(60) NOT NULL,
   `usuario_contrasena` VARCHAR(15) NOT NULL,
-  `veterinario_imagen` LONGBLOB NULL DEFAULT NULL,
+  `veterinario_urlimagen` VARCHAR(400) NULL DEFAULT NULL,
   `tipo_usuario_tipo_usuario_id` INT NOT NULL,
   PRIMARY KEY (`usuario_id`, `tipo_usuario_tipo_usuario_id`),
   INDEX `fk_usuarios_tipo_usuario1_idx` (`tipo_usuario_tipo_usuario_id` ASC) VISIBLE)

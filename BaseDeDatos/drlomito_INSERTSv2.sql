@@ -1,7 +1,7 @@
 -- insertar opinion
 -- INSERT INTO `drlomito`.`opiniones_vet` (`opiniones_id`, `opiniones_nombre_autor`, `opiniones_calificacion`, `opiniones_comentario`, `usuarios_usuario_id`) VALUES (NULL, NULL, NULL, NULL, NULL);
 -- insertar usuario
--- INSERT INTO `drlomito`.`usuarios` (`usuario_id`, `usuario_nombre`, `usuario_correo`, `usuario_contrasena`, `veterinario_imagen`, `tipo_usuario_tipo_usuario_id`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL);
+-- INSERT INTO `drlomito`.`usuarios` (`usuario_id`, `usuario_nombre`, `usuario_correo`, `usuario_contrasena`, `veterinario_urlimagen`, `tipo_usuario_tipo_usuario_id`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL);
 -- insert categoria veterinario
 -- INSERT INTO `drlomito`.`categoria_vet` (`categoria_id`, `categoria_nombre`) VALUES (NULL, NULL);
 -- insert contacto_vet
