@@ -109,7 +109,7 @@ btnRegistro.addEventListener("click", function (e) {
     let valorNombre = document.getElementById("inputNombre").value;
     let valorCorreo = document.getElementById("inputCorreo").value;
     let valorCont1 = document.getElementById("inputCont1").value; 
- 
+    
 //no tocar
 if(validarNombre() && validarCorreo() && validarPass() && validarPassCon){
 
@@ -126,6 +126,15 @@ if(validarNombre() && validarCorreo() && validarPass() && validarPassCon){
                 localStorage.setItem("nameRegisterVet", valorNombre);
                 localStorage.setItem("correoRegisterVet", valorCorreo);
                 localStorage.setItem("passRegisterVet", valorCont1);
+                Swal.fire({
+                    background: '#FFF9E3',
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Redireccionando...',
+                    showConfirmButton: false,
+                    timer: 2500,
+                    timerProgressBar: true
+                    })
                 setTimeout(() => {
                     location.href = "http://127.0.0.1:5501/pages/ingresarVet.html"
                 }, 1500);
@@ -152,7 +161,7 @@ if(validarNombre() && validarCorreo() && validarPass() && validarPassCon){
                         background: '#FFF9E3',
                         position: 'center',
                         icon: 'success',
-                        title: 'Su cuenta ha sido registrada con exito!',
+                        title: '¡Su cuenta ha sido registrada con éxito!',
                         showConfirmButton: false,
                         timer: 2500,
                         timerProgressBar: true
