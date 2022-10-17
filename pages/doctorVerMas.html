@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+       
+   <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/> 
+    <link rel="stylesheet" href="../css/swiperbundlemin.css">
+
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/vermasdoctor.css">
+    <!--Fuentes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Varela+Round&display=swap" rel="stylesheet">
+ <!--estios de fontawesome, no borrar-->
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+
+    
+    <link rel="icon" href="/src/logoCircular.png">
+    <title>Ver Más</title>
+  </head>
+  <body>
+     <!-- Se inserta navbar desde js/general.js -->
+     <header class="insertNavbar"></header>
+  
+     <i class="fa fa-paw " style="display:none; text-shadow: 0 0 3px #000;" id="pata1"></i>
+     <i class="fa fa-paw " style="display:none; text-shadow: 0 0 3px #000;" id="pata2"></i>
+     <i class="fa fa-paw " style="display:none; text-shadow: 0 0 3px #000;" id="pata3"></i>
+     <i class="fa fa-paw " style="display:none; text-shadow: 0 0 3px #000;" id="pata4"></i>
+     <i class="fa fa-paw " style="display:none; text-shadow: 0 0 3px #000;" id="pata5"></i>
+     
+
+      
+  <main class="container_">  
+  <div id="list-items"></div>
+  <div><h1>Opiniones</h1></div>  
+  <div class="slide-container swiper">
+    <div class="slide-content">
+      <div class="card-wrapper swiper-wrapper" >
+        
+        <div class="card_ swiper-slide listOpiniones" id="opinionTemporal">
+          <div class="image-content">
+            <span class="overlay"></span>
+
+            <div class="card-image">
+              <img src="../src/6.png" alt="" class="card-img">
+            </div>
+          </div>
+            <div class="puntuacion">
+              <p>  - Sin puntuación</p>
+            </div>
+            
+            <div class="card-content">
+              <h2 class="nombre">Dr. Lomito</h2>
+              <p class="opinion">Ayúdanos a calificar y deja tus comentarios para que otros puedan tomar una decisión para agendar con el especialista Inicia sesión para poder opinar</p>
+            </div>          
+        </div> 
+            
+      </div>
+    </div>
+    <div class="swiper-button-next swiper-navBtn"></div>
+    <div class="swiper-button-prev swiper-navBtn"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <div>
+    <div class="modal fade" id="escribirOpinion" tabindex="-1" aria-labelledby="escribirOpinion" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">¡Califica a tu Especialista!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="checkAnoni">
+                <label class="form-check-label" for="anonimo">Anónimo</label>
+              </div>
+
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Nombre</label>
+                <input type="text" class="form-control" id="autor" readonly>
+              </div>
+
+              <div class="form-group">
+                <label for="selectCalif">Califique su experiencia</label>
+                <select class="form-control" id="selectCalif">
+                  <option value="0" disabled selected>Seleccione una calificación</option>
+                  <option value="1">★(Pésima)</option>
+                  <option value="2">★★(Mala)  </option>
+                  <option value="3">★★★(Regular)</option>
+                  <option value="4">★★★★(Buena)</option>
+                  <option value="5">★★★★★(Excelente)</option>
+                </select>
+                <div class="invalid-feedback">
+                  Debe seleccionar una calificación.
+                 </div>
+              </div>
+
+              <div class="form-group">
+                <label for="Opinion" class="col-form-label">Escribe tu opinión:</label>
+                <textarea class="form-control" id="Opinion"></textarea>
+                <small  class="form-text text-muted">
+                  Tus opiniones ayudan a toda la comunidad Dr. Lomito a tomar mejores decisiones al elegir a su especialista.
+                </small>
+                <div class="invalid-feedback">
+                  ¡Recuerda dejarnos tus comentarios! Min-Max 20-300 caracteres
+                 </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button"  style="background-color: rgba(209, 207, 207, 0.678)"class="btn" id="btnCerrarModal" data-dismiss="modal">Cancelar</button>
+            <button type="button" style="background-color: #7ED4B5" class="btn" id="btnOpinar">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main> 
+<footer id="footer_olas"></footer>
+
+
+
+ 
+
+
+
+
+
+    <script src="../js/general.js"></script>
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script src="../js/vermasdoctor.js" type="module"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>  
+  </body>
+</html>

@@ -1,0 +1,144 @@
+
+  /* Animación login-registro*/
+  section{
+    position: relative;
+    min-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: 0.5s;
+  }
+
+  section .container{
+    position: relative;
+    width: 80%;
+    height: 900px;
+    box-shadow: 0 15px 50 px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  section .container .user{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    display: flex;
+  }
+  section .container .user .imgBx{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    transition: 0.5;
+  }
+  section .container .user .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }   
+
+  section .container .user .formBx{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background:  rgba(209, 207, 207, 0.678);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    transition: 0.5s;
+  }
+  .textFormat label{   
+    font-size: large;
+    font-weight: bold;
+    color: black; 
+   /*  text-shadow: 0 0 0.1em #000000; */
+  }
+  section .container .user .formBx h2 {
+    color: black;
+    
+  }
+ 
+  section .container .user .formBx input[type = "submit"]{
+    max-width: 100px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: 0.5s;
+  }
+  form{
+    width: 80%;
+    align-content: center;
+  }
+  
+  
+  section .container .user .formBx .signup{
+    position: relative;
+    margin-top: 20px;
+  }
+  section .container .user .formBx .signup a{
+    font-weight: 600;
+    text-decoration: none;
+    color: #557085;
+  
+  }
+  section .container .signupBx{
+    pointer-events: none;
+  }
+  section .container.active .signupBx{
+    pointer-events: initial;
+    height: 100%;
+  }
+  
+  section .container .signupBx .formBx{
+    top: 115%;
+  }
+  section .container.active .signupBx .formBx{
+    top: 0;
+    height: 100%;
+  }
+  section .container .signupBx .imgBx{
+    top: -100%; 
+    transition: 0.5s;
+  }
+  section .container.active .signupBx .imgBx{
+    top: 0;
+  }
+  
+  
+  section .container .signinBx .formBx{
+    top: 0;
+  }
+  section .container.active .signinBx .formBx{
+    top: 100%;
+  }
+  section .container .signinBx .imgBx{
+    top: 0;
+    transition: 0.5s;
+  }
+  section .container.active .signinBx .imgBx{
+    top: -100%;
+  }
+
+  @media (max-width: 991px)
+  { 
+    section .container{
+      max-width: 400px;
+      align-items: left;
+    }
+    section .container .imgBx{
+      display: none;
+    }
+    section .container .user .formBx{
+      width: 100%;
+      height: 70%;
+    }
+    section .container.active .signinBx .formBx{
+      top: -100%
+    }
+  }

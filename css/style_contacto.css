@@ -1,0 +1,36 @@
+/*body nav y footer lo llevan igual todas las páginas*/
+.container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+} 
+/*Esto estiliza el formulario*/
+  form {
+    margin: auto;
+    padding: auto;
+    text-align: left;
+    border: 2px;
+    border-radius: 15px;
+    width: 90%;
+    background-color:rgba(209, 207, 207, 0.678);
+
+  }
+  label{   
+    font-size: large;
+    font-weight: bold;
+    color: black; 
+   /*  text-shadow: 0 0 0.1em #000000; */
+  }
+  .col-md-6{
+    max-width: 90%;
+  }
+ /*  .col{
+    padding-right: 20px;
+    margin-right: 50px;
+    align-items: center;
+    margin-left: 40px;
+  } */
+  textarea.form-control{
+    height: 50%;
+    margin-bottom: 30px;
+  }

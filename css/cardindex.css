@@ -1,0 +1,24 @@
+
+    .presentacion{
+        width: 100%;
+        height: 100%;
+        display:flex;
+        margin: auto;
+        border-radius: 7px;
+        overflow: visible;
+        box-sizing:content-box;
+    }  
+    .card:hover{
+        box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+        transform: translateY(-1%);
+    }
+    
+    .presentacion .img{
+        width: 100%;
+        background-color: #34495e;
+        vertical-align: auto;
+    }
+    .precio-btn{
+       align-content: center;
+       margin: auto;
+    }

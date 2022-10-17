@@ -1,0 +1,4 @@
+-- insertar opinion
+INSERT INTO `drlomito`.`opiniones_vet` (`opiniones_id`, `opiniones_nombre_autor`, `opiniones_calificacion`, `opiniones_comentario`, `usuarios_usuario_id`) VALUES (0, 'Mario Eduardo López Zárate', 5,'Super recomiendo a victor. Llevé a mi cocodrilo albino a un baño y limada de uñas. Ya se estaba poniendo verde y volvió a brillar con su color blanco. Excelente servicio.',19);
+                                        
+INSERT INTO `drlomito`.`opiniones_vet` (`opiniones_id`, `opiniones_nombre_autor`, `opiniones_calificacion`, `opiniones_comentario`, `usuarios_usuario_id`) VALUES (0, 'Mario Eduardo López Zárate', 5,'En mi rancho tengo alungas vacas y estaba sufriendo para encontrar un veterinario que me ayudara a curarlas. Pnesé que era un brote de vacas locas, pero sólo necesitaban mejorar su dieta balanceada ',20);

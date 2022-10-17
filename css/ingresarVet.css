@@ -1,0 +1,68 @@
+#formulario{
+    background-color: rgb(234, 229, 225);
+    border-radius: 25px;
+}
+button {
+    border-width: 1px;
+    width: 150px;
+    height: 75px;
+    /*border-radius*/
+    border-radius: 100px;
+    background-color: #7ED4B5;
+    position: absolute;
+    border: 5px solid #7ED4B5;
+    transition: all 200ms ease;  
+    }
+
+button:hover{
+    color: beige;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4); 
+    transform: translateY(-1%);
+}
+
+button > span {
+    font-size: 18px;
+    color: #FFF9E3
+    }
+
+img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0
+    }
+
+button:focus {
+    /*animation*/
+    -webkit-animation: extend 1s ease-in-out;
+    -ms-animation: extend 1s ease-in-out;
+    animation: extend 1s ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    /* Chrome, Safari, Opera */
+    animation-fill-mode: forwards
+    }
+
+button:focus > span {
+    /*animation*/
+    -webkit-animation: disappear 1s ease-in-out;
+    -ms-animation: disappear 1s ease-in-out;
+    animation: disappear 1s ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    /* Chrome, Safari, Opera */
+    animation-fill-mode: forwards
+    }
+
+button:focus > img {
+    /*animation*/
+    -webkit-animation: appear 1s ease-in-out;
+    -ms-animation: appear 1s ease-in-out;
+    animation: appear 1s ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    /* Chrome, Safari, Opera */
+    animation-fill-mode: forwards
+    }

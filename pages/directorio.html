@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/directorio.css">
+    <!--Fuentes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="icon" href="/src/Dr._Lomito.png">
+
+     <!--estios de fontawesome, no borrar-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+
+    <title>Directorio</title>
+  </head>
+  <body>
+    <!-- Se inserta navbar desde js/general.js -->
+    <header class="insertNavbar"></header>
+  
+    <main class="container-fluid cards">
+      <div class="vets">
+        <div class="custom-control custom-switch check">
+          <input type="checkbox" class="custom-control-input" id="customSwitch0" checked value="all">
+          <label class="custom-control-label" for="customSwitch0" id="tesp">Todas las Especialidades</label>
+        </div>
+        <p style="padding: none; margin: none; width: 300px;" >
+          <a class="btn btn-primary" data-toggle="collapse" href="#vetCategory" role="button" aria-expanded="false" aria-controls="collapseExample" id="btnFiltrar">
+            Filtrar por Especialidad
+          </a>       
+        </p>  
+        
+      <div class="collapse" id="vetCategory">    
+          <div class="custom-control custom-switch">
+            <input class="custom-control-input" type="checkbox" id="customSwitch1" value="vetG">
+            <label class="custom-control-label" for="customSwitch1">Veterinario General</label>
+          </div>
+          <div class="custom-control custom-switch">
+            <input class="custom-control-input" type="checkbox" id="customSwitch2" value="vetAv">
+            <label class="custom-control-label" for="customSwitch2">Veterinario Aviar</label>
+          </div>
+          <div class="custom-control custom-switch">
+            <input class="custom-control-input" type="checkbox" id="customSwitch3" value="vetRep">
+            <label class="custom-control-label" for="customSwitch3">Veterinario Reptiles</label>
+          </div>
+          <div class="custom-control custom-switch">
+            <input class="custom-control-input" type="checkbox" id="customSwitch4" value="vetGan">
+            <label class="custom-control-label" for="customSwitch4">Veterinario Ganadería</label>
+          </div>
+          <div class="custom-control custom-switch">
+            <input class="custom-control-input" type="checkbox" id="customSwitch5" value="vetOrt">
+            <label class="custom-control-label" for="customSwitch5">Veterinario Ortopedista</label>
+          </div>
+          <div class="custom-control custom-switch">
+            <input class="custom-control-input" type="checkbox" id="customSwitch6" value="vetCir">
+            <label class="custom-control-label" for="customSwitch6">Veterinario Cirujano</label>
+          </div>
+        <div class="custom-control custom-switch">
+          <input class="custom-control-input" type="checkbox" id="customSwitch7" value="vetOnc">
+          <label class="custom-control-label" for="customSwitch7">Veterinario Oncólogo</label>
+        </div>
+        <div class="custom-control custom-switch">
+          <input class="custom-control-input" type="checkbox" id="customSwitch8" value="vetOft">
+          <label class="custom-control-label" for="customSwitch8">Veterinario Oftalmólogo</label>
+        </div>
+        <div class="custom-control custom-switch">
+          <input class="custom-control-input" type="checkbox" id="customSwitch9" value="vetFis">
+          <label class="custom-control-label" for="customSwitch9">Veterinario Fisioterapeuta</label>
+        </div>
+        <div class="custom-control custom-switch">
+          <input class="custom-control-input" type="checkbox" id="customSwitch10" value="vetDer">
+          <label class="custom-control-label" for="customSwitch10">Veterinario Dermatólogo</label>
+        </div>
+        <div class="custom-control custom-switch">
+          <input class="custom-control-input" type="checkbox" id="customSwitch11" value="otros">
+          <label class="custom-control-label" for="customSwitch11">Otras Especialidades</label>
+        </div>
+  </div>
+</div>
+</main>
+<div id="list-items" class="row" ></div> <!--aqui se inyecta el codigo de las cards-->
+    
+    <footer id="footer_olas"></footer>
+          
+ 
+
+    <script src="../js/general.js"></script>
+    <script src="/js/directorio.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+  </body>
+</html>
+
