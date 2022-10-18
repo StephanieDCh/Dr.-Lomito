@@ -111,7 +111,7 @@ btnRegistro.addEventListener("click", function (e) {
     let valorCont1 = document.getElementById("inputCont1").value; 
     
 //no tocar
-if(validarNombre() && validarCorreo() && validarPass() && validarPassCon){
+if(validarNombre() && validarCorreo() && validarPass() && validarPassCon()){
 
     let flag2 = true    
     usuarios.forEach(e => {
@@ -132,7 +132,7 @@ if(validarNombre() && validarCorreo() && validarPass() && validarPassCon){
                     icon: 'success',
                     title: 'Redireccionando...',
                     showConfirmButton: false,
-                    timer: 2500,
+                    timer: 1500,
                     timerProgressBar: true
                     })
                 setTimeout(() => {
