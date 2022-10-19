@@ -60,7 +60,7 @@ window.addEventListener("load", function () {
                 <div class="card ${item.categoria} all col-md-4 m-3">
                     <div class="presentacion">
                          <div class="img">
-                            <img id="imagenTest" src="${item.img}" height="300px" class="card-img-top"  alt="...">
+                            <img id="imagenTest" src="${item.img}" height="300px" width="10000px" class="card-img-top"  alt="...">
                         </div>
                         <div class="producto-info">
                             <div class="producto-texto">
@@ -69,7 +69,7 @@ window.addEventListener("load", function () {
                             <p class="card-text">${letrero}</p>
                             <h2 class="card-text">${item.especialidad}</h2>
                             <p class="card-text">${item.descripcion}</p>
-                            <p class="card-text">Consulta General<strong> $${item.costoConsulta}.00 MXN</strong></p>
+                            <p class="card-text">Consulta General<strong> $${item.costoConsulta} MXN</strong></p>
                             
                         <div class="precio-btn">
                             <button><a href="../pages/doctorVerMas.html"type="buton" class="btn" id="btnVerMas_${i}">Ver más</a></button>

@@ -13,6 +13,10 @@
 .card p{
   margin-bottom: 10px;
 }
+.colab h1{
+  text-align: center;
+  
+}
 
 .container{
     justify-content: space-around;
@@ -58,7 +62,7 @@ h3{
 }
 
 .card__padre{
-    margin: 20px;
+    margin: 6px;
     transition: all 900ms;
 
 }

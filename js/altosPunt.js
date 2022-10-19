@@ -28,6 +28,7 @@ for (let i = 0; i < 3; i++) {
               </i></p>
               <h2 class="card-text">${item.especialidad}</h2>
               <p class="card-text">${item.descripcion}</p>
+              <br>
               <p class="card-text">Consulta General<strong> $${item.costoConsulta}.00 MXN</strong></p>
               
               <br>

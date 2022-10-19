@@ -17,7 +17,7 @@ let campoCategoria = document.getElementById("listCat");
 let campo247 = document.getElementById("input247");
 
 let listVetsAdd = [];
-let imagenTemp = "../src/veterinarios/vetm7.jpg"; 
+let imagenTemp = "../src/veterinarios/vet17.jpg"; 
 let puntuacionTemp = 5;
 let indexVets = 0;
 let passVet = "";//Aquí guardamos la contrasena ingresada por el usuario en la pagina de registro

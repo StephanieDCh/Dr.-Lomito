@@ -1,23 +1,25 @@
 
 /*Contenedor de formulario y card*/
-.contenedorFormulario{
+ .contenedorFormulario{
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction:row;
     width: auto;
     margin: auto;
     flex-wrap: wrap;
-    padding-bottom: 50px;
     
-}
+    
+} 
 
 
 /*Formulario*/
-.formato {
+ .formato {
     margin:auto;
-    width: 325px;
+    width: 100%;
     height: auto;
     text-align: left;
-    padding: 10px 25px 0 12px;
+    padding: 0px 0px 0px 0px;
+     margin-bottom: 20px;
+     
     
 }
 
@@ -113,7 +115,7 @@
 
 }
 
-/*Contenedor de formulario y card*/
+/* Contenedor de formulario y card
 .contenedorFormulario{
     display: flex;
     flex-direction: row-reverse;
@@ -125,13 +127,13 @@
 }
 
 
-/*Formulario*/
+Formulario
 .formato {
-    margin: 0 0 0 50px;
-    width: 325px;
+    margin: 0 0 0 0px;
+    width: 100%;
     height: auto;
     text-align: left;
-    padding: 10px 25px 0 12px;
+    padding: 0px 0px 0px 0px;
 }
 
 .form-control{
@@ -140,7 +142,7 @@
     width: 100%;
     height: 30px;
     
-}/*inputs*/
+}/*inputs
 
 .form-group label{
     margin: 0;
@@ -152,7 +154,7 @@
     margin: 0;
     font-size: 18px;
     font-weight: bold;
-}
+} */
 
 
 /*checkbox*/
