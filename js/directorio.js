@@ -60,7 +60,7 @@ window.addEventListener("load", function () {
                 <div class="card ${item.categoria} all col-md-4 m-3">
                     <div class="presentacion">
                          <div class="img">
-                            <img id="imagenTest" src="${item.img}" height="300px" class="card-img-top"  alt="...">
+                            <img id="imagenTest" src="${item.img}" height="300px" width="10000px" class="card-img-top"  alt="...">
                         </div>
                         <div class="producto-info">
                             <div class="producto-texto">

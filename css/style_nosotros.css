@@ -13,6 +13,10 @@
 .card p{
   margin-bottom: 10px;
 }
+.colab h1{
+  text-align: center;
+  
+}
 
 .container{
     justify-content: space-around;
