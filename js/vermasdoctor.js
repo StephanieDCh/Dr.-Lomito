@@ -55,10 +55,10 @@ window.addEventListener("load", function (e){
           <p>${letrero} </p> <!--esta es la parte a modificar-->
         </div>
         <div class="descripcion">
-          <p><strong>Descripcion: </strong> ${listVet[posCardVerMas].descripcion}</p>
+          <p><strong>Descripción: </strong> ${listVet[posCardVerMas].descripcion}</p>
               <p><strong>Servicios: </strong>${listVet[posCardVerMas].servicios}</p>
-              <p><strong>Direccion: </strong>${listVet[posCardVerMas].direccion}</p>
-              <p><strong>Telefono: </strong>${listVet[posCardVerMas].telLocal1}</p>
+              <p><strong>Dirección: </strong>${listVet[posCardVerMas].direccion}</p>
+              <p><strong>Teléfono: </strong>${listVet[posCardVerMas].telLocal1}</p>
               <p><strong>Teléfono Personal: </strong>${listVet[posCardVerMas].telPersonal}</p>
               <p><strong>Correo: </strong>${listVet[posCardVerMas].correo}</p>
               <p><strong>Horario: </strong>Lunes a viernes de: ${listVet[posCardVerMas].horAteIni} a ${listVet[posCardVerMas].horaAteCierre}</p>

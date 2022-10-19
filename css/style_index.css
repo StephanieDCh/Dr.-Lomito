@@ -2,7 +2,7 @@
 /*Contenedor de formulario y card*/
  .contenedorFormulario{
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction:row;
     width: auto;
     margin: auto;
     flex-wrap: wrap;
