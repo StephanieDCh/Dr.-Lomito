@@ -33,29 +33,29 @@ INSERT INTO `drlomito`.`categoria_vet` (`categoria_id`, `categoria_nombre`) VALU
 
 -- SELECT * FROM drlomito.usuarios;
 -- INSERTAR LOS 8 USUARIOS DEL EQUIPO DR. LOMITO
-INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Josué Chávez Lomelí', 'josue.chavezlomeli@gmail.com', 'Batman33!', "../src/veterinarios/vet5.jpg", 1);
-INSERT INTO `drlomito`.`usuarios` VALUES (0, 'José Luis López Toledo', 'jltoledo@gmail.com', 'Batman33!', "../src/veterinarios/vet14.jpg", 1);
-INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Pablo Herrera Rosas', 'pablo_herrera@gmail.com', 'Batman33!', "../src/veterinarios/vet3.jpg", 1);
-INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Christian Iván Mendoza Díaz', 'mendochristiandiaz@gmail.com', 'Batman33!', "../src/veterinarios/vet4.jpg", 1);
-INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Stephanie Díaz Chamorro', 'fannycha1996@gmail.com', 'Batman33!', "../src/veterinarios/vet1m.jpg", 1);
-INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Akari Yessenia Gutiérrez Esquivel', 'akari@ciencias.unam.mx', 'Batman33!', "../src/veterinarios/vetm6.jpg", '1');
-INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Juan Carlos Rojas Sánchez', 'rojcar754@gmail.com', 'Batman33!', "../src/veterinarios/vet12.jpg", 1);
-INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Xochitl Rubí Baltazar', 'rubi@gmail.com', 'Batman33!', "../src/veterinarios/vetm9.jpg", 1);
+INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Josué Chávez Lomelí', 'josue.chavezlomeli@gmail.com', 'Batman33!', NULL, 1);
+INSERT INTO `drlomito`.`usuarios` VALUES (0, 'José Luis López Toledo', 'jltoledo@gmail.com', 'Batman33!', NULL, 1);
+INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Pablo Herrera Rosas', 'pablo_herrera@gmail.com', 'Batman33!', NULL, 1);
+INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Christian Iván Mendoza Díaz', 'mendochristiandiaz@gmail.com', 'Batman33!', NULL, 1);
+INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Stephanie Díaz Chamorro', 'fannycha1996@gmail.com', 'Batman33!', NULL, 1);
+INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Akari Yessenia Gutiérrez Esquivel', 'akari@ciencias.unam.mx', 'Batman33!', NULL, '1');
+INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Juan Carlos Rojas Sánchez', 'rojcar754@gmail.com', 'Batman33!', NULL, 1);
+INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Xochitl Rubí Baltazar', 'rubi@gmail.com', 'Batman33!', NULL, 1);
 -- AHORA INSERTAMOS 
-INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Pedro Lopez Zamarripa', 'pedro@gmail.com', 'Batman33!', "../src/veterinarios/vet5.jpg", 2);
-INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Antonio Torres Leal', 'antonio@gmail.com', 'Batman33!', "../src/veterinarios/vet14.jpg", 2);
-INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Pablo Verdía', 'juanperez@gmail.com', 'Batman33!', "../src/veterinarios/vet3.jpg", 2);
-INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Sofía Brizuela', 'sofíamvz@gmail.com', 'Batman33!', "../src/veterinarios/vetm7.jpg", 2);
-INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Viridiana Domínguez López', 'ada_hack313@hackademy.mx', 'Batman33!', "../src/veterinarios/vet1m.jpg", 2);
-INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Luis Hernández Drue', 'vet_luis_hrz@gmail.com', 'Batman33!', "../src/veterinarios/vet13.jpg", 2);
-INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Juan Matus', 'matus.vet@gmail.com', 'Batman33!', "../src/veterinarios/vet12.jpg", 2);
-INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Octavio David', 'dr.octopus@gmail.com', 'Araña33!', "../src/veterinarios/vet9.jpg", 2);
-INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Leonardo Rodríguez Tabáres', 'leonardo.vet@gmail.com', 'Batman33!', "../src/veterinarios/vet16.jpg", 2);
-INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Romero López Altamirano', 'romero.vet@gmail.com', 'Batman33!', "../src/veterinarios/vet14.jpg", 2);
-INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Victor Sandoval Torres', 'victor@gmail.com', 'Batman33!', "../src/veterinarios/vet13.jpg", 2);
-INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Jaime Contreras Guzmán', 'jaime@gmail.com', 'Batman33!', "../src/veterinarios/vet16.jpg", 2);
-INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Pablo Herrera Rosas', 'pablo_herrera@gmail.com', 'Batman33!', "../src/veterinarios/vet15.jpg", 2);
-INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Diana Karen Ramos Vitar', 'dkr_v@gmail.com', 'Batman33!', "../src/veterinarios/vetm8.jpg", 2);
+INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Pedro Lopez Zamarripa', 'pedro@gmail.com', 'Batman33!', NULL, 2);
+INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Antonio Torres Leal', 'antonio@gmail.com', 'Batman33!', NULL, 2);
+INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Pablo Verdía', 'juanperez@gmail.com', 'Batman33!', NULL, 2);
+INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Sofía Brizuela', 'sofíamvz@gmail.com', 'Batman33!', NULL, 2);
+INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Viridiana Domínguez López', 'ada_hack313@hackademy.mx', 'Batman33!', NULL, 2);
+INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Luis Hernández Drue', 'vet_luis_hrz@gmail.com', 'Batman33!', NULL, 2);
+INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Juan Matus', 'matus.vet@gmail.com', 'Batman33!', NULL, 2);
+INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Octavio David', 'dr.octopus@gmail.com', 'Araña33!', NULL, 2);
+INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Leonardo Rodríguez Tabáres', 'leonardo.vet@gmail.com', 'Batman33!', NULL, 2);
+INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Romero López Altamirano', 'romero.vet@gmail.com', 'Batman33!', NULL, 2);
+INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Victor Sandoval Torres', 'victor@gmail.com', 'Batman33!', NULL, 2);
+INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Jaime Contreras Guzmán', 'jaime@gmail.com', 'Batman33!', NULL, 2);
+INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Pablo Herrera Rosas', 'pablo_herrera@gmail.com', 'Batman33!', NULL, 2);
+INSERT INTO `drlomito`.`usuarios` VALUES (0, 'Diana Karen Ramos Vitar', 'dkr_v@gmail.com', 'Batman33!', NULL, 2);
 
 -- AHORA INSERTAMOS SU INFO DE CONTACTO
 
