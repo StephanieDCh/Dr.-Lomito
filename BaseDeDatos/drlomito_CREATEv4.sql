@@ -65,21 +65,13 @@ COLLATE = utf8mb4_0900_ai_ci;
 -- Table `drlomito`.`contacto_vet`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `drlomito`.`contacto_vet` (
-<<<<<<<< HEAD:BaseDeDatos/drlomito_CREATEv3.sql
-  `contacto_id` BIGINT NOT NULL,
-========
   `contacto_id` BIGINT NOT NULL AUTO_INCREMENT,
->>>>>>>> 615c74111699fa97c9e47ae6df96d6e54a07ef25:BaseDeDatos/drlomito_CREATEv4.sql
   `veterinario_direccion` VARCHAR(100) NOT NULL,
   `veterinario_telefono1` VARCHAR(10) NOT NULL,
   `veterinario_telefono2` VARCHAR(10) NOT NULL,
   `veterinario_horario_inicio` INT NOT NULL,
   `veterinario_horario_cierre` INT NOT NULL,
-<<<<<<<< HEAD:BaseDeDatos/drlomito_CREATEv3.sql
-  `veterinario_atencion_urgencias` TINYINT NOT NULL,
-========
   `veterinario_atencion_urgencias` BIT(1) NOT NULL,
->>>>>>>> 615c74111699fa97c9e47ae6df96d6e54a07ef25:BaseDeDatos/drlomito_CREATEv4.sql
   `usuarios_usuario_id` BIGINT NOT NULL,
   PRIMARY KEY (`contacto_id`, `usuarios_usuario_id`),
   INDEX `fk_contacto_vet_usuarios1_idx` (`usuarios_usuario_id` ASC) VISIBLE)
